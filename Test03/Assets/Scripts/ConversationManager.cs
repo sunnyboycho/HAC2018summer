@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ConversationManager : MonoBehaviour {
 
     [SerializeField]
-    TextAsset fileName;
+    string fileName = "test.txt";
 
     bool ConversationStarted = false;
 
@@ -63,9 +63,9 @@ public class ConversationManager : MonoBehaviour {
     IEnumerator HoldConversation()
     {
         yield return new WaitForSeconds(.5f);
-        string temp = ReadConversationFile("test.txt");
-        string[] lines = temp.Split('\n');
         string character = portraitPoints[0].GetComponentInChildren<PortraitDisplay>().portrait.characterName;
+        string temp = ReadConversationFile(fileName);
+        string[] lines = temp.Split('\n');
         for (int i = 0; i < lines.Length; i+=2)
         {
             int j = 1;
@@ -78,6 +78,8 @@ public class ConversationManager : MonoBehaviour {
             conversationPoints[j].GetComponentInChildren<Text>().text = lines[i+1];
             yield return new WaitForSeconds(conversationSpeed);
         }
+        conversationPoints[0].transform.GetChild(0).gameObject.SetActive(false);
+        conversationPoints[1].transform.GetChild(0).gameObject.SetActive(false);
     }
 
     void EndConversation()
