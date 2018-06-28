@@ -14,10 +14,13 @@ public class ConversationManager : MonoBehaviour {
     ButtonScript buttonScript;
 
     [SerializeField]
-    GameObject[] portraitPoints;
+    GameObject[] portraitPoints = new GameObject[2];
 
     [SerializeField]
-    GameObject[] conversationPoints;
+    GameObject[] conversationPoints = new GameObject[2];
+
+    [SerializeField]
+    float conversationSpeed;
 
     int[,] progress =
     {
@@ -60,14 +63,20 @@ public class ConversationManager : MonoBehaviour {
     IEnumerator HoldConversation()
     {
         yield return new WaitForSeconds(.5f);
-        for (int i = 0; i < 4; i++)
+        string temp = ReadConversationFile("test.txt");
+        string[] lines = temp.Split('\n');
+        string character = portraitPoints[0].GetComponentInChildren<PortraitDisplay>().portrait.characterName;
+        for (int i = 0; i < lines.Length; i+=2)
         {
-            //Debug.Log(j);
-            string character = portraitPoints[(i + 1) % 2].GetComponentInChildren<PortraitDisplay>().portrait.characterName;
-            conversationPoints[i % 2].transform.GetChild(0).gameObject.SetActive(true);
-            conversationPoints[i % 2].GetComponentInChildren<Text>().text = "Hey " + character + "!";
-            ReadString();
-            yield return new WaitForSeconds(1f);
+            int j = 1;
+            if (lines[i].Contains(character))
+            {
+                j = 0;
+            }
+            conversationPoints[j].transform.GetChild(0).gameObject.SetActive(true);
+            conversationPoints[(j+1)%2].transform.GetChild(0).gameObject.SetActive(false);
+            conversationPoints[j].GetComponentInChildren<Text>().text = lines[i+1];
+            yield return new WaitForSeconds(conversationSpeed);
         }
     }
 
@@ -77,13 +86,14 @@ public class ConversationManager : MonoBehaviour {
         conversationPoints[1].transform.GetChild(0).gameObject.SetActive(false);
     }
 
-    static void ReadString()
+    string ReadConversationFile(string file)
     {
-        string path = "Assets/Resources/test.txt";
+        string path = "Assets/Resources/" + file;
 
         //Read the text from directly from the test.txt file
         StreamReader reader = new StreamReader(path);
-        Debug.Log(reader.ReadToEnd());
+        string temp = reader.ReadToEnd();
         reader.Close();
+        return temp;
     }
 }
