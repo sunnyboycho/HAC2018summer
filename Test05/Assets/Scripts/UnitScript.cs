@@ -122,7 +122,7 @@ public class UnitScript : MonoBehaviour {
 
     void CheckHealth()
     {
-        if (totalHP < 0)
+        if (totalHP <= 0)
         {
             deathAudio = gameObject.GetComponent<AudioSource>();
             animator.SetBool("isAlive", false);

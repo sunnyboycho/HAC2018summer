@@ -22,6 +22,7 @@ public class PlayerUnits : UnitScript {
 	// Update is called once per frame
 	void Update () {
         currentState.Action();
+        if (animator.GetBool("isAlive") == false) GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
     public void SetColors(string[] newColors)
