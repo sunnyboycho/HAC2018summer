@@ -23,11 +23,25 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
+    protected float attackRange;
+
+    public float AttackRange
+    {
+        get
+        {
+            return attackRange;
+        }
+    }
+
     public int TotalAttack
     {
         get
         {
             return totalAttack;
+        }
+        set
+        {
+            totalAttack = value;
         }
     }
 
@@ -39,6 +53,10 @@ public class UnitScript : MonoBehaviour {
         {
             return totalHP;
         }
+        set
+        {
+            totalHP = value;
+        }
     }
 
     protected int totalSpeed;
@@ -49,9 +67,21 @@ public class UnitScript : MonoBehaviour {
         {
             return totalSpeed;
         }
+        set
+        {
+            totalSpeed = value;
+        }
     }
 
-    
+    protected bool isAlive = true;
+
+    public bool IsAlive
+    {
+        get
+        {
+            return isAlive;
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -96,6 +126,7 @@ public class UnitScript : MonoBehaviour {
         {
             deathAudio = gameObject.GetComponent<AudioSource>();
             animator.SetBool("isAlive", false);
+            isAlive = false;
             StartCoroutine("Death");
         }
     }

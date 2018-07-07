@@ -8,7 +8,7 @@ public class MoveState : UnitState
 
     LayerMask layerMask;
 
-    float distance = 5f;
+    float distance;
 
     public MoveState(UnitScript unitScript) : base(unitScript)
     {
@@ -32,6 +32,7 @@ public class MoveState : UnitState
     public override void OnStateEnter()
     {
         Debug.Log("move");
+        distance = unitScript.AttackRange;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", false);
         unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(playerPositive * unitScript.TotalSpeed, 0);
     }

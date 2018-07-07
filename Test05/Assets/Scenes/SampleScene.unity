@@ -1005,7 +1005,7 @@ RectTransform:
   m_GameObject: {fileID: 88580980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9125, y: 0.85171187, z: 1}
   m_Children: []
   m_Father: {fileID: 844654409}
   m_RootOrder: 0
@@ -1102,7 +1102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 66.321884, y: 65.55481}
+  m_Size: {x: 59.15, y: 57.5}
   m_EdgeRadius: 0
 --- !u!1 &88672805 stripped
 GameObject:
@@ -6469,7 +6469,7 @@ RectTransform:
   m_GameObject: {fileID: 881879137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88750464, y: 0.88750005, z: 1}
   m_Children:
   - {fileID: 844654409}
   - {fileID: 29759995}
@@ -6478,8 +6478,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.8, y: -102.29995}
-  m_SizeDelta: {x: 467.2, y: 158.8}
+  m_AnchoredPosition: {x: -8, y: -88}
+  m_SizeDelta: {x: 407.4, y: 117.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881879139
 MonoBehaviour:

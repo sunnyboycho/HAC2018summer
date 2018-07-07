@@ -11,9 +11,9 @@ public class AttackState : UnitState
 
     private float timer = 0f;
 
-    private float attackSpeed = 2f;
+    private float attackSpeed;
 
-    float distance = 5f;
+    float distance;
 
     public AttackState(UnitScript unitScript) : base(unitScript)
     {
@@ -40,6 +40,8 @@ public class AttackState : UnitState
     public override void OnStateEnter()
     {
         Debug.Log("attack");
+        distance = unitScript.AttackRange;
+        attackSpeed = unitScript.GetComponent<UnitDisplay>().unit.attackSpeed;
         timer = 0f;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", true);
         unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -68,12 +70,13 @@ public class AttackState : UnitState
 
     void Attack()
     {
-        if (timer >= attackSpeed)
+        if (timer >= attackSpeed && unitScript.IsAlive)
         {
             timer = 0f;
             //GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, target.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
             //temp.transform.SetParent(target.GetComponent<Transform>());
             //temp.GetComponent<Rigidbody2D>().velocity = new Vector2(2, 0);
+            Debug.Log("Attack " + unitScript.TotalAttack);
             target.GetComponent<UnitScript>().RecieveDamage(unitScript.TotalAttack);
         }
     }
