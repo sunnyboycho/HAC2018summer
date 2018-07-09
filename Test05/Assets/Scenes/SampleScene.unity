@@ -1005,7 +1005,7 @@ RectTransform:
   m_GameObject: {fileID: 88580980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9125, y: 0.85171187, z: 1}
+  m_LocalScale: {x: 0.8326606, y: 0.85171187, z: 1}
   m_Children: []
   m_Father: {fileID: 844654409}
   m_RootOrder: 0
@@ -6469,7 +6469,7 @@ RectTransform:
   m_GameObject: {fileID: 881879137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82245505, y: 0.88750005, z: 1}
+  m_LocalScale: {x: 0.86087924, y: 0.88750005, z: 1}
   m_Children:
   - {fileID: 844654409}
   - {fileID: 29759995}
@@ -6478,7 +6478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.1, y: -70.6}
+  m_AnchoredPosition: {x: -12, y: -70.6}
   m_SizeDelta: {x: 407.4, y: 117.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881879139
@@ -7215,7 +7215,7 @@ Transform:
   m_GameObject: {fileID: 952563366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.361, y: -1.94, z: 0}
-  m_LocalScale: {x: 10.7828865, y: 4.0252075, z: 1}
+  m_LocalScale: {x: 11.466927, y: 4.0252075, z: 1}
   m_Children:
   - {fileID: 1410118508}
   - {fileID: 1358135996}
@@ -8691,7 +8691,6 @@ GameObject:
   - component: {fileID: 1171351439}
   - component: {fileID: 1171351438}
   - component: {fileID: 1171351440}
-  - component: {fileID: 1171351442}
   - component: {fileID: 1171351441}
   - component: {fileID: 1171351443}
   m_Layer: 10
@@ -8796,18 +8795,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 11400000, guid: 9bc2851b2543a47438456547beb78f71, type: 2}
---- !u!114 &1171351442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1171351437}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d082f377333337441a8f5bd49c518f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
 --- !u!50 &1171351443
 Rigidbody2D:
   serializedVersion: 4
@@ -14379,7 +14366,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2100637762}
   - component: {fileID: 2100637761}
-  - component: {fileID: 2100637764}
   - component: {fileID: 2100637763}
   - component: {fileID: 2100637766}
   - component: {fileID: 2100637765}
@@ -14460,18 +14446,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 11400000, guid: 9bc2851b2543a47438456547beb78f71, type: 2}
---- !u!114 &2100637764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2100637760}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d082f377333337441a8f5bd49c518f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
 --- !u!50 &2100637765
 Rigidbody2D:
   serializedVersion: 4
@@ -14698,7 +14672,8 @@ MonoBehaviour:
   - {fileID: 2113488118}
   unit:
   - {fileID: 1145273227946834, guid: ad9da8d02d722cb498d58739dc11db86, type: 2}
-  enemyUnit: {fileID: 1233968067733794, guid: b7142796d0fcd674584e1d681fc2d99f, type: 2}
+  enemyUnit:
+  - {fileID: 1320623934645276, guid: 8c03a926f38b62a47a030ce1cf63f7d1, type: 2}
   playerSpawn: {fileID: 2100637762}
   enemySpawn: {fileID: 1171351439}
 --- !u!114 &2145599718
@@ -14712,5 +14687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6883b93cb27377d468d524714bd15c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  spawnSpeed: 5
+  enemyNumber: 1
+  spawnInterval: 10
+  initialWait: 0

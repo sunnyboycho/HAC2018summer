@@ -5,10 +5,13 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     [SerializeField]
-    int level;
+    int enemyNumber;
 
     [SerializeField]
-    float spawnSpeed = 5.0f;
+    float spawnInterval = 5.0f;
+
+    [SerializeField]
+    float initialWait = 5.0f;
 
     // Use this for initialization
     void Start () {
@@ -21,10 +24,11 @@ public class EnemyManager : MonoBehaviour {
 
     IEnumerator Create()
     {
-        for (int i = 0; i < level; i++)
+        yield return new WaitForSeconds(initialWait); ;
+        for (int i = 0; i < enemyNumber; i++)
         {
             gameObject.GetComponent<UnitCreator>().CreateEnemyUnit();
-            yield return new WaitForSeconds(spawnSpeed);
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 }

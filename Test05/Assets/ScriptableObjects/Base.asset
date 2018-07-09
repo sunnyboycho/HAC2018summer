@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: 
   image: {fileID: 0}
-  hp: 30
+  hp: 50
   attack: 0
   speed: 0
+  attackSpeed: 0
+  attackRange: 0

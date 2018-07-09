@@ -8,9 +8,18 @@ public class UnitScript : MonoBehaviour {
 
     protected Animator animator;
 
-    protected int totalAttack;
-
     protected AudioSource deathAudio;
+
+    [SerializeField]
+    protected bool isProjectileUnit;
+
+    public bool IsProjectileUnit
+    {
+        get
+        {
+            return isProjectileUnit;
+        }
+    }
 
     [SerializeField]
     protected GameObject projectile;
@@ -33,15 +42,13 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
+    protected int totalAttack;
+
     public int TotalAttack
     {
         get
         {
             return totalAttack;
-        }
-        set
-        {
-            totalAttack = value;
         }
     }
 
@@ -53,10 +60,6 @@ public class UnitScript : MonoBehaviour {
         {
             return totalHP;
         }
-        set
-        {
-            totalHP = value;
-        }
     }
 
     protected int totalSpeed;
@@ -66,10 +69,6 @@ public class UnitScript : MonoBehaviour {
         get
         {
             return totalSpeed;
-        }
-        set
-        {
-            totalSpeed = value;
         }
     }
 
@@ -135,9 +134,9 @@ public class UnitScript : MonoBehaviour {
 
     IEnumerator Death()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         deathAudio.Play();
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(3.5f);
         Destroy(gameObject);
     }
 }

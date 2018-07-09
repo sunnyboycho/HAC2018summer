@@ -12,7 +12,6 @@ public class PlayerUnits : UnitScript {
         animator.SetBool("isAttacking", false);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
-        Debug.Log("attack" + gameObject.GetComponent<UnitDisplay>().unit.attack + totalAttack);
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
         SetState(new MoveState(this));
@@ -42,16 +41,15 @@ public class PlayerUnits : UnitScript {
         {
             if (colors[i].Equals("red"))
             {
-                TotalAttack += 5;
-                Debug.Log("increased attack" + totalAttack);
+                totalAttack += 5;
             }
             else if (colors[i].Equals("green"))
             {
-                TotalHP += 5;
+                totalHP += 5;
             }
             else if (colors[i].Equals("blue"))
             {
-                TotalSpeed += 2;
+                totalSpeed += 2;
             }
             else
             {

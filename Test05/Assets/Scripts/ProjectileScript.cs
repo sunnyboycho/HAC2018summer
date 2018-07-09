@@ -19,6 +19,8 @@ public class ProjectileScript : MonoBehaviour {
 
     string opponent;
 
+    bool targetAquired = false;
+
     // Use this for initialization
     void Start () {
         if (gameObject.transform.parent.CompareTag("Player"))
@@ -38,12 +40,13 @@ public class ProjectileScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         DamageTarget();
-
+        TargetDestroyed();
     }
 
     public void StartProjectile(Transform tar, int damage)
     {
         target = tar;
+        targetAquired = true;
         projectileDamage = damage;
         float x = target.transform.position.x - gameObject.transform.position.x;
         float y = 0;
@@ -67,6 +70,14 @@ public class ProjectileScript : MonoBehaviour {
                     break;
                 }
             }
+        }
+    }
+
+    void TargetDestroyed()
+    {
+        if (target == null && targetAquired)
+        {
+            Destroy(gameObject);
         }
     }
 }

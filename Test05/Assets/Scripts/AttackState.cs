@@ -73,9 +73,16 @@ public class AttackState : UnitState
         if (timer >= attackSpeed && unitScript.IsAlive)
         {
             timer = 0f;
-            GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, unitScript.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
-            temp.transform.SetParent(unitScript.GetComponent<Transform>());
-            temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, unitScript.TotalAttack);
+            if (unitScript.IsProjectileUnit)
+            {
+                GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, unitScript.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
+                temp.transform.SetParent(unitScript.GetComponent<Transform>());
+                temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, unitScript.TotalAttack);
+            }
+            else
+            {
+                target.GetComponent<UnitScript>().RecieveDamage(unitScript.TotalAttack);
+            }
         }
     }
 }

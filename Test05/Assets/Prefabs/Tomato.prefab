@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93338dcc06958549b92ede3ada946de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectileUnit: 1
   projectile: {fileID: 1951193497590744, guid: d2b734a8a414b764c8525c3801b3ee12, type: 2}
   colors:
   - 

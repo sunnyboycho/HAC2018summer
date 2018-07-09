@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Tomato
   image: {fileID: 0}
-  hp: 30
+  hp: 25
   attack: 5
   speed: 2
   attackSpeed: 2
