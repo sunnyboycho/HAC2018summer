@@ -124,6 +124,8 @@ public class UnitScript : MonoBehaviour {
     {
         if (totalHP <= 0)
         {
+            gameObject.layer = 11;
+            gameObject.GetComponent<Collider2D>().enabled = false;
             deathAudio = gameObject.GetComponent<AudioSource>();
             animator.SetBool("isAlive", false);
             isAlive = false;
