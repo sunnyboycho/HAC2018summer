@@ -10,7 +10,7 @@ public class AttackState : UnitState
     GameObject target;
 
     private float timer = 0f;
-
+    
     private float attackSpeed;
 
     float distance;
@@ -62,7 +62,7 @@ public class AttackState : UnitState
                 break;
             }
         }
-        if (isEmpty)
+        if (isEmpty && unitScript.IsAlive)
         {
             unitScript.SetState(new MoveState(unitScript));
         }
@@ -73,11 +73,9 @@ public class AttackState : UnitState
         if (timer >= attackSpeed && unitScript.IsAlive)
         {
             timer = 0f;
-            //GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, target.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
-            //temp.transform.SetParent(target.GetComponent<Transform>());
-            //temp.GetComponent<Rigidbody2D>().velocity = new Vector2(2, 0);
-            Debug.Log("Attack " + unitScript.TotalAttack);
-            target.GetComponent<UnitScript>().RecieveDamage(unitScript.TotalAttack);
+            GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, unitScript.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
+            temp.transform.SetParent(unitScript.GetComponent<Transform>());
+            temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, unitScript.TotalAttack);
         }
     }
 }

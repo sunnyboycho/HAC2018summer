@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212174717402330088}
   - component: {fileID: 95672137196836910}
   - component: {fileID: 50159865477630468}
+  - component: {fileID: 114619748308019972}
+  - component: {fileID: 58776923210511546}
   m_Layer: 0
   m_Name: TomatoProjectile
   m_TagString: Untagged
@@ -62,6 +64,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58776923210511546
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951193497590744}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.24
 --- !u!95 &95672137196836910
 Animator:
   serializedVersion: 3
@@ -80,6 +97,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114619748308019972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951193497590744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fe331f1fb2c3414d96e7ad0a744036a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 2
 --- !u!212 &212174717402330088
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,9 +141,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 816126695
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f56a17df5147d3a4b9ca7c3aa7021637, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

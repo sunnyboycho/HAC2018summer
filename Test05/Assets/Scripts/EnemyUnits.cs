@@ -8,7 +8,6 @@ public class EnemyUnits : UnitScript {
 	void Start () {
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
-        animator.SetBool("isAlive", true);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         Debug.Log("attack" + gameObject.GetComponent<UnitDisplay>().unit.attack + totalAttack);
@@ -20,5 +19,9 @@ public class EnemyUnits : UnitScript {
 	// Update is called once per frame
 	void Update () {
         currentState.Action();
+        if (isAlive == false)
+        {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
     }
 }

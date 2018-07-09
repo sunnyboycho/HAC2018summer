@@ -10,7 +10,6 @@ public class PlayerUnits : UnitScript {
     void Start () {
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
-        animator.SetBool("isAlive", true);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         Debug.Log("attack" + gameObject.GetComponent<UnitDisplay>().unit.attack + totalAttack);
@@ -22,7 +21,10 @@ public class PlayerUnits : UnitScript {
 	// Update is called once per frame
 	void Update () {
         currentState.Action();
-        if (animator.GetBool("isAlive") == false) GetComponent<Rigidbody2D>().isKinematic = true;
+        if (isAlive == false)
+        {
+            GetComponent<Rigidbody2D>().isKinematic = true;
+        }
     }
 
     public void SetColors(string[] newColors)

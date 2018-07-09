@@ -26,6 +26,10 @@ public class MoveState : UnitState
 
     public override void Action()
     {
+        if (unitScript.IsAlive)
+        {
+            unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(playerPositive * unitScript.TotalSpeed, 0);
+        }
         CheckEnemy();
     }
 
@@ -34,7 +38,6 @@ public class MoveState : UnitState
         Debug.Log("move");
         distance = unitScript.AttackRange;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", false);
-        unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(playerPositive * unitScript.TotalSpeed, 0);
     }
 
     void CheckEnemy()

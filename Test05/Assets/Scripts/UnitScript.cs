@@ -122,12 +122,12 @@ public class UnitScript : MonoBehaviour {
 
     void CheckHealth()
     {
-        if (totalHP <= 0)
+        if (totalHP <= 0 && isAlive)
         {
             gameObject.layer = 11;
             gameObject.GetComponent<Collider2D>().enabled = false;
             deathAudio = gameObject.GetComponent<AudioSource>();
-            animator.SetBool("isAlive", false);
+            animator.SetTrigger("isDead");
             isAlive = false;
             StartCoroutine("Death");
         }
@@ -137,7 +137,7 @@ public class UnitScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(1.0f);
         deathAudio.Play();
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(3.0f);
         Destroy(gameObject);
     }
 }

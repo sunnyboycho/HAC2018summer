@@ -10108,7 +10108,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1399852916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13001846, y: -1.6588067, z: -9.863281}
+  m_LocalPosition: {x: 0.13001846, y: -1.6588067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14674,7 +14674,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145599715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.13, y: 2.4020882, z: -9.860352}
+  m_LocalPosition: {x: -34.13, y: 2.4020882, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 758337251}
@@ -14697,8 +14697,8 @@ MonoBehaviour:
   - {fileID: 758337251}
   - {fileID: 2113488118}
   unit:
-  - {fileID: 1132666087897070, guid: ad9da8d02d722cb498d58739dc11db86, type: 2}
-  enemyUnit: {fileID: 1604790967289002, guid: b7142796d0fcd674584e1d681fc2d99f, type: 2}
+  - {fileID: 1145273227946834, guid: ad9da8d02d722cb498d58739dc11db86, type: 2}
+  enemyUnit: {fileID: 1233968067733794, guid: b7142796d0fcd674584e1d681fc2d99f, type: 2}
   playerSpawn: {fileID: 2100637762}
   enemySpawn: {fileID: 1171351439}
 --- !u!114 &2145599718
