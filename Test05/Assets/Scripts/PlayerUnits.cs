@@ -53,7 +53,7 @@ public class PlayerUnits : UnitScript {
             }
             else
             {
-                //Debug.Log("Stat allocation error no color input");
+                Debug.Log("Stat allocation error no color input");
             }
         }
     }
