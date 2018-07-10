@@ -17,7 +17,7 @@ public class EnemyUnits : UnitScript {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         currentState.Action();
         if (isAlive == false)
         {

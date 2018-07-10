@@ -16,10 +16,11 @@ public class PlayerUnits : UnitScript {
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
         SetState(new MoveState(this));
     }
-	
-	// Update is called once per frame
-	void Update () {
-        currentState.Action();
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+    currentState.Action();
         if (isAlive == false)
         {
             GetComponent<Rigidbody2D>().isKinematic = true;

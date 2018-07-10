@@ -1,0 +1,278 @@
+
+미친연구원.png
+size: 2048,2045
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Flask
+  rotate: false
+  xy: 1767, 204
+  size: 247, 300
+  orig: 247, 300
+  offset: 0, 0
+  index: -1
+L-leg
+  rotate: false
+  xy: 1607, 157
+  size: 158, 345
+  orig: 158, 345
+  offset: 0, 0
+  index: -1
+L_arm
+  rotate: false
+  xy: 1206, 87
+  size: 203, 351
+  orig: 203, 351
+  offset: 0, 0
+  index: -1
+R_hand
+  rotate: false
+  xy: 596, 829
+  size: 585, 602
+  orig: 585, 602
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 1348, 1634
+  size: 409, 632
+  orig: 409, 632
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: true
+  xy: 944, 10
+  size: 373, 147
+  orig: 373, 147
+  offset: 0, 0
+  index: -1
+hair1
+  rotate: true
+  xy: 1411, 79
+  size: 359, 194
+  orig: 359, 194
+  offset: 0, 0
+  index: -1
+hair2
+  rotate: false
+  xy: 1175, 440
+  size: 282, 333
+  orig: 282, 333
+  offset: 0, 0
+  index: -1
+hair5
+  rotate: false
+  xy: 1459, 504
+  size: 293, 269
+  orig: 293, 269
+  offset: 0, 0
+  index: -1
+hair6
+  rotate: false
+  xy: 1607, 33
+  size: 139, 122
+  orig: 139, 122
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1183, 775
+  size: 621, 554
+  orig: 621, 554
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 1062, 423
+  size: 404, 111
+  orig: 404, 111
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 1732
+  size: 1344, 311
+  orig: 1344, 311
+  offset: 0, 0
+  index: -1
+spoid 사본
+  rotate: false
+  xy: 596, 385
+  size: 464, 442
+  orig: 464, 442
+  offset: 0, 0
+  index: -1
+window
+  rotate: true
+  xy: 1806, 723
+  size: 606, 228
+  orig: 606, 228
+  offset: 0, 0
+  index: -1
+깨진스포이드
+  rotate: false
+  xy: 1767, 85
+  size: 270, 117
+  orig: 270, 117
+  offset: 0, 0
+  index: -1
+깨진플라스크
+  rotate: false
+  xy: 1754, 506
+  size: 261, 215
+  orig: 261, 215
+  offset: 0, 0
+  index: -1
+눈빛2
+  rotate: false
+  xy: 1940, 1516
+  size: 106, 116
+  orig: 106, 116
+  offset: 0, 0
+  index: -1
+레이어 2
+  rotate: false
+  xy: 2, 1433
+  size: 1226, 297
+  orig: 1226, 297
+  offset: 0, 0
+  index: -1
+몸통2
+  rotate: false
+  xy: 2, 2
+  size: 517, 686
+  orig: 517, 686
+  offset: 0, 0
+  index: -1
+몸통3
+  rotate: false
+  xy: 2, 690
+  size: 592, 741
+  orig: 592, 741
+  offset: 0, 0
+  index: -1
+오른손4
+  rotate: true
+  xy: 521, 8
+  size: 375, 421
+  orig: 375, 421
+  offset: 0, 0
+  index: -1
+오른팔3
+  rotate: false
+  xy: 1230, 1331
+  size: 708, 301
+  orig: 708, 301
+  offset: 0, 0
+  index: -1
+입3
+  rotate: true
+  xy: 1093, 17
+  size: 404, 111
+  orig: 404, 111
+  offset: 0, 0
+  index: -1
+입4
+  rotate: true
+  xy: 1230, 1654
+  size: 76, 110
+  orig: 76, 110
+  offset: 0, 0
+  index: -1
+튐
+  rotate: false
+  xy: 521, 573
+  size: 68, 115
+  orig: 68, 115
+  offset: 0, 0
+  index: -1
+혀
+  rotate: true
+  xy: 1940, 1397
+  size: 117, 104
+  orig: 117, 104
+  offset: 0, 0
+  index: -1
+
+미친연구원2.png
+size: 1165,591
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L_hand
+  rotate: false
+  xy: 674, 186
+  size: 179, 200
+  orig: 179, 200
+  offset: 0, 0
+  index: -1
+R-leg
+  rotate: true
+  xy: 824, 420
+  size: 169, 339
+  orig: 169, 339
+  offset: 0, 0
+  index: -1
+hair3
+  rotate: true
+  xy: 855, 178
+  size: 240, 250
+  orig: 240, 250
+  offset: 0, 0
+  index: -1
+hair4
+  rotate: false
+  xy: 327, 240
+  size: 345, 146
+  orig: 345, 146
+  offset: 0, 0
+  index: -1
+눈2
+  rotate: false
+  xy: 2, 2
+  size: 312, 172
+  orig: 312, 172
+  offset: 0, 0
+  index: -1
+눈3
+  rotate: false
+  xy: 2, 176
+  size: 323, 210
+  orig: 323, 210
+  offset: 0, 0
+  index: -1
+눈빛1
+  rotate: true
+  xy: 316, 8
+  size: 114, 129
+  orig: 114, 129
+  offset: 0, 0
+  index: -1
+오른팔2
+  rotate: false
+  xy: 2, 388
+  size: 820, 201
+  orig: 820, 201
+  offset: 0, 0
+  index: -1
+왼손2
+  rotate: false
+  xy: 893, 19
+  size: 212, 157
+  orig: 212, 157
+  offset: 0, 0
+  index: -1
+입2
+  rotate: false
+  xy: 659, 28
+  size: 232, 148
+  orig: 232, 148
+  offset: 0, 0
+  index: -1
+죽은눈
+  rotate: false
+  xy: 327, 124
+  size: 330, 114
+  orig: 330, 114
+  offset: 0, 0
+  index: -1

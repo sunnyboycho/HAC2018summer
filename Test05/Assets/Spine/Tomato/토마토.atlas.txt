@@ -1,0 +1,257 @@
+
+토마토.png
+size: 2047,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 1614, 1735
+  size: 311, 378
+  orig: 311, 378
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 1978, 1370
+  size: 55, 76
+  orig: 55, 76
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 1614, 681
+  size: 273, 349
+  orig: 273, 349
+  offset: 0, 0
+  index: -1
+111
+  rotate: true
+  xy: 523, 79
+  size: 600, 1095
+  orig: 600, 1095
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 1965, 885
+  size: 73, 69
+  orig: 73, 69
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 1921, 44
+  size: 119, 107
+  orig: 119, 107
+  offset: 0, 0
+  index: -1
+5
+  rotate: true
+  xy: 1614, 1448
+  size: 285, 377
+  orig: 285, 377
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 1948, 511
+  size: 89, 168
+  orig: 89, 168
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 1994, 1951
+  size: 50, 43
+  orig: 50, 43
+  offset: 0, 0
+  index: -1
+Reyes2
+  rotate: true
+  xy: 1614, 956
+  size: 490, 362
+  orig: 490, 362
+  offset: 0, 0
+  index: -1
+e2
+  rotate: false
+  xy: 1620, 7
+  size: 136, 107
+  orig: 136, 107
+  offset: 0, 0
+  index: -1
+green1
+  rotate: true
+  xy: 1620, 429
+  size: 250, 326
+  orig: 250, 326
+  offset: 0, 0
+  index: -1
+grren3
+  rotate: false
+  xy: 1810, 153
+  size: 235, 274
+  orig: 235, 274
+  offset: 0, 0
+  index: -1
+main
+  rotate: false
+  xy: 2, 728
+  size: 1610, 1318
+  orig: 1610, 1318
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 1994, 1857
+  size: 92, 46
+  orig: 92, 46
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: false
+  xy: 1810, 2
+  size: 109, 149
+  orig: 109, 149
+  offset: 0, 0
+  index: -1
+mouth4
+  rotate: false
+  xy: 1994, 1996
+  size: 51, 50
+  orig: 51, 50
+  offset: 0, 0
+  index: -1
+top
+  rotate: false
+  xy: 1620, 116
+  size: 188, 311
+  orig: 188, 311
+  offset: 0, 0
+  index: -1
+top2
+  rotate: false
+  xy: 2, 53
+  size: 519, 626
+  orig: 519, 626
+  offset: 0, 0
+  index: -1
+
+토마토2.png
+size: 1849,1201
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2
+  rotate: true
+  xy: 1303, 2
+  size: 104, 161
+  orig: 104, 161
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 767, 32
+  size: 231, 266
+  orig: 231, 266
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 1634, 344
+  size: 251, 194
+  orig: 251, 194
+  offset: 0, 0
+  index: -1
+Leyes
+  rotate: false
+  xy: 1128, 336
+  size: 251, 550
+  orig: 251, 550
+  offset: 0, 0
+  index: -1
+Leyes2
+  rotate: true
+  xy: 1348, 897
+  size: 302, 484
+  orig: 302, 484
+  offset: 0, 0
+  index: -1
+Leyes3
+  rotate: false
+  xy: 1381, 345
+  size: 251, 550
+  orig: 251, 550
+  offset: 0, 0
+  index: -1
+Reyes
+  rotate: false
+  xy: 2, 300
+  size: 561, 586
+  orig: 561, 586
+  offset: 0, 0
+  index: -1
+Reyes3
+  rotate: false
+  xy: 565, 300
+  size: 561, 586
+  orig: 561, 586
+  offset: 0, 0
+  index: -1
+e1
+  rotate: true
+  xy: 1701, 148
+  size: 194, 146
+  orig: 194, 146
+  offset: 0, 0
+  index: -1
+e3
+  rotate: false
+  xy: 1488, 124
+  size: 211, 218
+  orig: 211, 218
+  offset: 0, 0
+  index: -1
+e4
+  rotate: false
+  xy: 1000, 29
+  size: 152, 269
+  orig: 152, 269
+  offset: 0, 0
+  index: -1
+green2
+  rotate: true
+  xy: 1634, 597
+  size: 298, 190
+  orig: 298, 190
+  offset: 0, 0
+  index: -1
+green4
+  rotate: false
+  xy: 1303, 108
+  size: 183, 226
+  orig: 183, 226
+  offset: 0, 0
+  index: -1
+green5
+  rotate: false
+  xy: 1154, 26
+  size: 147, 308
+  orig: 147, 308
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 888
+  size: 1344, 311
+  orig: 1344, 311
+  offset: 0, 0
+  index: -1
+모양 2
+  rotate: true
+  xy: 2, 4
+  size: 294, 763
+  orig: 294, 763
+  offset: 0, 0
+  index: -1
