@@ -7,13 +7,14 @@ public class PlayerUnits : UnitScript {
     public string[] colors = new string[4];
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
+        isAlive = true;
         SetState(new MoveState(this));
     }
 
@@ -42,15 +43,16 @@ public class PlayerUnits : UnitScript {
         {
             if (colors[i].Equals("red"))
             {
-                totalAttack += 5;
+                totalAttack = totalAttack + 5;
             }
             else if (colors[i].Equals("green"))
             {
-                totalHP += 5;
+                totalHP = totalHP + 5;
             }
             else if (colors[i].Equals("blue"))
             {
-                totalSpeed += 2;
+                totalSpeed = totalSpeed + 2;
+                Debug.Log("totalSpeed " + totalSpeed);
             }
             else
             {

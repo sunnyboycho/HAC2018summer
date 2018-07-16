@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Marble
   - Enemy
+  - Field
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Player
   - Enemy
   - Dead
-  - 
+  - Field
   - 
   - 
   - 

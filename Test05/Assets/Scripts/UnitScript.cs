@@ -72,7 +72,7 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
-    protected bool isAlive = true;
+    protected bool isAlive = false;
 
     public bool IsAlive
     {

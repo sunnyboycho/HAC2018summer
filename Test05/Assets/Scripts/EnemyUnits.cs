@@ -13,6 +13,7 @@ public class EnemyUnits : UnitScript {
         Debug.Log("attack" + gameObject.GetComponent<UnitDisplay>().unit.attack + totalAttack);
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
+        isAlive = true;
         SetState(new MoveState(this));
     }
 	
