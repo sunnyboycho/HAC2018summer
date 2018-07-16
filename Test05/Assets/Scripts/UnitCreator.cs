@@ -20,18 +20,18 @@ public class UnitCreator : MonoBehaviour {
     Transform enemySpawn;
 
     [SerializeField]
-    Dictionary<string, GameObject> dict = new Dictionary<string, GameObject>();
+    Dictionary<int, GameObject> dict = new Dictionary<int, GameObject>();
 
     private void Start()
     {
         //CreateEnemyUnit();
         for (int i = 0; i < 1; i++)
         {
-            dict.Add("SquareTile", unit[i]);
+            dict.Add(0, unit[i]);
         }
     }
 
-    public void CreateUnit(string type, string[] colors)
+    public void CreateUnit(int type, string[] colors)
     {
         Debug.Log("Create Unit " + type);
         GameObject newUnit = Instantiate(dict[type], playerSpawn.position, Quaternion.identity);

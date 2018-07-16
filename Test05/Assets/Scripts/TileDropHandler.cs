@@ -82,7 +82,7 @@ public class TileDropHandler : MonoBehaviour, IDropHandler {
                     }
                 }
             }
-            unitCreator.CreateUnit(squareTile.name, colors);
+            //unitCreator.CreateUnit(squareTile.name, colors);
             Initialize();
         }
         else

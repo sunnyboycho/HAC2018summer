@@ -13,9 +13,9 @@ public class MarbleInput : MonoBehaviour {
 
     bool[,] matrix =
         {
-            {false, false, false, false, false, false, false, false, true, false, false, false },
-            {false, false, false, false, false, false, false, false, true, false, false, false },
-            {false, false, false, false, false, false, false, true, true, false, false, false },
+            {false, false, false, false, false, false, false, false, false, false, false, false },
+            {false, false, false, false, false, false, false, false, false, false, false, false },
+            {false, false, false, false, false, false, false, false, false, false, false, false },
             {false, false, false, false, false, false, false, false, false, false, false, false },
         };
 
@@ -27,16 +27,24 @@ public class MarbleInput : MonoBehaviour {
     };
 
     int type;
-    int layerMask;
+
+    [SerializeField]
+    UnitCreator unitCreator;
+
+    [SerializeField]
+    MarbleManager marbleManager;
+
+    string[] colors = new string[4];
+
+    int fieldLayerMask;
+
+    int marbleLayerMask;
     
     // Use this for initialization
     void Start () {
-        layerMask = LayerMask.GetMask("Field");
-        hits[0] = null;
-        hits[1] = null;
-        hits[2] = null;
-        hits[3] = null;
-        hits[4] = null;
+        fieldLayerMask = LayerMask.GetMask("Field");
+        marbleLayerMask = LayerMask.GetMask("Marble");
+        Initialize();
     }
 	
 	// Update is called once per frame
@@ -44,7 +52,7 @@ public class MarbleInput : MonoBehaviour {
         if (Input.GetMouseButton(0))
         {
             //Debug.Log("click ");
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 100f, layerMask);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 100f, fieldLayerMask);
 
             if (hit.collider != null)
             {
@@ -77,12 +85,51 @@ public class MarbleInput : MonoBehaviour {
             InputMatrix();
             CompareMatrixes();
             Debug.Log("type " + type);
+            int n = 0;
             for (int i = 0; i < 5; i++)
             {
                 if (hits[i] != null)
                 {
+                    n++;
                     hits[i].GetComponent<SpriteRenderer>().enabled = false;
-                    hits[i] = null;
+                    //hits[i] = null;
+                }
+            }
+            Debug.Log("n " + n);
+            if (n == 4)
+            {
+                if (type < 4)
+                {
+                    int j = 0;
+                    for (int i = 0; i < 5; i++)
+                    {
+                        if (hits[i] != null)
+                        {
+                            Collider2D[] marbleBuffer = new Collider2D[2];
+                            marbleBuffer = Physics2D.OverlapBoxAll(hits[i].position, new Vector2(0.8f, 0.8f), 0, marbleLayerMask);
+                            if (marbleBuffer[0] != null)
+                            {
+                                Destroy(marbleBuffer[0].gameObject);
+                                marbleManager.decreaseMarble((int)char.GetNumericValue(hits[i].name[0]) - 1);
+                                for (int k = 0; k < 4; k++)
+                                {
+                                    if (colors[k] == "none")
+                                    {
+                                        j++;
+                                        colors[k] = marbleBuffer[0].gameObject.GetComponent<MarbleDisplay>().marble.color;
+                                        Debug.Log(colors[k]);
+                                        break;
+                                    }
+                                }
+                                marbleManager.CheckifFull();
+                            }
+                        }
+                    }
+                    if (j == 4)
+                    {
+                        unitCreator.CreateUnit(type, colors);
+                        Initialize();
+                    }
                 }
             }
             SetMatrix();
@@ -257,7 +304,7 @@ public class MarbleInput : MonoBehaviour {
         {
             if (compare[i])
             {
-                Debug.Log("true for " + i);
+                //Debug.Log("true for " + i);
                 count++;
                 num = i;
             }
@@ -266,13 +313,38 @@ public class MarbleInput : MonoBehaviour {
         {
             num = 14;
         }
-        type = num;
+
+        switch (num)
+        {
+            case 0:
+                type = 0;
+                break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                type = 1;
+                break;
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+                type = 2;
+                break;
+            default:
+                type = 4;
+                break;
+        }
 
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
             {
-                Debug.Log("i" + i + "j" + j + inputMatrix[i, j]);
+                //Debug.Log("i" + i + "j" + j + inputMatrix[i, j]);
                 inputMatrix[i, j] = false;
             }
         }
@@ -290,5 +362,18 @@ public class MarbleInput : MonoBehaviour {
         }
         hitsFull = true;
         return true;
+    }
+
+    void Initialize()
+    {
+        hits[0] = null;
+        hits[1] = null;
+        hits[2] = null;
+        hits[3] = null;
+        hits[4] = null;
+        for (int i = 0; i < 4; i++)
+        {
+            colors[i] = "none";
+        }
     }
 }
