@@ -6,8 +6,6 @@ public class MarbleInput : MonoBehaviour {
 
     Transform[] hits = new Transform[5];
 
-    bool hitsFull = false;
-
     [SerializeField]
     GameObject[] box;
 
@@ -192,7 +190,7 @@ public class MarbleInput : MonoBehaviour {
                             jTemp++;
                             startPosition[1] = startPosition[1] - 1;
                         }
-                        if (i >= startPosition[0] && i < startPosition[0] + 3 && j >= startPosition[1] && j < startPosition[1])
+                        if (i >= startPosition[0] && i < startPosition[0] + 3 && j >= startPosition[1] && j < startPosition[1] + 3)
                         {
                             inputMatrix[i - startPosition[0], j - startPosition[1]] = true;
                         }
@@ -421,11 +419,9 @@ public class MarbleInput : MonoBehaviour {
         {
             if (hits[i] == null)
             {
-                hitsFull = false;
                 return false;
             }
         }
-        hitsFull = true;
         return true;
     }
 
