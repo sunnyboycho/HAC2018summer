@@ -51,90 +51,100 @@ public class MarbleInput : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButton(0))
         {
-            //Debug.Log("click ");
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 100f, fieldLayerMask);
-
-            if (hit.collider != null)
-            {
-                //Debug.Log("hit " + hit.transform.name);
-                hit.transform.GetComponent<SpriteRenderer>().enabled = true;
-                int i = 0;
-                while (hits[i] != null && !hits[i].Equals(hit.transform))
-                {
-                    i++;
-                }
-                hits[i] = hit.transform;
-                if (isHitsFull())
-                {
-                    hits[0].GetComponent<SpriteRenderer>().enabled = false;
-                    hits[1].GetComponent<SpriteRenderer>().enabled = false;
-                    hits[2].GetComponent<SpriteRenderer>().enabled = false;
-                    hits[3].GetComponent<SpriteRenderer>().enabled = false;
-                    hits[4].GetComponent<SpriteRenderer>().enabled = false;
-                    hits[0] = null;
-                    hits[1] = null;
-                    hits[2] = null;
-                    hits[3] = null;
-                    hits[4] = null;
-                }
-            }
+            SelectMarbles();
         }
         if (Input.GetMouseButtonUp(0))
         {
-            SetMatrix();
-            InputMatrix();
-            CompareMatrixes();
-            Debug.Log("type " + type);
-            int n = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                if (hits[i] != null)
-                {
-                    n++;
-                    hits[i].GetComponent<SpriteRenderer>().enabled = false;
-                    //hits[i] = null;
-                }
-            }
-            Debug.Log("n " + n);
-            if (n == 4)
-            {
-                if (type < 4)
-                {
-                    int j = 0;
-                    for (int i = 0; i < 5; i++)
-                    {
-                        if (hits[i] != null)
-                        {
-                            Collider2D[] marbleBuffer = new Collider2D[2];
-                            marbleBuffer = Physics2D.OverlapBoxAll(hits[i].position, new Vector2(0.8f, 0.8f), 0, marbleLayerMask);
-                            if (marbleBuffer[0] != null)
-                            {
-                                Destroy(marbleBuffer[0].gameObject);
-                                marbleManager.decreaseMarble((int)char.GetNumericValue(hits[i].name[0]) - 1);
-                                for (int k = 0; k < 4; k++)
-                                {
-                                    if (colors[k] == "none")
-                                    {
-                                        j++;
-                                        colors[k] = marbleBuffer[0].gameObject.GetComponent<MarbleDisplay>().marble.color;
-                                        Debug.Log(colors[k]);
-                                        break;
-                                    }
-                                }
-                                marbleManager.CheckifFull();
-                            }
-                        }
-                    }
-                    if (j == 4)
-                    {
-                        unitCreator.CreateUnit(type, colors);
-                        Initialize();
-                    }
-                }
-            }
-            SetMatrix();
+            ProcessMarbles();
         }
 	}
+
+    void SelectMarbles()
+    {
+        //Debug.Log("click ");
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 100f, fieldLayerMask);
+
+        if (hit.collider != null)
+        {
+            //Debug.Log("hit " + hit.transform.name);
+            hit.transform.GetComponent<SpriteRenderer>().enabled = true;
+            int i = 0;
+            while (hits[i] != null && !hits[i].Equals(hit.transform))
+            {
+                i++;
+            }
+            hits[i] = hit.transform;
+            if (isHitsFull())
+            {
+                hits[0].GetComponent<SpriteRenderer>().enabled = false;
+                hits[1].GetComponent<SpriteRenderer>().enabled = false;
+                hits[2].GetComponent<SpriteRenderer>().enabled = false;
+                hits[3].GetComponent<SpriteRenderer>().enabled = false;
+                hits[4].GetComponent<SpriteRenderer>().enabled = false;
+                hits[0] = null;
+                hits[1] = null;
+                hits[2] = null;
+                hits[3] = null;
+                hits[4] = null;
+            }
+        }
+    }
+
+    void ProcessMarbles()
+    {
+        SetMatrix();
+        InputMatrix();
+        CompareMatrixes();
+        Debug.Log("type " + type);
+        int n = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            if (hits[i] != null)
+            {
+                n++;
+                hits[i].GetComponent<SpriteRenderer>().enabled = false;
+                //hits[i] = null;
+            }
+        }
+        Debug.Log("n " + n);
+        if (n == 4)
+        {
+            if (type < 4)
+            {
+                int j = 0;
+                for (int i = 0; i < 5; i++)
+                {
+                    if (hits[i] != null)
+                    {
+                        Collider2D[] marbleBuffer = new Collider2D[2];
+                        marbleBuffer = Physics2D.OverlapBoxAll(hits[i].position, new Vector2(0.8f, 0.8f), 0, marbleLayerMask);
+                        if (marbleBuffer[0] != null)
+                        {
+                            Destroy(marbleBuffer[0].gameObject);
+                            marbleManager.decreaseMarble((int)char.GetNumericValue(hits[i].name[0]) - 1);
+                            for (int k = 0; k < 4; k++)
+                            {
+                                if (colors[k] == "none")
+                                {
+                                    j++;
+                                    colors[k] = marbleBuffer[0].gameObject.GetComponent<MarbleDisplay>().marble.color;
+                                    Debug.Log(colors[k]);
+                                    break;
+                                }
+                            }
+                            marbleManager.CheckifFull();
+                        }
+                    }
+                }
+                if (j == 4)
+                {
+                    unitCreator.CreateUnit(type, colors);
+                    Initialize();
+                }
+            }
+        }
+        SetMatrix();
+    }
 
     void SetMatrix()
     {
@@ -219,6 +229,19 @@ public class MarbleInput : MonoBehaviour {
         */
     }
 
+    /*
+     * 11
+     * 11
+     * compare0
+     * 01
+     * 11
+     * 10
+     * compare1-4
+     * 10
+     * 10
+     * 11
+     * compare5-12
+     * */
     void CompareMatrixes()
     {
         bool[] compare = new bool[13] {true, true, true, true, true, true, true, true, true, true, true, true, true};
@@ -299,6 +322,22 @@ public class MarbleInput : MonoBehaviour {
             compare[7] = false;
             compare[8] = false;
             compare[9] = false;
+        }
+        if (inputMatrix[2, 2])
+        {
+            compare[0] = false;
+            compare[1] = false;
+            compare[2] = false;
+            compare[3] = false;
+            compare[4] = false;
+            compare[5] = false;
+            compare[6] = false;
+            compare[7] = false;
+            compare[8] = false;
+            compare[9] = false;
+            compare[10] = false;
+            compare[11] = false;
+            compare[12] = false;
         }
         for (int i = 0; i < 13; i++)
         {
