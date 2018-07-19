@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseScript : MonoBehaviour {
+public class BaseScript : UnitScript{
 
     protected Animator animator;
 

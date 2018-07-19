@@ -55,7 +55,6 @@ public class ProjectileScript : MonoBehaviour {
 
     void DamageTarget()
     {
-        contactFilter2D.useLayerMask = true;
         int temp = gameObject.GetComponent<Rigidbody2D>().OverlapCollider(contactFilter2D, colliders);
         Debug.Log("col " + temp);
         for (int i = 0; i < colliders.Length; i++)

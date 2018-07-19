@@ -192,7 +192,31 @@ public class MarbleInput : MonoBehaviour {
                             jTemp++;
                             startPosition[1] = startPosition[1] - 1;
                         }
-                        inputMatrix[i - startPosition[0], j - startPosition[1]] = true;
+                        if (i >= startPosition[0] && i < startPosition[0] + 3 && j >= startPosition[1] && j < startPosition[1])
+                        {
+                            inputMatrix[i - startPosition[0], j - startPosition[1]] = true;
+                        }
+                        else
+                        {
+                            for (int b = 0; b < 5; b++)
+                            {
+                                if (hits[b] != null)
+                                {
+                                    hits[b].GetComponent<SpriteRenderer>().enabled = false;
+                                    //hits[i] = null;
+                                }
+                            }
+                            Initialize();
+                            for (int n = 0; n < 3; n++)
+                            {
+                                for (int r = 0; r < 3; r++)
+                                {
+                                    //Debug.Log("i" + i + "j" + j + inputMatrix[i, j]);
+                                    inputMatrix[n, r] = false;
+                                }
+                            }
+                            return;
+                        }
                     }
                 }
             }
@@ -247,6 +271,24 @@ public class MarbleInput : MonoBehaviour {
         bool[] compare = new bool[13] {true, true, true, true, true, true, true, true, true, true, true, true, true};
         int count = 0;
         int num = 14;
+        if (inputMatrix[2, 2])
+        {
+            compare[0] = false;
+            compare[1] = false;
+            compare[2] = false;
+            compare[3] = false;
+            compare[4] = false;
+            compare[5] = false;
+            compare[6] = false;
+            compare[7] = false;
+            compare[8] = false;
+            compare[9] = false;
+            compare[10] = false;
+            compare[11] = false;
+            compare[12] = false;
+            type = 4;
+            return;
+        }
         if (inputMatrix[0,0])
         {
             compare[2] = false;
@@ -322,22 +364,6 @@ public class MarbleInput : MonoBehaviour {
             compare[7] = false;
             compare[8] = false;
             compare[9] = false;
-        }
-        if (inputMatrix[2, 2])
-        {
-            compare[0] = false;
-            compare[1] = false;
-            compare[2] = false;
-            compare[3] = false;
-            compare[4] = false;
-            compare[5] = false;
-            compare[6] = false;
-            compare[7] = false;
-            compare[8] = false;
-            compare[9] = false;
-            compare[10] = false;
-            compare[11] = false;
-            compare[12] = false;
         }
         for (int i = 0; i < 13; i++)
         {
