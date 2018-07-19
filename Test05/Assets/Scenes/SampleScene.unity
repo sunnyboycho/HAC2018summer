@@ -15013,6 +15013,8 @@ MonoBehaviour:
   - {fileID: 2113488118}
   unit:
   - {fileID: 1794561797104230, guid: f551ddbe8dc6f584e8f77da03d9ab89e, type: 2}
+  - {fileID: 1595683411926426, guid: 77bb1cad1d5663042ab0494c8ec30221, type: 2}
+  - {fileID: 1794561797104230, guid: f551ddbe8dc6f584e8f77da03d9ab89e, type: 2}
   enemyUnit:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   playerSpawn: {fileID: 2100637762}
@@ -15028,6 +15030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6883b93cb27377d468d524714bd15c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyNumber: 0
+  enemyNumber: 1
   spawnInterval: 10
-  initialWait: 0
+  initialWait: 5

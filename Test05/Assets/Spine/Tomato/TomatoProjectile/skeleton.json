@@ -1,0 +1,36 @@
+{
+"skeleton": { "hash": "8AzMR8nSpLf3Ym40Gq2DlFmE+P0", "spine": "3.6.53", "width": 61.02, "height": 64.94, "images": "./imagess/" },
+"bones": [
+	{ "name": "root", "x": 0.31, "y": 1.54 },
+	{ "name": "bone", "parent": "root", "x": -0.27, "y": 24.99 }
+],
+"slots": [
+	{ "name": "ball", "bone": "bone", "attachment": "ball" }
+],
+"skins": {
+	"default": {
+		"ball": {
+			"ball": { "x": 1.72, "y": 5.93, "scaleX": 0.127, "scaleY": 0.127, "rotation": -13.77, "width": 388, "height": 430 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"bones": {
+			"bone": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.3333, "angle": 180 },
+					{ "time": 0.6667, "angle": 0 }
+				],
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		}
+	}
+}
+}

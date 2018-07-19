@@ -25,9 +25,9 @@ public class UnitCreator : MonoBehaviour {
     private void Start()
     {
         //CreateEnemyUnit();
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 3; i++)
         {
-            dict.Add(0, unit[i]);
+            dict.Add(i, unit[i]);
         }
     }
 
