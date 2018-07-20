@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class BattlefieldCameraFollow : MonoBehaviour {
 
+    public bool bDragging = true;
+    public float panSpeed = 5;
+    private Vector3 oldPos;
+    private Vector3 panOrigin;
+
     [SerializeField]
     float xMin;
 
@@ -33,7 +38,35 @@ public class BattlefieldCameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!unitPresent)
+        /*
+        if (Input.GetMouseButtonDown(0))
+        {
+            bDragging = true;
+            oldPos = transform.position;
+            panOrigin = Camera.main.ScreenToViewportPoint(Input.mousePosition);                    //Get the ScreenVector the mouse clicked
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition) - panOrigin;    //Get the difference between where the mouse clicked and where it moved
+            transform.position = oldPos + -pos * panSpeed;                                         //Move the position of the camera to simulate a drag, speed * 10 for screen to worldspace conversion
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            bDragging = false;
+
+            if (!unitPresent)
+            {
+                CenterOnBase();
+            }
+            else
+            {
+                CenterOnUnit();
+            }
+        }*/
+        
+        if (!unitPresent)
         {
             CenterOnBase();
         }
