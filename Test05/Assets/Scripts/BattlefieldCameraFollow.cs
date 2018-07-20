@@ -60,7 +60,21 @@ public class BattlefieldCameraFollow : MonoBehaviour {
         }
         else
         {
-            targetUnit = playerUnits.transform.GetChild(0).transform;
+            for (int i = 0; i < playerUnits.transform.childCount; i++)
+            {
+                Transform temp = playerUnits.transform.GetChild(i).transform;
+                if (targetUnit == null)
+                {
+                    targetUnit = temp;
+                }
+                else
+                {
+                    if (targetUnit.position.x < temp.position.x)
+                    {
+                        targetUnit = temp;
+                    }
+                }
+            }
             gameObject.transform.position = new Vector3(Mathf.Clamp(targetUnit.position.x, xMin, xMax), Mathf.Clamp(targetUnit.position.y, yMin, yMax), -10);
         }
     }
