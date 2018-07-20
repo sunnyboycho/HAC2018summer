@@ -6,6 +6,8 @@ public class MarbleInput : MonoBehaviour {
 
     Transform[] hits = new Transform[5];
 
+    Collider2D[] marbles = new Collider2D[4];
+
     [SerializeField]
     GameObject[] box;
 
@@ -109,7 +111,7 @@ public class MarbleInput : MonoBehaviour {
         {
             if (type < 4)
             {
-                int j = 0;
+                int m = 0;
                 for (int i = 0; i < 5; i++)
                 {
                     if (hits[i] != null)
@@ -118,30 +120,45 @@ public class MarbleInput : MonoBehaviour {
                         marbleBuffer = Physics2D.OverlapBoxAll(hits[i].position, new Vector2(0.8f, 0.8f), 0, marbleLayerMask);
                         if (marbleBuffer[0] != null)
                         {
-                            Destroy(marbleBuffer[0].gameObject);
-                            marbleManager.decreaseMarble((int)char.GetNumericValue(hits[i].name[0]) - 1);
-                            for (int k = 0; k < 4; k++)
+                            while (marbles[m] != null)
                             {
-                                if (colors[k] == "none")
-                                {
-                                    j++;
-                                    colors[k] = marbleBuffer[0].gameObject.GetComponent<MarbleDisplay>().marble.color;
-                                    Debug.Log(colors[k]);
-                                    break;
-                                }
+                                m++;
                             }
-                            marbleManager.CheckifFull();
+                            marbles[m] = marbleBuffer[0];
+                            Debug.Log("marbles " + marbles[m].name);
                         }
                     }
                 }
-                if (j == 4)
+                if (marbles[0] != null && marbles[1] != null && marbles[2] != null  && marbles[3] != null)
                 {
+                    ConsumeMarbles();
                     unitCreator.CreateUnit(type, colors);
-                    Initialize();
                 }
             }
         }
+        Initialize();
         SetMatrix();
+    }
+
+    void ConsumeMarbles()
+    {
+        for (int k = 0; k < 4; k++)
+        {
+            if (colors[k] == "none")
+            {
+                colors[k] = marbles[k].gameObject.GetComponent<MarbleDisplay>().marble.color;
+                Debug.Log(colors[k]);
+            }
+            Destroy(marbles[k].gameObject);
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            if (hits[i] != null)
+            {
+                marbleManager.decreaseMarble((int)char.GetNumericValue(hits[i].name[0]) - 1);
+            }
+            marbleManager.CheckifFull();
+        }
     }
 
     void SetMatrix()
@@ -432,6 +449,10 @@ public class MarbleInput : MonoBehaviour {
         hits[2] = null;
         hits[3] = null;
         hits[4] = null;
+        marbles[0] = null;
+        marbles[1] = null;
+        marbles[2] = null;
+        marbles[3] = null;
         for (int i = 0; i < 4; i++)
         {
             colors[i] = "none";
