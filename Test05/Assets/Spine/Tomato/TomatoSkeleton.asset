@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
-  m_Name: "\uD1A0\uB9C8\uD1A0_SkeletonData"
+  m_Name: TomatoSkeleton
   m_EditorClassIdentifier: 
   atlasAssets:
   - {fileID: 11400000, guid: e0c2bb09572d7174b92946ef18492e6a, type: 2}
@@ -18,5 +18,5 @@ MonoBehaviour:
   fromAnimation: []
   toAnimation: []
   duration: []
-  defaultMix: 0.2
-  controller: {fileID: 0}
+  defaultMix: 0
+  controller: {fileID: 9100000, guid: 45a0aa835964ab949ab3fbc7286ea48e, type: 2}

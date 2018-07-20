@@ -26,7 +26,6 @@ public class UnitCreator : MonoBehaviour {
 
     public void CreateUnit(int type, string[] colors)
     {
-        Debug.Log("Create Unit " + type);
         GameObject newUnit = Instantiate(unit[type], playerSpawn.position, Quaternion.identity);
         newUnit.GetComponent<PlayerUnits>().SetColors(colors);
         newUnit.transform.SetParent(parent[0]);
@@ -34,7 +33,6 @@ public class UnitCreator : MonoBehaviour {
 
     public void CreateEnemyUnit(int i)
     {
-        Debug.Log("Create enemy");
         GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn.position, Quaternion.identity);
         newUnit.transform.SetParent(parent[1]);
     }

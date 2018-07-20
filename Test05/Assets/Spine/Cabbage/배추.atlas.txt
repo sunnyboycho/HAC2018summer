@@ -1,0 +1,152 @@
+
+배추.png
+size: 2043,2029
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+e1
+  rotate: false
+  xy: 823, 138
+  size: 194, 146
+  orig: 194, 146
+  offset: 0, 0
+  index: -1
+e2
+  rotate: true
+  xy: 1901, 1261
+  size: 136, 107
+  orig: 136, 107
+  offset: 0, 0
+  index: -1
+e4
+  rotate: true
+  xy: 1772, 13
+  size: 152, 269
+  orig: 152, 269
+  offset: 0, 0
+  index: -1
+공격잎
+  rotate: false
+  xy: 1020, 105
+  size: 401, 765
+  orig: 401, 765
+  offset: 0, 0
+  index: -1
+그림자
+  rotate: false
+  xy: 2, 73
+  size: 819, 211
+  orig: 819, 211
+  offset: 0, 0
+  index: -1
+그림자2
+  rotate: true
+  xy: 1984, 1790
+  size: 237, 56
+  orig: 237, 56
+  offset: 0, 0
+  index: -1
+눈
+  rotate: false
+  xy: 1423, 13
+  size: 347, 152
+  orig: 347, 152
+  offset: 0, 0
+  index: -1
+눈2
+  rotate: false
+  xy: 1680, 1018
+  size: 347, 152
+  orig: 347, 152
+  offset: 0, 0
+  index: -1
+눈썹
+  rotate: true
+  xy: 1680, 1172
+  size: 394, 219
+  orig: 394, 219
+  offset: 0, 0
+  index: -1
+밑동
+  rotate: true
+  xy: 1901, 1399
+  size: 167, 82
+  orig: 167, 82
+  offset: 0, 0
+  index: -1
+입
+  rotate: false
+  xy: 2, 2
+  size: 233, 69
+  orig: 233, 69
+  offset: 0, 0
+  index: -1
+입2
+  rotate: false
+  xy: 1129, 879
+  size: 226, 120
+  orig: 226, 120
+  offset: 0, 0
+  index: -1
+잎1
+  rotate: false
+  xy: 1129, 1001
+  size: 549, 1026
+  orig: 549, 1026
+  offset: 0, 0
+  index: -1
+잎2
+  rotate: false
+  xy: 1423, 167
+  size: 588, 832
+  orig: 588, 832
+  offset: 0, 0
+  index: -1
+잎3
+  rotate: true
+  xy: 2, 286
+  size: 584, 1016
+  orig: 584, 1016
+  offset: 0, 0
+  index: -1
+잎4
+  rotate: true
+  xy: 1680, 1568
+  size: 459, 302
+  orig: 459, 302
+  offset: 0, 0
+  index: -1
+전체
+  rotate: false
+  xy: 2, 872
+  size: 1125, 1155
+  orig: 1125, 1155
+  offset: 0, 0
+  index: -1
+
+배추2.png
+size: 1014,440
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+e3
+  rotate: false
+  xy: 801, 220
+  size: 211, 218
+  orig: 211, 218
+  offset: 0, 0
+  index: -1
+잎5
+  rotate: false
+  xy: 542, 123
+  size: 257, 315
+  orig: 257, 315
+  offset: 0, 0
+  index: -1
+잎6
+  rotate: true
+  xy: 2, 2
+  size: 436, 538
+  orig: 436, 538
+  offset: 0, 0
+  index: -1

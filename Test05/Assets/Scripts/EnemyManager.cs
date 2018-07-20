@@ -41,7 +41,7 @@ public class EnemyManager : MonoBehaviour {
         {
             for (int j = 0; j < enemyArray.Length; j++)
             {
-                gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[i]]);
+                gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
                 yield return new WaitForSeconds(spawnInterval);
             }
             yield return new WaitForSeconds(intervalWait);

@@ -106,7 +106,6 @@ public class MarbleInput : MonoBehaviour {
                 //hits[i] = null;
             }
         }
-        Debug.Log("n " + n);
         if (n == 4)
         {
             if (type < 4)

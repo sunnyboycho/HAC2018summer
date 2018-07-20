@@ -33,7 +33,8 @@ public class AttackState : UnitState
         CheckEnemy();
         if (target != null)
         {
-            Attack();
+            PassTarget();
+            //Attack();
         }
     }
 
@@ -68,7 +69,7 @@ public class AttackState : UnitState
         }
     }
 
-    void Attack()
+    public void Attack()
     {
         if (timer >= attackSpeed && unitScript.IsAlive)
         {
@@ -84,5 +85,10 @@ public class AttackState : UnitState
                 target.GetComponent<UnitScript>().RecieveDamage(unitScript.TotalAttack);
             }
         }
+    }
+
+    void PassTarget()
+    {
+        unitScript.AquireTarget(target);
     }
 }

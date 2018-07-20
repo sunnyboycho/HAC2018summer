@@ -10,6 +10,8 @@ public class UnitScript : MonoBehaviour {
 
     protected AudioSource deathAudio;
 
+    protected GameObject target;
+
     [SerializeField]
     protected bool isProjectileUnit;
 
@@ -136,7 +138,31 @@ public class UnitScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         deathAudio.Play();
-        yield return new WaitForSeconds(3.5f);
+        //yield return new WaitForSeconds(3.5f);
+        //Destroy(gameObject);
+    }
+
+    public void DeadAndDelete()
+    {
         Destroy(gameObject);
+    }
+
+    public void AquireTarget(GameObject tar)
+    {
+        target = tar;
+    }
+
+    public void Attack()
+    {
+        if (IsProjectileUnit)
+        {
+            GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
+            temp.transform.SetParent(GetComponent<Transform>());
+            temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, TotalAttack);
+        }
+        else
+        {
+            target.GetComponent<UnitScript>().RecieveDamage(TotalAttack);
+        }
     }
 }
