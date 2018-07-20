@@ -5,16 +5,28 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
     [SerializeField]
+    GameObject[] enemyTypes;
+
+    [SerializeField]
+    GameObject[] enemyArray;
+
+    [SerializeField]
     int enemyNumber;
 
     [SerializeField]
     float spawnInterval = 5.0f;
 
     [SerializeField]
-    float initialWait = 5.0f;
+    float intervalWait = 5.0f;
+
+    Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
 
     // Use this for initialization
     void Start () {
+        for (int i = 0; i < enemyTypes.Length; i++)
+        {
+            dict.Add(enemyTypes[i], i);
+        }
         StartCoroutine("Create");
     }
 	
@@ -24,11 +36,15 @@ public class EnemyManager : MonoBehaviour {
 
     IEnumerator Create()
     {
-        yield return new WaitForSeconds(initialWait); ;
+        yield return new WaitForSeconds(intervalWait);
         for (int i = 0; i < enemyNumber; i++)
         {
-            gameObject.GetComponent<UnitCreator>().CreateEnemyUnit();
-            yield return new WaitForSeconds(spawnInterval);
+            for (int j = 0; j < enemyArray.Length; j++)
+            {
+                gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[i]]);
+                yield return new WaitForSeconds(spawnInterval);
+            }
+            yield return new WaitForSeconds(intervalWait);
         }
     }
 }

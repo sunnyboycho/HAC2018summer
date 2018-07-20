@@ -125,7 +125,6 @@ public class MarbleInput : MonoBehaviour {
                                 m++;
                             }
                             marbles[m] = marbleBuffer[0];
-                            Debug.Log("marbles " + marbles[m].name);
                         }
                     }
                 }

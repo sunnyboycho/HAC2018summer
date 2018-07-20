@@ -19,30 +19,23 @@ public class UnitCreator : MonoBehaviour {
     [SerializeField]
     Transform enemySpawn;
 
-    [SerializeField]
-    Dictionary<int, GameObject> dict = new Dictionary<int, GameObject>();
-
     private void Start()
     {
-        //CreateEnemyUnit();
-        for (int i = 0; i < 3; i++)
-        {
-            dict.Add(i, unit[i]);
-        }
+        
     }
 
     public void CreateUnit(int type, string[] colors)
     {
         Debug.Log("Create Unit " + type);
-        GameObject newUnit = Instantiate(dict[type], playerSpawn.position, Quaternion.identity);
+        GameObject newUnit = Instantiate(unit[type], playerSpawn.position, Quaternion.identity);
         newUnit.GetComponent<PlayerUnits>().SetColors(colors);
         newUnit.transform.SetParent(parent[0]);
     }
 
-    public void CreateEnemyUnit()
+    public void CreateEnemyUnit(int i)
     {
         Debug.Log("Create enemy");
-        GameObject newUnit = Instantiate(enemyUnit[0], enemySpawn.position, Quaternion.identity);
+        GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn.position, Quaternion.identity);
         newUnit.transform.SetParent(parent[1]);
     }
 }

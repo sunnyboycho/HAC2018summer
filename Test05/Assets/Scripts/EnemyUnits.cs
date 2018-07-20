@@ -10,7 +10,6 @@ public class EnemyUnits : UnitScript {
         animator.SetBool("isAttacking", false);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
-        Debug.Log("attack" + gameObject.GetComponent<UnitDisplay>().unit.attack + totalAttack);
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
         isAlive = true;

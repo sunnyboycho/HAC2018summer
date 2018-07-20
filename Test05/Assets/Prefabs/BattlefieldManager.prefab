@@ -132,6 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6883b93cb27377d468d524714bd15c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyNumber: 1
-  spawnInterval: 10
-  initialWait: 5
+  enemyTypes:
+  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  enemyArray:
+  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  enemyNumber: 3
+  spawnInterval: 4
+  intervalWait: 8
