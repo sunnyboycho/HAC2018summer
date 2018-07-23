@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bc352c7906986b47aa40d0a58a39869, type: 3}
-  m_Name: Tomato
+  m_Name: Base
   m_EditorClassIdentifier: 
-  unitName: Tomato
+  unitName: 
   image: {fileID: 0}
-  hp: 25
-  attack: 5
-  speed: 2
-  attackSpeed: 2
-  attackRange: 7
+  hp: 100
+  attack: 0
+  speed: 0
+  attackSpeed: 0
+  attackRange: 0

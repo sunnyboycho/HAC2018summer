@@ -8,8 +8,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e60be42c1473144db0fd3337c25b500, type: 3}
-  m_Name: TomatoEventData
+  m_Script: {fileID: 11500000, guid: 6bc352c7906986b47aa40d0a58a39869, type: 3}
+  m_Name: Cabbage
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 1d88ca4f3abcf634d90fe277db2d4146, type: 2}
-  eventName: 
+  unitName: Cabbage
+  image: {fileID: 0}
+  hp: 45
+  attack: 2
+  speed: 1
+  attackSpeed: 2
+  attackRange: 2

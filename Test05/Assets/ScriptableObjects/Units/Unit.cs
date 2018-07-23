@@ -14,7 +14,7 @@ public class Unit : ScriptableObject
 
     public int attack;
 
-    public int speed;
+    public float speed;
 
     public float attackSpeed;
 

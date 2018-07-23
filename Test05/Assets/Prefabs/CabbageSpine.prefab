@@ -263,6 +263,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
+  bonusAttack: 3
+  bonusHP: 5
+  bonusSpeed: 1
   colors:
   - 
   - 

@@ -27,7 +27,7 @@ public class UnitCreator : MonoBehaviour {
     public void CreateUnit(int type, string[] colors)
     {
         GameObject newUnit = Instantiate(unit[type], playerSpawn.position, Quaternion.identity);
-        newUnit.GetComponent<PlayerUnits>().SetColors(colors);
+        newUnit.GetComponent<PlayerUnit>().SetColors(colors);
         newUnit.transform.SetParent(parent[0]);
     }
 

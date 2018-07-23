@@ -14,7 +14,7 @@ MonoBehaviour:
   unitName: 
   image: {fileID: 0}
   hp: 30
-  attack: 5
+  attack: 4
   speed: 2
   attackSpeed: 2
   attackRange: 3

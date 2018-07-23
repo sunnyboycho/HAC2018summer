@@ -57,7 +57,6 @@ public class ProjectileScript : MonoBehaviour {
     void DamageTarget()
     {
         int temp = gameObject.GetComponent<Rigidbody2D>().OverlapCollider(contactFilter2D, colliders);
-        Debug.Log("col " + temp);
         for (int i = 0; i < colliders.Length; i++)
         {
             if(colliders[i] != null)

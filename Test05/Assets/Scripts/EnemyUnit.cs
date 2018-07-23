@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyUnits : UnitScript {
+public class EnemyUnit : UnitScript {
 
 	// Use this for initialization
 	void Start () {

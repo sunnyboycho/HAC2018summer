@@ -64,9 +64,9 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
-    protected int totalSpeed;
+    protected float totalSpeed;
 
-    public int TotalSpeed
+    public float TotalSpeed
     {
         get
         {
@@ -126,6 +126,7 @@ public class UnitScript : MonoBehaviour {
         if (totalHP <= 0 && isAlive)
         {
             gameObject.layer = 11;
+            gameObject.tag = "Dead";
             gameObject.GetComponent<Collider2D>().enabled = false;
             deathAudio = gameObject.GetComponent<AudioSource>();
             animator.SetTrigger("isDead");

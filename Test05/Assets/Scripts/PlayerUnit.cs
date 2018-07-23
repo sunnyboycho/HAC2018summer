@@ -2,7 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerUnits : UnitScript {
+public class PlayerUnit : UnitScript {
+
+    [SerializeField]
+    int bonusAttack = 3;
+
+    [SerializeField]
+    int bonusHP = 5;
+
+    [SerializeField]
+    float bonusSpeed = 1;
 
     public string[] colors = new string[4];
 
@@ -43,16 +52,15 @@ public class PlayerUnits : UnitScript {
         {
             if (colors[i].Equals("red"))
             {
-                totalAttack = totalAttack + 5;
+                totalAttack = totalAttack + bonusAttack;
             }
             else if (colors[i].Equals("green"))
             {
-                totalHP = totalHP + 5;
+                totalHP = totalHP + bonusHP;
             }
             else if (colors[i].Equals("blue"))
             {
-                totalSpeed = totalSpeed + 2;
-                Debug.Log("totalSpeed " + totalSpeed);
+                totalSpeed = totalSpeed + bonusSpeed;
             }
             else
             {
