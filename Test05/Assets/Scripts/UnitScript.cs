@@ -129,8 +129,8 @@ public class UnitScript : MonoBehaviour {
             gameObject.tag = "Dead";
             gameObject.GetComponent<Collider2D>().enabled = false;
             deathAudio = gameObject.GetComponent<AudioSource>();
-            animator.SetTrigger("isDead");
             isAlive = false;
+            animator.SetTrigger("isDead");
             StartCoroutine("Death");
         }
     }
