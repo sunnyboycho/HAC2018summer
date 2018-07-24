@@ -30,7 +30,7 @@ public class UnitCreator : MonoBehaviour {
         GameObject newUnit = Instantiate(unit[type], playerSpawn[spawnPoint].position, Quaternion.identity);
         newUnit.GetComponent<PlayerUnit>().SetColors(colors);
         newUnit.transform.SetParent(parent[0]);
-        //newUnit.GetComponent<SkeletonAnimator>()
+        newUnit.GetComponent<MeshRenderer>().sortingOrder = spawnPoint;
     }
 
     public void CreateEnemyUnit(int i)
@@ -38,5 +38,6 @@ public class UnitCreator : MonoBehaviour {
         int enemySpawnPoint = Random.Range(0, enemySpawn.Length);
         GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn[enemySpawnPoint].position, Quaternion.identity);
         newUnit.transform.SetParent(parent[1]);
+        newUnit.GetComponent<MeshRenderer>().sortingOrder = enemySpawnPoint;
     }
 }
