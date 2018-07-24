@@ -17,7 +17,7 @@ public class UnitCreator : MonoBehaviour {
     Transform[] playerSpawn = new Transform[5];
 
     [SerializeField]
-    Transform enemySpawn;
+    Transform[] enemySpawn = new Transform[5];
 
     private void Start()
     {
@@ -34,7 +34,8 @@ public class UnitCreator : MonoBehaviour {
 
     public void CreateEnemyUnit(int i)
     {
-        GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn.position, Quaternion.identity);
+        int enemySpawnPoint = Random.Range(0, enemySpawn.Length + 1);
+        GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn[enemySpawnPoint].position, Quaternion.identity);
         newUnit.transform.SetParent(parent[1]);
     }
 }
