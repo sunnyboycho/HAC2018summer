@@ -44,6 +44,7 @@ public class PlayerUnit : UnitScript {
             colors[i] = newColors[i];
         }
         SetStats();
+        GetComponentInChildren<MarbleSubscript>().ReceiveColors(colors);
     }
 
     public void SetStats()

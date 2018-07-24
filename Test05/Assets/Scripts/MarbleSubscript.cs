@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class MarbleSubscript : MonoBehaviour {
 
-    [SerializeField]
-    Sprite[] marbles = new Sprite[3];
-
     // Use this for initialization
     void Start () {
 		
@@ -23,21 +20,20 @@ public class MarbleSubscript : MonoBehaviour {
         {
             if (input[i].Equals("red"))
             {
-
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.red;
             }
             else if (input[i].Equals("green"))
             {
-
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.green;
             }
             else if (input[i].Equals("blue"))
             {
-
+                transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.blue;
             }
             else
             {
                 Debug.Log("Stat allocation error no color input");
             }
-            transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = marbles[0];
         }
     }
 }
