@@ -68,10 +68,4 @@ public class PlayerUnit : UnitScript {
             }
         }
     }
-
-    void SendColors()
-    {
-        GetComponentInChildren<MarbleSubscript>().ReceiveColors(colors);
-
-    }
 }
