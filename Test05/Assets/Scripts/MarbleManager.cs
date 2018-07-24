@@ -5,6 +5,9 @@ using UnityEngine;
 public class MarbleManager : MonoBehaviour {
 
     [SerializeField]
+    Transform[] initialSpawn;
+
+    [SerializeField]
     GameObject[] marbleSpawnPoints = new GameObject[4];
 
     [SerializeField]
@@ -27,6 +30,7 @@ public class MarbleManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        InitialSpawn();
         //field = gameObject.transform.GetChild(1).transform;
     }
 	
@@ -35,6 +39,18 @@ public class MarbleManager : MonoBehaviour {
         if (isReady && !isFull)
         {
             SpawnMarbles();
+        }
+    }
+
+    void InitialSpawn()
+    {
+        for (int i = 0; i < initialSpawn.Length; i++)
+        {
+            marbleNumber[i%4]++;
+            int randomMarble = Random.Range(0, 3);
+            GameObject temp = Instantiate(marbles[randomMarble], initialSpawn[i].position, Quaternion.identity);
+            temp.name = Random.Range(0, 1000).ToString();
+            temp.transform.SetParent(field);
         }
     }
 

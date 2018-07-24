@@ -49,7 +49,7 @@ public class ProjectileScript : MonoBehaviour {
         targetAquired = true;
         projectileDamage = damage;
         float x = target.transform.position.x - gameObject.transform.position.x;
-        float y = 0;
+        float y = (target.transform.position.y - gameObject.transform.position.y) / 3;
         gameObject.GetComponent<Rigidbody2D>().velocity = (new Vector2(x, y).normalized) * projectileSpeed;
         Destroy(gameObject, 5.0f);
     }
