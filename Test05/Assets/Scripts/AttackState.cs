@@ -53,7 +53,7 @@ public class AttackState : UnitState
         bool isEmpty = true;
         Vector2 point = unitScript.GetComponent<Transform>().position;
         Collider2D[] colliders = new Collider2D[4];
-        colliders = Physics2D.OverlapCircleAll(point, distance, layerMask);
+        colliders = Physics2D.OverlapBoxAll(point, new Vector2(distance, 5f), 0f, layerMask);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != unitScript.gameObject)

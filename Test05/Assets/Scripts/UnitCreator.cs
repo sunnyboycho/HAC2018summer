@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Spine.Unity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,6 +30,7 @@ public class UnitCreator : MonoBehaviour {
         GameObject newUnit = Instantiate(unit[type], playerSpawn[spawnPoint].position, Quaternion.identity);
         newUnit.GetComponent<PlayerUnit>().SetColors(colors);
         newUnit.transform.SetParent(parent[0]);
+        //newUnit.GetComponent<SkeletonAnimator>()
     }
 
     public void CreateEnemyUnit(int i)
