@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitCreator : MonoBehaviour {
-
+    
     [SerializeField]
     Transform[] parent = new Transform[2];
     
@@ -14,7 +14,7 @@ public class UnitCreator : MonoBehaviour {
     GameObject[] enemyUnit;
 
     [SerializeField]
-    Transform playerSpawn;
+    Transform[] playerSpawn = new Transform[5];
 
     [SerializeField]
     Transform enemySpawn;
@@ -26,7 +26,8 @@ public class UnitCreator : MonoBehaviour {
 
     public void CreateUnit(int type, string[] colors)
     {
-        GameObject newUnit = Instantiate(unit[type], playerSpawn.position, Quaternion.identity);
+        int spawnPoint = Random.Range(0,playerSpawn.Length+1);
+        GameObject newUnit = Instantiate(unit[type], playerSpawn[spawnPoint].position, Quaternion.identity);
         newUnit.GetComponent<PlayerUnit>().SetColors(colors);
         newUnit.transform.SetParent(parent[0]);
     }
