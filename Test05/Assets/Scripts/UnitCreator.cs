@@ -21,7 +21,6 @@ public class UnitCreator : MonoBehaviour {
 
     private void Start()
     {
-        
     }
 
     public void CreateUnit(int type, string[] colors)
