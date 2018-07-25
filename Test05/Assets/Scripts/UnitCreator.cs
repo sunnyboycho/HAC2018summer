@@ -24,7 +24,7 @@ public class UnitCreator : MonoBehaviour {
     {
     }
 
-    public void CreateUnit(int type, string[] colors)
+    public void CreateUnit(int type, int[] colors)
     {
         int spawnPoint = Random.Range(0,playerSpawn.Length);
         GameObject newUnit = Instantiate(unit[type], playerSpawn[spawnPoint].position, Quaternion.identity);

@@ -13,7 +13,7 @@ public class PlayerUnit : UnitScript {
     [SerializeField]
     float bonusSpeed = 1;
 
-    public string[] colors = new string[4];
+    public int[] colors = new int[4];
 
     // Use this for initialization
     void Awake () {
@@ -37,7 +37,7 @@ public class PlayerUnit : UnitScript {
         }
     }
 
-    public void SetColors(string[] newColors)
+    public void SetColors(int[] newColors)
     {
         for (int i = 0; i < 4; i++)
         {
@@ -53,21 +53,26 @@ public class PlayerUnit : UnitScript {
     {
         for (int i = 0; i < 4; i++)
         {
-            if (colors[i].Equals("red"))
+            switch (colors[i])
             {
-                totalAttack = totalAttack + bonusAttack;
-            }
-            else if (colors[i].Equals("green"))
-            {
-                totalHP = totalHP + bonusHP;
-            }
-            else if (colors[i].Equals("blue"))
-            {
-                totalSpeed = totalSpeed + bonusSpeed;
-            }
-            else
-            {
-                Debug.Log("Stat allocation error no color input");
+                case 0:
+                    totalAttack = totalAttack + bonusAttack;
+                    break;
+                case 1:
+                    totalHP = totalHP + bonusHP;
+                    break;
+                case 2:
+                    totalSpeed = totalSpeed + bonusSpeed;
+                    break;
+                case 3:
+                    totalAttack = totalAttack + 2 * bonusAttack;
+                    break;
+                case 4:
+                    totalHP = totalHP + 2 * bonusHP;
+                    break;
+                case 5:
+                    totalSpeed = totalSpeed + 2 * bonusSpeed;
+                    break;
             }
         }
     }

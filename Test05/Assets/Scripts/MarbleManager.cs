@@ -19,6 +19,10 @@ public class MarbleManager : MonoBehaviour {
     [SerializeField]
     float waitSeconds = 2;
 
+    int[] sparkle = { -1, -1, -1, -1 };
+
+    int sparklePosition;
+
     int[] marbleNumber = { 0, 0, 0, 0 };
 
     bool isFull = false;
@@ -29,13 +33,16 @@ public class MarbleManager : MonoBehaviour {
     Transform field;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         InitialSpawn();
+        sparklePosition = -1;
         //field = gameObject.transform.GetChild(1).transform;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (isReady && !isFull)
         {
             SpawnMarbles();
@@ -76,7 +83,64 @@ public class MarbleManager : MonoBehaviour {
     void SpawnMarbles()
     {
         isReady = false;
-        StartCoroutine("SpawningMarbles");
+        sparklePosition = GetSparkle();
+        if (sparklePosition == -1)
+        {
+            StartCoroutine("SpawningMarbles");
+        }
+        else
+        {
+            StartCoroutine("SpawningSparkle");
+        }
+    }
+
+    int GetSparkle()
+    {
+        for (int i = 0; i < sparkle.Length; i++)
+        {
+            if (sparkle[i] != -1)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    IEnumerator SpawningSparkle()
+    {
+        int randomposition = Random.Range(0, 3);
+        for (int i = 0; i < 4; i++)
+        {
+            if (i != randomposition)
+            {
+                if (marbleNumber[i] < 12)
+                {
+                    marbleNumber[i]++;
+                    int randomMarble = Random.Range(0, 3);
+                    GameObject temp = Instantiate(marbles[randomMarble], marbleSpawnPoints[i].transform.position, Quaternion.identity);
+                    temp.name = Random.Range(0, 1000).ToString();
+                    temp.transform.SetParent(field);
+                    temp.GetComponent<Rigidbody2D>().velocity = new Vector2(-marbleSpeed, 0);
+                }
+            }
+            else
+            {
+                if (marbleNumber[i] < 12)
+                {
+                    marbleNumber[i]++;
+                    int sparkleMarble = sparkle[sparklePosition] + 3;
+                    GameObject temp = Instantiate(marbles[sparkleMarble], marbleSpawnPoints[i].transform.position, Quaternion.identity);
+                    temp.name = Random.Range(0, 1000).ToString();
+                    temp.transform.SetParent(field);
+                    temp.GetComponent<Rigidbody2D>().velocity = new Vector2(-marbleSpeed, 0);
+                }
+            }
+        }
+        sparkle[sparklePosition] = -1;
+        sparklePosition = -1;
+        yield return new WaitForSeconds(waitSeconds);
+        isReady = true;
+        CheckifFull();
     }
 
     public void CheckifFull()
@@ -91,5 +155,17 @@ public class MarbleManager : MonoBehaviour {
     public void decreaseMarble(int row)
     {
         marbleNumber[row]--;
+    }
+
+    public void sparkleDibs(int dibs)
+    {
+        for (int i = 0; i < sparkle.Length; i++)
+        {
+            if (sparkle[i] == -1)
+            {
+                sparkle[i] = dibs;
+                break;
+            }
+        }
     }
 }

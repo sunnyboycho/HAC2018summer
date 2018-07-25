@@ -34,7 +34,7 @@ public class MarbleInput : MonoBehaviour {
     [SerializeField]
     MarbleManager marbleManager;
 
-    string[] colors = new string[4];
+    int[] colors = new int[4];
 
     int fieldLayerMask;
 
@@ -134,6 +134,7 @@ public class MarbleInput : MonoBehaviour {
                 }
             }
         }
+        Sparkle();
         Initialize();
         SetMatrix();
     }
@@ -142,9 +143,9 @@ public class MarbleInput : MonoBehaviour {
     {
         for (int k = 0; k < 4; k++)
         {
-            if (colors[k] == "none")
+            if (colors[k] == -1)
             {
-                colors[k] = marbles[k].gameObject.GetComponent<MarbleDisplay>().marble.color;
+                colors[k] = marbles[k].gameObject.GetComponent<MarbleDisplay>().marble.id;
                 Debug.Log(colors[k]);
             }
             Destroy(marbles[k].gameObject);
@@ -453,7 +454,24 @@ public class MarbleInput : MonoBehaviour {
         marbles[3] = null;
         for (int i = 0; i < 4; i++)
         {
-            colors[i] = "none";
+            colors[i] = -1;
+        }
+    }
+
+    void Sparkle()
+    {
+        int temp = colors[0];
+        for (int i = 0; i < colors.Length; i++)
+        {
+            if (temp != colors[i])
+            {
+                temp = -1;
+                break;
+            }
+        }
+        if (temp != -1)
+        {
+            marbleManager.sparkleDibs(temp);
         }
     }
 }

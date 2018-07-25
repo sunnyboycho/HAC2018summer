@@ -14,25 +14,30 @@ public class MarbleSubscript : MonoBehaviour {
 		
 	}
 
-    public void ReceiveColors(string[] input)
+    public void ReceiveColors(int[] input)
     {
         for (int i = 0; i < 4; i++)
         {
-            if (input[i].Equals("red"))
+            switch (input[i])
             {
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.red;
-            }
-            else if (input[i].Equals("green"))
-            {
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.green;
-            }
-            else if (input[i].Equals("blue"))
-            {
-                transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.blue;
-            }
-            else
-            {
-                Debug.Log("Stat allocation error no color input");
+                case 0:
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.red;
+                    break;
+                case 1:
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.green;
+                    break;
+                case 2:
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.blue;
+                    break;
+                case 3:
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(1, 0.5f, 0.5f);
+                    break;
+                case 4:
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(0.5f, 1, 0.5f);
+                    break;
+                case 5:
+                    transform.GetChild(i).GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 1);
+                    break;
             }
         }
     }

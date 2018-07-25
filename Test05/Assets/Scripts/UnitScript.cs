@@ -163,6 +163,7 @@ public class UnitScript : MonoBehaviour {
     IEnumerator Death()
     {
         yield return new WaitForSeconds(0.5f);
+        slider.GetComponent<CanvasGroup>().alpha = 0;
         deathAudio.Play();
         //yield return new WaitForSeconds(3.5f);
         //Destroy(gameObject);
@@ -205,7 +206,7 @@ public class UnitScript : MonoBehaviour {
         slider.GetComponent<CanvasGroup>().alpha = 1;
         slider.value = (float)currentHP / (float)totalHP;
         yield return new WaitForSeconds(0.4f);
-        if ((float)currentHP / (float)totalHP > 0.2)
+        if ((float)currentHP / (float)totalHP > 0.3)
         {
             slider.GetComponent<CanvasGroup>().alpha = 0;
         }

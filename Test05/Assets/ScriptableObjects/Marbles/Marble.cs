@@ -8,5 +8,7 @@ public class Marble : ScriptableObject
 
     public string color;
 
+    public int id;
+
     public Sprite image;
 }
