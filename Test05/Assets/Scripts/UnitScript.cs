@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitScript : MonoBehaviour {
     
@@ -11,6 +12,19 @@ public class UnitScript : MonoBehaviour {
     protected AudioSource deathAudio;
 
     protected GameObject target;
+
+    int startingHealth;
+
+    int currentHealth;
+
+    [SerializeField]
+    Slider slider;
+
+    [SerializeField]
+    Image fillImage;
+
+    Color fullHealthColor = Color.green;
+    Color zeroHealthColor = Color.red;
 
     [SerializeField]
     protected bool isProjectileUnit;
@@ -61,6 +75,16 @@ public class UnitScript : MonoBehaviour {
         get
         {
             return totalHP;
+        }
+    }
+
+    protected int currentHP;
+
+    public int CurrentHP
+    {
+        get
+        {
+            return currentHP;
         }
     }
 
@@ -117,13 +141,14 @@ public class UnitScript : MonoBehaviour {
     public void RecieveDamage(int damage)
     {
         Debug.Log("take " + damage + " damage");
-        totalHP -= damage;
+        currentHP -= damage;
+        StartCoroutine("SetHealth");
         CheckHealth();
     }
 
     void CheckHealth()
     {
-        if (totalHP <= 0 && isAlive)
+        if (currentHP <= 0 && isAlive)
         {
             gameObject.layer = 11;
             gameObject.tag = "Dead";
@@ -164,6 +189,25 @@ public class UnitScript : MonoBehaviour {
         else
         {
             target.GetComponent<UnitScript>().RecieveDamage(TotalAttack);
+        }
+    }
+
+    
+    protected void SetHealthUI()
+    {
+        slider.value = (float)currentHP/(float)totalHP;
+        slider.GetComponent<CanvasGroup>().alpha = 0;
+        //fillImage.color = Color.Lerp(zeroHealthColor, fullHealthColor, currentHP / totalHP);
+    }
+
+    IEnumerator SetHealth()
+    {
+        slider.GetComponent<CanvasGroup>().alpha = 1;
+        slider.value = (float)currentHP / (float)totalHP;
+        yield return new WaitForSeconds(0.4f);
+        if ((float)currentHP / (float)totalHP > 0.2)
+        {
+            slider.GetComponent<CanvasGroup>().alpha = 0;
         }
     }
 }

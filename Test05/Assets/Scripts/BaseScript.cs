@@ -11,6 +11,8 @@ public class BaseScript : UnitScript{
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
+        currentHP = totalHP;
+        SetHealthUI();
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
         isAlive = true;
     }

@@ -44,6 +44,8 @@ public class PlayerUnit : UnitScript {
             colors[i] = newColors[i];
         }
         SetStats();
+        currentHP = totalHP;
+        SetHealthUI();
         GetComponentInChildren<MarbleSubscript>().ReceiveColors(colors);
     }
 
