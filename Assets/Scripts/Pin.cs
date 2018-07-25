@@ -5,24 +5,22 @@ using UnityEngine;
 
 public enum Direction
 {
-	Up,
-	Down,
-	Left,
-	Right
+    Next,
+    Before
 }
 
 public class Pin : MonoBehaviour
 {
-	[Header("Options")] //
+    public Character Character;
+
+    [Header("Options")] //
 	public bool IsAutomatic;
 	public bool HideIcon;
 	public string SceneToLoad;
 	
 	[Header("Pins")] //
-	public Pin UpPin;
-	public Pin DownPin;
-	public Pin LeftPin;
-	public Pin RightPin;
+	public Pin NextPin;
+	public Pin BeforePin;
 
 	private Dictionary<Direction, Pin> _pinDirections; 
 	
@@ -35,10 +33,8 @@ public class Pin : MonoBehaviour
 		// Load the directions into a dictionary for easy access
 		_pinDirections = new Dictionary<Direction, Pin>
 		{
-			{ Direction.Up, UpPin },
-			{ Direction.Down, DownPin },
-			{ Direction.Left, LeftPin },
-			{ Direction.Right, RightPin }
+			{ Direction.Next, NextPin },
+			{ Direction.Before, BeforePin }
 		};
 		
 		// Hide the icon if needed
@@ -59,14 +55,10 @@ public class Pin : MonoBehaviour
 	{
 		switch (direction)
 		{
-			case Direction.Up:
-				return UpPin;
-			case Direction.Down:
-				return DownPin;
-			case Direction.Left:
-				return LeftPin;
-			case Direction.Right:
-				return RightPin;
+			case Direction.Next:
+				return NextPin;
+			case Direction.Before:
+				return BeforePin;
 			default:
 				throw new ArgumentOutOfRangeException("direction", direction, null);
 		}
@@ -90,10 +82,8 @@ public class Pin : MonoBehaviour
     /// </summary>
     private void OnDrawGizmos()
 	{
-		if(UpPin != null) DrawLine(UpPin);
-		if(RightPin != null) DrawLine(RightPin);
-		if(DownPin != null) DrawLine(DownPin);
-		if(LeftPin != null) DrawLine(LeftPin);
+		if(NextPin != null) DrawLine(NextPin);
+		if(BeforePin != null) DrawLine(BeforePin);
 	}
 
 
@@ -107,31 +97,32 @@ public class Pin : MonoBehaviour
 		Gizmos.DrawLine(transform.position, pin.transform.position);
 	}
 
-    public Character Character;
-
     private void OnMouseDown()
     {
         Debug.Log("clicked!");
+
+
+
         if (!Character.GetComponent<Animator>().GetBool("IsMoving"))
         {
-            if (transform.position.y > Character.transform.position.y + 1)
+            if (transform.position.x > Character.transform.position.x)
             {
-                Character.TrySetDirection(Direction.Up);
+                Character.TrySetDirection(Direction.Next);
             }
 
-            if (transform.position.y < Character.transform.position.y + 1)
+            else if (transform.position.x < Character.transform.position.x)
             {
-                Character.TrySetDirection(Direction.Down);
+                Character.TrySetDirection(Direction.Before);
             }
 
-            if (transform.position.x > Character.transform.position.x + 1)
+            else if (transform.position.y > Character.transform.position.y)
             {
-                Character.TrySetDirection(Direction.Right);
+                Character.TrySetDirection(Direction.Next);
             }
 
-            if (transform.position.x < Character.transform.position.x + 1)
+            else if (transform.position.y < Character.transform.position.y)
             {
-                Character.TrySetDirection(Direction.Left);
+                Character.TrySetDirection(Direction.Before);
             }
         }
         }

@@ -17,43 +17,6 @@ public class MapManager : MonoBehaviour
 		Character.Start(this, StartPin);
 	}
 
-
-	/// <summary>
-	/// This runs once a frame
-	/// </summary>
-	private void Update()
-	{
-		// Only check input when character is stopped
-		if (Character.GetComponent<Animator>().GetBool("IsMoving")) return;
-		
-		// First thing to do is try get the player input
-		//CheckForInput();
-	}
-
-	
-	/// <summary>
-	/// Check if the player has pressed a button
-	/// </summary>
-	public void CheckForInput()
-	{
-		if (Input.GetKeyUp(KeyCode.UpArrow))
-		{
-			Character.TrySetDirection(Direction.Up);
-		}
-		else if(Input.GetKeyUp(KeyCode.DownArrow))
-		{
-			Character.TrySetDirection(Direction.Down);
-		}
-		else if(Input.GetKeyUp(KeyCode.LeftArrow))
-		{
-			Character.TrySetDirection(Direction.Left);
-		}
-		else if(Input.GetKeyUp(KeyCode.RightArrow))
-		{
-			Character.TrySetDirection(Direction.Right);
-		}
-	}
-
     /// <summary>
     /// Update the GUI text
     /// </summary>
