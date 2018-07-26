@@ -465,13 +465,28 @@ public class MarbleInput : MonoBehaviour {
         {
             if (temp != colors[i])
             {
+                if (temp < 3 && (temp == colors[i] - 3))
+                {
+                    continue;
+                }
+                else if (temp > 2 && (temp == colors[i] + 3))
+                {
+                    temp = colors[i];
+                    continue;
+                }
                 temp = -1;
                 break;
             }
         }
         if (temp != -1)
         {
+            Message(temp);
             marbleManager.sparkleDibs(temp);
         }
+    }
+
+    void Message(int color)
+    {
+
     }
 }

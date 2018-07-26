@@ -21,13 +21,15 @@ public class MarbleManager : MonoBehaviour {
 
     int[] sparkle = { -1, -1, -1, -1 };
 
-    int sparklePosition;
+    int sparkleNumber = 0;
+
+    int sparkleIndex;
 
     int[] marbleNumber = { 0, 0, 0, 0 };
 
     bool isFull = false;
 
-    bool isReady = true;
+    bool isReady = false;
 
     [SerializeField]
     Transform field;
@@ -36,7 +38,9 @@ public class MarbleManager : MonoBehaviour {
     void Start ()
     {
         InitialSpawn();
-        sparklePosition = -1;
+        sparkleNumber = 0;
+        sparkleIndex = -1;
+        StartCoroutine("InitialWait");
         //field = gameObject.transform.GetChild(1).transform;
     }
 	
@@ -83,8 +87,8 @@ public class MarbleManager : MonoBehaviour {
     void SpawnMarbles()
     {
         isReady = false;
-        sparklePosition = GetSparkle();
-        if (sparklePosition == -1)
+        sparkleIndex = GetSparkle();
+        if (sparkleIndex == -1)
         {
             StartCoroutine("SpawningMarbles");
         }
@@ -108,6 +112,30 @@ public class MarbleManager : MonoBehaviour {
 
     IEnumerator SpawningSparkle()
     {
+        /*
+        int[] tempMarbles = new int[sparkleNumber];
+        int tempNumber = sparkleNumber;
+        for (int i = 0; i < sparkle.Length; i++)
+        {
+            if (sparkle[i] != -1)
+            {
+                tempNumber--;
+                tempMarbles[tempNumber] = sparkle[i];
+            }
+        }
+        int[] randomposition = new int[sparkleNumber];
+        for (int i = 0; i < sparkleNumber; i++)
+        {
+            randomposition[i] = Random.Range(0, 3);
+            if (i >= 2)
+            {
+                while (randomposition[i - 1] == randomposition[i])
+                {
+                    randomposition[i] = Random.Range(0, 3);
+                }
+            }
+        }
+        */
         int randomposition = Random.Range(0, 3);
         for (int i = 0; i < 4; i++)
         {
@@ -117,10 +145,10 @@ public class MarbleManager : MonoBehaviour {
                 {
                     marbleNumber[i]++;
                     int randomMarble = Random.Range(0, 3);
-                    GameObject temp = Instantiate(marbles[randomMarble], marbleSpawnPoints[i].transform.position, Quaternion.identity);
-                    temp.name = Random.Range(0, 1000).ToString();
-                    temp.transform.SetParent(field);
-                    temp.GetComponent<Rigidbody2D>().velocity = new Vector2(-marbleSpeed, 0);
+                    GameObject tempUnit = Instantiate(marbles[randomMarble], marbleSpawnPoints[i].transform.position, Quaternion.identity);
+                    tempUnit.name = Random.Range(0, 1000).ToString();
+                    tempUnit.transform.SetParent(field);
+                    tempUnit.GetComponent<Rigidbody2D>().velocity = new Vector2(-marbleSpeed, 0);
                 }
             }
             else
@@ -128,16 +156,20 @@ public class MarbleManager : MonoBehaviour {
                 if (marbleNumber[i] < 12)
                 {
                     marbleNumber[i]++;
-                    int sparkleMarble = sparkle[sparklePosition] + 3;
-                    GameObject temp = Instantiate(marbles[sparkleMarble], marbleSpawnPoints[i].transform.position, Quaternion.identity);
-                    temp.name = Random.Range(0, 1000).ToString();
-                    temp.transform.SetParent(field);
-                    temp.GetComponent<Rigidbody2D>().velocity = new Vector2(-marbleSpeed, 0);
+                    int sparkleMarble = 0;
+                    if (sparkle[sparkleIndex] < 3)
+                    {
+                        sparkleMarble = sparkle[sparkleIndex] + 3;
+                    }
+                    GameObject tempUnit = Instantiate(marbles[sparkleMarble], marbleSpawnPoints[i].transform.position, Quaternion.identity);
+                    tempUnit.name = Random.Range(0, 1000).ToString();
+                    tempUnit.transform.SetParent(field);
+                    tempUnit.GetComponent<Rigidbody2D>().velocity = new Vector2(-marbleSpeed, 0);
                 }
             }
         }
-        sparkle[sparklePosition] = -1;
-        sparklePosition = -1;
+        sparkle[sparkleIndex] = -1;
+        sparkleIndex = -1;
         yield return new WaitForSeconds(waitSeconds);
         isReady = true;
         CheckifFull();
@@ -164,8 +196,15 @@ public class MarbleManager : MonoBehaviour {
             if (sparkle[i] == -1)
             {
                 sparkle[i] = dibs;
+                sparkleNumber++;
                 break;
             }
         }
+    }
+
+    IEnumerator InitialWait()
+    {
+        yield return new WaitForSeconds(waitSeconds);
+        isReady = true;
     }
 }

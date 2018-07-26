@@ -183,7 +183,7 @@ public class UnitScript : MonoBehaviour {
     {
         if (IsProjectileUnit)
         {
-            GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
+            GameObject temp = GameObject.Instantiate(projectile, GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
             temp.transform.SetParent(GetComponent<Transform>());
             temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, TotalAttack);
         }

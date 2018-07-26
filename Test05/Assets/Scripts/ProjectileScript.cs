@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
 
+    Animator animator;
+
     Transform target;
 
     int projectileDamage;
@@ -21,8 +23,11 @@ public class ProjectileScript : MonoBehaviour {
 
     bool targetAquired = false;
 
+    bool isHit = false;
+
     // Use this for initialization
     void Start () {
+        animator = GetComponent<Animator>();
         if (gameObject.transform.parent.CompareTag("Player"))
         {
             opponent = "Enemy";
@@ -39,7 +44,10 @@ public class ProjectileScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        DamageTarget();
+        if (!isHit)
+        {
+            DamageTarget();
+        }
         TargetDestroyed();
     }
 
@@ -64,8 +72,11 @@ public class ProjectileScript : MonoBehaviour {
                 Debug.Log("col " + colliders[i].name);
                 if (colliders[i].CompareTag(opponent))
                 {
+                    isHit = true;
+                    gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    animator.SetTrigger("hit");
                     colliders[i].GetComponent<UnitScript>().RecieveDamage(projectileDamage);
-                    Destroy(gameObject);
+                    StartCoroutine("DeleteObject");
                     break;
                 }
             }
@@ -78,5 +89,11 @@ public class ProjectileScript : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator DeleteObject()
+    {
+        yield return new WaitForSeconds(0.4f);
+        Destroy(gameObject);
     }
 }

@@ -1,0 +1,55 @@
+
+ball.png
+size: 874,1062
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ball
+  rotate: false
+  xy: 2, 2
+  size: 388, 430
+  orig: 388, 430
+  offset: 0, 0
+  index: -1
+top2
+  rotate: false
+  xy: 2, 434
+  size: 519, 626
+  orig: 519, 626
+  offset: 0, 0
+  index: -1
+확1
+  rotate: false
+  xy: 523, 683
+  size: 285, 377
+  orig: 285, 377
+  offset: 0, 0
+  index: -1
+확2
+  rotate: false
+  xy: 639, 140
+  size: 231, 266
+  orig: 231, 266
+  offset: 0, 0
+  index: -1
+확3
+  rotate: true
+  xy: 523, 408
+  size: 273, 349
+  orig: 273, 349
+  offset: 0, 0
+  index: -1
+확4
+  rotate: false
+  xy: 392, 108
+  size: 245, 298
+  orig: 245, 298
+  offset: 0, 0
+  index: -1
+확5
+  rotate: false
+  xy: 392, 6
+  size: 172, 100
+  orig: 172, 100
+  offset: 0, 0
+  index: -1

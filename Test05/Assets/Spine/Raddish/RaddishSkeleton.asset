@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+  m_Name: RaddishSkeleton
+  m_EditorClassIdentifier: 
+  atlasAssets:
+  - {fileID: 11400000, guid: f8760ad58b8a91f4c8f5edad3fffe8d8, type: 2}
+  scale: 0.01
+  skeletonJSON: {fileID: 4900000, guid: 4b23b09775ef0ee429df6e23b206b015, type: 3}
+  fromAnimation: []
+  toAnimation: []
+  duration: []
+  defaultMix: 0
+  controller: {fileID: 9100000, guid: ab84ba6a48746cb48a6ed68fef9fdf57, type: 2}

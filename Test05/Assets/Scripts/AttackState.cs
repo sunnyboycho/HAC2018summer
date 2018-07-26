@@ -69,6 +69,7 @@ public class AttackState : UnitState
         }
     }
     
+    /*
     public void Attack()
     {
         if (unitScript.IsAlive)
@@ -76,7 +77,7 @@ public class AttackState : UnitState
             //timer = 0f;
             if (unitScript.IsProjectileUnit)
             {
-                GameObject temp = GameObject.Instantiate(target.GetComponent<UnitScript>().Projectile, unitScript.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
+                GameObject temp = GameObject.Instantiate(unitScript.Projectile, unitScript.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
                 temp.transform.SetParent(unitScript.GetComponent<Transform>());
                 temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, unitScript.TotalAttack);
             }
@@ -86,6 +87,7 @@ public class AttackState : UnitState
             }
         }
     }
+    */
 
     void PassTarget()
     {

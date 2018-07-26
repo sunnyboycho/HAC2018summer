@@ -1311,11 +1311,6 @@ Transform:
   m_Father: {fileID: 692888889}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &986935894 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4500974064411264, guid: 64da829448a5bae48b083b77c834df19,
-    type: 2}
-  m_PrefabInternal: {fileID: 272474764}
 --- !u!1 &1018989114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1136794050007762, guid: 64da829448a5bae48b083b77c834df19,
@@ -1608,26 +1603,6 @@ Prefab:
       objectReference: {fileID: 111977855}
     - target: {fileID: 114528892761283006, guid: 7529adf41792a1e468accf028dd133d9,
         type: 2}
-      propertyPath: initialSpawn.Array.data[8]
-      value: 
-      objectReference: {fileID: 1471073995}
-    - target: {fileID: 114528892761283006, guid: 7529adf41792a1e468accf028dd133d9,
-        type: 2}
-      propertyPath: initialSpawn.Array.data[9]
-      value: 
-      objectReference: {fileID: 1912260387}
-    - target: {fileID: 114528892761283006, guid: 7529adf41792a1e468accf028dd133d9,
-        type: 2}
-      propertyPath: initialSpawn.Array.data[10]
-      value: 
-      objectReference: {fileID: 986935894}
-    - target: {fileID: 114528892761283006, guid: 7529adf41792a1e468accf028dd133d9,
-        type: 2}
-      propertyPath: initialSpawn.Array.data[11]
-      value: 
-      objectReference: {fileID: 1350580836}
-    - target: {fileID: 114528892761283006, guid: 7529adf41792a1e468accf028dd133d9,
-        type: 2}
       propertyPath: marbleSpawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1018989114}
@@ -1682,11 +1657,6 @@ Transform:
   m_Father: {fileID: 1668609842}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1350580836 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4018383863038458, guid: 64da829448a5bae48b083b77c834df19,
-    type: 2}
-  m_PrefabInternal: {fileID: 272474764}
 --- !u!1 &1377381754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,11 +1899,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!4 &1471073995 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4581196172432238, guid: 64da829448a5bae48b083b77c834df19,
-    type: 2}
-  m_PrefabInternal: {fileID: 272474764}
 --- !u!1 &1477582239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,11 +2248,6 @@ Transform:
 --- !u!4 &1877874745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4584895942289572, guid: 64da829448a5bae48b083b77c834df19,
-    type: 2}
-  m_PrefabInternal: {fileID: 272474764}
---- !u!4 &1912260387 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4358722487804690, guid: 64da829448a5bae48b083b77c834df19,
     type: 2}
   m_PrefabInternal: {fileID: 272474764}
 --- !u!1 &1975510011
