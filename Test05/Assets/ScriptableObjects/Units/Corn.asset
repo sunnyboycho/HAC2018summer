@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc352c7906986b47aa40d0a58a39869, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
-  unitName: 
+  unitName: Corn
   image: {fileID: 0}
   hp: 30
   attack: 4
   speed: 2
-  attackSpeed: 2
+  attackSpeed: 0
   attackRange: 4

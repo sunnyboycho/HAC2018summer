@@ -14,7 +14,7 @@ public class MapManager : MonoBehaviour
 	private void Start ()
 	{
 		// Pass a ref and default the player Starting Pin
-		Character.Start(this, StartPin);
+		Character.Initialize(this, StartPin);
 	}
 
     /// <summary>

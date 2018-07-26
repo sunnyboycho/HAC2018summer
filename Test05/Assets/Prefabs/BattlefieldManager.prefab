@@ -110,11 +110,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804a8dd80a30eae47b9ccf383ad9c623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
   parent:
   - {fileID: 4605550361754420}
   - {fileID: 4163565011468776}
   unit:
   - {fileID: 1747102449721276, guid: 7ea064059fcbff1499180f5f456209e0, type: 2}
+  - {fileID: 1595683411926426, guid: 77bb1cad1d5663042ab0494c8ec30221, type: 2}
+  - {fileID: 1789263776277062, guid: f551ddbe8dc6f584e8f77da03d9ab89e, type: 2}
+  altUnit:
+  - {fileID: 1554075204570152, guid: fda3a3fd5d061194490b3c7f8338a557, type: 2}
   - {fileID: 1595683411926426, guid: 77bb1cad1d5663042ab0494c8ec30221, type: 2}
   - {fileID: 1789263776277062, guid: f551ddbe8dc6f584e8f77da03d9ab89e, type: 2}
   enemyUnit:
@@ -148,6 +153,6 @@ MonoBehaviour:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
-  enemyNumber: 1
+  enemyNumber: 2
   spawnInterval: 4
   intervalWait: 8

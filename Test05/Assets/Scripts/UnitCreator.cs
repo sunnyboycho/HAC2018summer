@@ -2,14 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UnitCreator : MonoBehaviour {
+
+    [SerializeField]
+    Text text;
     
     [SerializeField]
     Transform[] parent = new Transform[2];
     
     [SerializeField]
-    GameObject[] unit;
+    GameObject[] unit = new GameObject[3];
+
+    [SerializeField]
+    GameObject[] altUnit = new GameObject[3];
 
     [SerializeField]
     GameObject[] enemyUnit;
@@ -22,6 +29,7 @@ public class UnitCreator : MonoBehaviour {
 
     private void Start()
     {
+        SetUnitText();
     }
 
     public void CreateUnit(int type, int[] colors)
@@ -39,5 +47,22 @@ public class UnitCreator : MonoBehaviour {
         GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn[enemySpawnPoint].position, Quaternion.identity);
         newUnit.transform.SetParent(parent[1]);
         newUnit.GetComponent<MeshRenderer>().sortingOrder = enemySpawnPoint;
+    }
+
+    public void SwapUnits()
+    {
+        GameObject temp;
+        for (int i = 0; i < 3; i++)
+        {
+            temp = unit[i];
+            unit[i] = altUnit[i];
+            altUnit[i] = temp;
+        }
+        SetUnitText();
+    }
+
+    void SetUnitText()
+    {
+        text.text = unit[0].GetComponent<UnitDisplay>().unit.unitName + "\n" + unit[1].GetComponent<UnitDisplay>().unit.unitName + "\n" + unit[2].GetComponent<UnitDisplay>().unit.unitName + "\n";
     }
 }

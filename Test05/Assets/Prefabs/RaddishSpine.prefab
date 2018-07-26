@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224555173881134370}
   - component: {fileID: 222625463743226500}
   - component: {fileID: 114617036641732566}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224817461104883746}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,9 +76,9 @@ GameObject:
   - component: {fileID: 61133325957379606}
   - component: {fileID: 50736132187185686}
   - component: {fileID: 82420001918709990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RaddishSpine
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 224311598799579646}
   - component: {fileID: 222407686183363410}
   - component: {fileID: 114603256792152436}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 224648328962419156}
   - component: {fileID: 114784253747234264}
   - component: {fileID: 225611930175502446}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 223690951223651768}
   - component: {fileID: 114102104192323794}
   - component: {fileID: 114124658100053662}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,8 +315,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 816126695
+  m_SortingLayer: 1
   m_SortingOrder: 0
 --- !u!33 &33029985586499496
 MeshFilter:

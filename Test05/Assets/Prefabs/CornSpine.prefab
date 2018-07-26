@@ -319,8 +319,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 816126695
+  m_SortingLayer: 1
   m_SortingOrder: 0
 --- !u!33 &33405263571128544
 MeshFilter:
@@ -621,11 +621,7 @@ MonoBehaviour:
   bonusAttack: 3
   bonusHP: 5
   bonusSpeed: 1
-  colors:
-  - 
-  - 
-  - 
-  - 
+  colors: 00000000000000000000000000000000
 --- !u!114 &114722216438439806
 MonoBehaviour:
   m_ObjectHideFlags: 1

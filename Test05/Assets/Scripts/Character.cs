@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     private MapManager _mapManager;
 
 
-    public void Start(MapManager mapManager, Pin startPin)
+    public void Initialize(MapManager mapManager, Pin startPin)
     {
         gameObject.GetComponent<Animator>().SetBool("IsMoving", false);
         _mapManager = mapManager;
