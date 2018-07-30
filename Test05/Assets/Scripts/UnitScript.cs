@@ -108,9 +108,9 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
-    protected float defense;
+    protected int defense;
 
-    public float Defense
+    public int Defense
     {
         get
         {
@@ -171,7 +171,12 @@ public class UnitScript : MonoBehaviour {
     public void RecieveDamage(int damage)
     {
         Debug.Log("take " + damage + " damage");
-        currentHP -= damage;
+        int dmg = damage - defense;
+        if (dmg <= 0)
+        {
+            dmg = 1;
+        }
+        currentHP -= dmg;
         StartCoroutine("SetHealth");
         CheckHealth();
     }
