@@ -535,9 +535,12 @@ MonoBehaviour:
   fillImage: {fileID: 114603256792152436}
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
-  bonusAttack: 3
-  bonusHP: 5
-  bonusSpeed: 1
+  bonusAttack: 1
+  bonusHP: 3
+  bonusRange: 0
+  bonusDefense: 0
+  marbleColor: {fileID: 1031655214887142, guid: 01e77482655b61246bed1b5018eef7a9,
+    type: 2}
   colors: 00000000000000000000000000000000
 --- !u!114 &114186519736797392
 MonoBehaviour:

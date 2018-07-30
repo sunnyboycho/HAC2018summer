@@ -98,6 +98,26 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
+    protected float totalRange;
+
+    public float TotalRange
+    {
+        get
+        {
+            return totalRange;
+        }
+    }
+
+    protected float defense;
+
+    public float Defense
+    {
+        get
+        {
+            return defense;
+        }
+    }
+
     protected bool isAlive = false;
 
     public bool IsAlive

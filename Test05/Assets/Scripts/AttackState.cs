@@ -42,7 +42,6 @@ public class AttackState : UnitState
     {
         Debug.Log("attack");
         distance = unitScript.AttackRange;
-        attackSpeed = unitScript.GetComponent<UnitDisplay>().unit.attackSpeed;
         //timer = 0f;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", true);
         unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
