@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UnitScript : MonoBehaviour {
-    
+
     protected UnitState currentState;
 
     protected Animator animator;
@@ -128,8 +128,18 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
-	void Start () {
+    protected GameManager gameManager;
+
+    public GameManager GameManager
+    {
+        get
+        {
+            return gameManager;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
         /*
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);

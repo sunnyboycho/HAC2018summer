@@ -14,6 +14,26 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     GameObject enemy;
 
+    bool playerWin = false;
+
+    bool enemyWin = false;
+
+    public bool PlayerWin
+    {
+        get
+        {
+            return playerWin;
+        }
+    }
+
+    public bool EnemyWin
+    {
+        get
+        {
+            return enemyWin;
+        }
+    }
+
     // Use this for initialization
     void Start () {
 		
@@ -23,10 +43,12 @@ public class GameManager : MonoBehaviour {
 	void Update () {
         if (!enemy.GetComponent<BaseScript>().IsAlive)
         {
+            playerWin = true;
             WinState();
         }
         if (!player.GetComponent<BaseScript>().IsAlive)
         {
+            enemyWin = true;
             LoseState();
         }
     }

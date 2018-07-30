@@ -31,6 +31,7 @@ public class PlayerUnit : UnitScript {
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
         defense = gameObject.GetComponent<UnitDisplay>().unit.defense;
         isAlive = true;
+        gameManager = FindObjectOfType<GameManager>();
         SetState(new MoveState(this));
     }
 

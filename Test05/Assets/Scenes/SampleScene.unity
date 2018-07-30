@@ -2718,6 +2718,11 @@ Prefab:
       propertyPath: enemySpawn.Array.data[4]
       value: 
       objectReference: {fileID: 765762384}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyNumber
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3bfbbe749aa93a4ea0efa177d23c194, type: 2}
   m_IsPrefabAsset: 0
