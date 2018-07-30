@@ -14,7 +14,10 @@ public class PlayerUnit : UnitScript {
     float bonusRange = 0;
 
     [SerializeField]
-    float bonusDefense = 0;
+    int bonusDefense = 0;
+
+    [SerializeField]
+    float bonusSpeed = 0.2f;
 
     [SerializeField]
     GameObject marbleColor;
@@ -79,24 +82,28 @@ public class PlayerUnit : UnitScript {
                 totalHP = totalHP + bonusHP * 10 * fitSparkle;
                 totalRange = totalRange + bonusRange * 10 * fitSparkle;
                 defense = defense + bonusDefense * 10 * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
                 break;
             case 3:
                 totalAttack = totalAttack + bonusAttack * 4 * fitSparkle;
                 totalHP = totalHP + bonusHP * 4 * fitSparkle;
                 totalRange = totalRange + bonusRange * 4 * fitSparkle;
                 defense = defense + bonusDefense * 4 * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
                 break;
             case 2:
                 totalAttack = totalAttack + bonusAttack * 2 * fitSparkle;
                 totalHP = totalHP + bonusHP * 2 * fitSparkle;
                 totalRange = totalRange + bonusRange * 2 * fitSparkle;
                 defense = defense + bonusDefense * 2 * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
                 break;
             case 1:
                 totalAttack = totalAttack + bonusAttack * fitSparkle;
                 totalHP = totalHP + bonusHP * fitSparkle;
                 totalRange = totalRange + bonusRange * fitSparkle;
                 defense = defense + bonusDefense * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
                 break;
         }
     }
