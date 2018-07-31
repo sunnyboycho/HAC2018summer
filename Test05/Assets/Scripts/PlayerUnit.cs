@@ -75,6 +75,7 @@ public class PlayerUnit : UnitScript {
                 fitSparkle++;
             }
         }
+
         switch (fitColor)
         {
             case 4:
