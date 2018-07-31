@@ -28,6 +28,7 @@ public class AttackState : UnitState
     public override void Action()
     {
         CheckEnemy();
+        CheckWin();
         if (target != null)
         {
             PassTarget();
@@ -67,5 +68,13 @@ public class AttackState : UnitState
     void PassTarget()
     {
         unitScript.AquireTarget(target);
+    }
+
+    void CheckWin()
+    {
+        if (unitScript.GameManager.EnemyWin || unitScript.GameManager.PlayerWin)
+        {
+            unitScript.SetState(new IdleState(unitScript));
+        }
     }
 }

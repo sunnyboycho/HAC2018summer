@@ -118,6 +118,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4981270030522408, guid: 64da829448a5bae48b083b77c834df19,
     type: 2}
   m_PrefabInternal: {fileID: 272474764}
+--- !u!114 &53264991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+    type: 2}
+  m_PrefabInternal: {fileID: 2049890202}
+  m_Script: {fileID: 11500000, guid: 6883b93cb27377d468d524714bd15c63, type: 3}
 --- !u!1 &63618029
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +355,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64da829448a5bae48b083b77c834df19, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &272474765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114369742163261802, guid: 64da829448a5bae48b083b77c834df19,
+    type: 2}
+  m_PrefabInternal: {fileID: 272474764}
+  m_Script: {fileID: 11500000, guid: d00f56e6dc3dc404fb2d8f53d33e283a, type: 3}
 --- !u!1 &335889524
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +774,9 @@ MonoBehaviour:
   gameStateText: {fileID: 1167940818}
   player: {fileID: 441219714}
   enemy: {fileID: 661166619}
+  marbleInput: {fileID: 272474765}
+  marbleManager: {fileID: 1399852917}
+  enemyManager: {fileID: 53264991}
 --- !u!4 &544505441
 Transform:
   m_ObjectHideFlags: 0
@@ -1899,6 +1914,11 @@ Prefab:
       propertyPath: field
       value: 
       objectReference: {fileID: 1410118508}
+    - target: {fileID: 114528892761283006, guid: 7529adf41792a1e468accf028dd133d9,
+        type: 2}
+      propertyPath: waitSeconds
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7529adf41792a1e468accf028dd133d9, type: 2}
   m_IsPrefabAsset: 0
@@ -2721,6 +2741,16 @@ Prefab:
     - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
         type: 2}
       propertyPath: enemyNumber
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: spawnInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: intervalWait
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

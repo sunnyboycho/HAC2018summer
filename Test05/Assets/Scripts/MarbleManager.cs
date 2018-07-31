@@ -31,6 +31,8 @@ public class MarbleManager : MonoBehaviour {
 
     bool isReady = false;
 
+    bool allowSpawn = true;
+
     [SerializeField]
     Transform field;
 
@@ -47,10 +49,18 @@ public class MarbleManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (isReady && !isFull)
+        if (allowSpawn)
         {
-            SpawnMarbles();
+            if (isReady && !isFull)
+            {
+                SpawnMarbles();
+            }
         }
+    }
+
+    public void SwitchAllowSpawn()
+    {
+        allowSpawn = !allowSpawn;
     }
 
     void InitialSpawn()

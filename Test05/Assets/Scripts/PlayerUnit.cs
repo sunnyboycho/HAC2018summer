@@ -15,12 +15,9 @@ public class PlayerUnit : UnitScript {
 
     [SerializeField]
     int bonusDefense = 0;
-<<<<<<< HEAD
 
     [SerializeField]
     float bonusSpeed = 0.2f;
-=======
->>>>>>> 4fe8beafba1d32b9e31f37132ccefc380e0be1b2
 
     [SerializeField]
     GameObject marbleColor;

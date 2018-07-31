@@ -14,6 +14,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     GameObject enemy;
 
+    [SerializeField]
+    MarbleInput marbleInput;
+
+    [SerializeField]
+    MarbleManager marbleManager;
+
+    [SerializeField]
+    EnemyManager enemyManager;
+
     bool playerWin = false;
 
     bool enemyWin = false;
@@ -41,15 +50,24 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!enemy.GetComponent<BaseScript>().IsAlive)
+        if (!playerWin && !enemyWin)
         {
-            playerWin = true;
-            WinState();
-        }
-        if (!player.GetComponent<BaseScript>().IsAlive)
-        {
-            enemyWin = true;
-            LoseState();
+            if (!enemy.GetComponent<BaseScript>().IsAlive)
+            {
+                playerWin = true;
+                marbleInput.SwitchInputAllow();
+                marbleManager.SwitchAllowSpawn();
+                enemyManager.SwitchAllowSpawn();
+                WinState();
+            }
+            if (!player.GetComponent<BaseScript>().IsAlive)
+            {
+                enemyWin = true;
+                marbleInput.SwitchInputAllow();
+                marbleManager.SwitchAllowSpawn();
+                enemyManager.SwitchAllowSpawn();
+                LoseState();
+            }
         }
     }
 

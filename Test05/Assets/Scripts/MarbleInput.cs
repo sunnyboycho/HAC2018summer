@@ -40,6 +40,9 @@ public class MarbleInput : MonoBehaviour {
 
     int marbleLayerMask;
     
+    [SerializeField]
+    bool allowInput = true;
+
     // Use this for initialization
     void Start () {
         fieldLayerMask = LayerMask.GetMask("Field");
@@ -49,15 +52,23 @@ public class MarbleInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButton(0))
+        if (allowInput)
         {
-            SelectMarbles();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            ProcessMarbles();
+            if (Input.GetMouseButton(0))
+            {
+                SelectMarbles();
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                ProcessMarbles();
+            }
         }
 	}
+
+    public void SwitchInputAllow()
+    {
+        allowInput = !allowInput;
+    }
 
     void SelectMarbles()
     {
