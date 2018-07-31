@@ -31,6 +31,14 @@ public class Character : MonoBehaviour
         // If the character isn't that close to the target move closer
         if (Vector3.Distance(currentPosition, targetPosition) > .02f)
         {
+            if (currentPosition.x - targetPosition.x > 0.2f)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (currentPosition.x - targetPosition.x < 0.2f)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
             transform.position = Vector3.MoveTowards(
                 currentPosition,
                 targetPosition,

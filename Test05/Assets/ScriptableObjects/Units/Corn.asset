@@ -14,7 +14,7 @@ MonoBehaviour:
   unitName: Corn
   image: {fileID: 0}
   hp: 30
-  attack: 4
-  speed: 2
-  attackSpeed: 0
+  attack: 3
+  speed: 1
   attackRange: 4
+  defense: 0
