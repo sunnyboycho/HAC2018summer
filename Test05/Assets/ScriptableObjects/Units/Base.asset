@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: 
   image: {fileID: 0}
-  hp: 100
+  hp: 150
   attack: 0
   speed: 0
-  attackSpeed: 0
   attackRange: 0
+  defense: 0

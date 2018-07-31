@@ -10,8 +10,8 @@ public class EnemyManager : MonoBehaviour {
     [SerializeField]
     GameObject[] enemyArray;
 
-    //[SerializeField]
-    //int enemyNumber;
+    [SerializeField]
+    int enemyNumber;
 
     [SerializeField]
     float spawnInterval = 5.0f;
@@ -41,11 +41,14 @@ public class EnemyManager : MonoBehaviour {
         if (allowSpawn)
         {
             yield return new WaitForSeconds(intervalWait);
-            while (true)
+            for (int i = 0; i < enemyNumber; i++)
             {
                 for (int j = 0; j < enemyArray.Length; j++)
                 {
-                    gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
+                    if (enemyArray[j] != null)
+                    {
+                        gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
+                    }
                     yield return new WaitForSeconds(spawnInterval);
                 }
                 yield return new WaitForSeconds(intervalWait);
