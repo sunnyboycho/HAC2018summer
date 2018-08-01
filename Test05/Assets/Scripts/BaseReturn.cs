@@ -20,10 +20,10 @@ public class BaseReturn : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         int spawnPoint = Random.Range(0, playerSpawn.Length);
-        //if(other.gameObject.tag == "Player")
-        //{
-            Debug.Log("collision deteced");
+        if(other.gameObject.tag == "Player")
+        {
+            //Debug.Log("collision deteced");
             other.transform.position = playerSpawn[spawnPoint].position;
-        //}
+        }
     }
 }
