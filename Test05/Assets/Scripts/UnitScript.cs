@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,9 @@ public class UnitScript : MonoBehaviour {
 
     [SerializeField]
     Image fillImage;
+
+    [SerializeField]
+    DamageVisualize damageVisualizer;
 
     Color fullHealthColor = Color.green;
     Color zeroHealthColor = Color.red;
@@ -170,8 +174,8 @@ public class UnitScript : MonoBehaviour {
 
     public void RecieveDamage(int damage)
     {
-        Debug.Log("take " + damage + " damage");
         int dmg = damage - defense;
+        Debug.Log("take " + dmg + " damage");
         if (dmg <= 0)
         {
             dmg = 1;
@@ -179,6 +183,8 @@ public class UnitScript : MonoBehaviour {
         currentHP -= dmg;
         StartCoroutine("SetHealth");
         CheckHealth();
+        damageVisualizer.damageText.text = dmg.ToString();
+        StartCoroutine("ShowDamage");
     }
 
     void CheckHealth()
@@ -245,5 +251,14 @@ public class UnitScript : MonoBehaviour {
         {
             slider.GetComponent<CanvasGroup>().alpha = 0;
         }
+    }
+
+    
+
+    IEnumerator ShowDamage()
+    {
+        damageVisualizer.TriggerTrue();
+        yield return new WaitForSeconds(1f);
+        damageVisualizer.TriggerFalse();
     }
 }
