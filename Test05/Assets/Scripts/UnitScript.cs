@@ -25,6 +25,7 @@ public class UnitScript : MonoBehaviour {
     Image fillImage;
 
     [SerializeField]
+    GameObject damageVisualize;
     DamageVisualize damageVisualizer;
 
     Color fullHealthColor = Color.green;
@@ -144,6 +145,7 @@ public class UnitScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        damageVisualizer = damageVisualize.GetComponent<DamageVisualize>();
         /*
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);

@@ -542,7 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 2103658333}
   fillImage: {fileID: 1488174331}
-  damageVisualizer: {fileID: 0}
+  damageVisualize: {fileID: 0}
   isProjectileUnit: 0
   projectile: {fileID: 0}
 --- !u!114 &441219718
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 335889526}
   fillImage: {fileID: 1477695792}
-  damageVisualizer: {fileID: 0}
+  damageVisualize: {fileID: 0}
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
 --- !u!114 &661166624

@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659970765707642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7952013, y: 13.013705, z: 0}
+  m_LocalPosition: {x: 1.5323858, y: 12.794106, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 224381233241180112}
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 114653270561476466}
   fillImage: {fileID: 114888241739377066}
-  damageVisualizer: {fileID: 0}
+  damageVisualize: {fileID: 1609596639070952}
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
 --- !u!114 &114888241739377066

@@ -242,7 +242,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747102449721276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.998019, y: 12.750272, z: 0}
+  m_LocalPosition: {x: -14.569336, y: 12.4453335, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 4007919002643304}
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 114495612207973572}
   fillImage: {fileID: 114630289995312326}
-  damageVisualizer: {fileID: 0}
+  damageVisualize: {fileID: 1564333927507248}
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
   bonusAttack: 1
