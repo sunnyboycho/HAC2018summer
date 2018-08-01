@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,8 +26,10 @@ public class UnitScript : MonoBehaviour {
     Image fillImage;
 
     [SerializeField]
-    GameObject damageVisualize;
-    DamageVisualize damageVisualizer;
+    TextMeshProUGUI damageText;
+
+    [SerializeField]
+    Animator damageIndicator;
 
     Color fullHealthColor = Color.green;
     Color zeroHealthColor = Color.red;
@@ -145,7 +148,7 @@ public class UnitScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        damageVisualizer = damageVisualize.GetComponent<DamageVisualize>();
+        damageText.text = "";
         /*
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
@@ -185,7 +188,7 @@ public class UnitScript : MonoBehaviour {
         currentHP -= dmg;
         StartCoroutine("SetHealth");
         CheckHealth();
-        damageVisualizer.damageText.text = dmg.ToString();
+        damageText.text = dmg.ToString();
         StartCoroutine("ShowDamage");
     }
 
@@ -255,12 +258,12 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
-    
-
     IEnumerator ShowDamage()
     {
-        damageVisualizer.TriggerTrue();
+        Debug.Log("Show damage " + damageText.text);
+        damageIndicator.SetBool("isDamaged", true);
         yield return new WaitForSeconds(1f);
-        damageVisualizer.TriggerFalse();
+        damageIndicator.SetBool("isDamaged", false);
+        damageText.text = "";
     }
 }

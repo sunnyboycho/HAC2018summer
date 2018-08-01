@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 222396643369290748}
   - component: {fileID: 114173699317302642}
   - component: {fileID: 95030590429964168}
-  - component: {fileID: 114703957717053482}
   m_Layer: 5
   m_Name: DamageText
   m_TagString: Untagged
@@ -242,7 +241,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747102449721276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.569336, y: 12.4453335, z: 0}
+  m_LocalPosition: {x: -12.308396, y: 13.656063, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children:
   - {fileID: 4007919002643304}
@@ -317,8 +316,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: ddbd0a862530cea4385c31b790a73d93, type: 2}
-  - {fileID: 2100000, guid: 4245644ea3c50b8448f323627efc43b4, type: 2}
   - {fileID: 2100000, guid: ddbd0a862530cea4385c31b790a73d93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -535,7 +532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 114495612207973572}
   fillImage: {fileID: 114630289995312326}
-  damageVisualize: {fileID: 1564333927507248}
+  damageText: {fileID: 114173699317302642}
+  damageIndicator: {fileID: 95030590429964168}
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
   bonusAttack: 1
@@ -565,9 +563,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: '1
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -635,13 +631,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114173699317302642}
-    characterCount: 2
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
@@ -816,19 +812,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114703957717053482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1564333927507248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d64b9a745ab675b46a27086553bfce19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageText: {fileID: 114173699317302642}
-  damageTextMove: {fileID: 95030590429964168}
 --- !u!114 &114744407227217374
 MonoBehaviour:
   m_ObjectHideFlags: 1
