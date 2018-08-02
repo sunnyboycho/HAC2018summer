@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 470996459}
   - component: {fileID: 470996460}
   m_Layer: 0
-  m_Name: ADC
+  m_Name: Marksman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1653,7 +1653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786211240}
   m_Layer: 0
-  m_Name: PuzzleADC
+  m_Name: PuzzleMarksman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1667,7 +1667,7 @@ Transform:
   m_GameObject: {fileID: 786211239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 2.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 328503572}
   - {fileID: 1687680723}
@@ -1889,7 +1889,7 @@ Transform:
   m_GameObject: {fileID: 848028825}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 829355274}
   - {fileID: 1004132894}
@@ -4498,7 +4498,7 @@ Transform:
   m_GameObject: {fileID: 2095159889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 596149830}
   - {fileID: 1473545225}
