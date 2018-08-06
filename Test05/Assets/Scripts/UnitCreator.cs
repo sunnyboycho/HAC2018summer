@@ -8,7 +8,10 @@ public class UnitCreator : MonoBehaviour {
 
     [SerializeField]
     Text text;
-    
+
+    [SerializeField]
+    SpriteRenderer[] unitImage = new SpriteRenderer[3];
+
     [SerializeField]
     Transform[] parent = new Transform[2];
     
@@ -63,6 +66,9 @@ public class UnitCreator : MonoBehaviour {
 
     void SetUnitText()
     {
+        //unitImage[0].sprite;
+        //FindObjectsOfTypeIncludingAssets(Sprite)
+        //unit[0].name.Substring(0, unit[0].name.Length - 5);
         text.text = unit[0].GetComponent<UnitDisplay>().unit.unitName + "\n" + unit[1].GetComponent<UnitDisplay>().unit.unitName + "\n" + unit[2].GetComponent<UnitDisplay>().unit.unitName + "\n";
     }
 }
