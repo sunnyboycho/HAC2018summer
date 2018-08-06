@@ -40,15 +40,12 @@ public class MarbleInput : MonoBehaviour {
     int fieldLayerMask;
 
     int marbleLayerMask;
-<<<<<<< HEAD
 
     [SerializeField]
     Text ComboText;
-=======
     
     [SerializeField]
     bool allowInput = true;
->>>>>>> 1650d9049c07b8140f2f1178a4539915b3530bd7
 
     // Use this for initialization
     void Start () {
