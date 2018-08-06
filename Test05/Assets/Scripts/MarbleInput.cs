@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MarbleInput : MonoBehaviour {
 
@@ -39,9 +40,15 @@ public class MarbleInput : MonoBehaviour {
     int fieldLayerMask;
 
     int marbleLayerMask;
+<<<<<<< HEAD
+
+    [SerializeField]
+    Text ComboText;
+=======
     
     [SerializeField]
     bool allowInput = true;
+>>>>>>> 1650d9049c07b8140f2f1178a4539915b3530bd7
 
     // Use this for initialization
     void Start () {
@@ -470,13 +477,37 @@ public class MarbleInput : MonoBehaviour {
         }
         if (temp != -1)
         {
-            Message(temp);
+            StartCoroutine(Message(temp));
             marbleManager.sparkleDibs(temp);
         }
     }
 
-    void Message(int color)
+    IEnumerator Message(int color)
     {
+        switch (color)
+        {
+            case 0:
+                {
+                    ComboText.color = Color.red;
+                    break;
+                }
+            case 1:
+                {
+                    ComboText.color = Color.green;
+                    break;
+                }
+            case 2:
+                {
+                    ComboText.color = Color.blue;
+                    break;
+                }
+        }
 
+                ComboText.text = "Perfect";
+                ComboText.enabled = true;
+
+                yield return new WaitForSeconds(1);
+
+                ComboText.enabled = false;
     }
 }
