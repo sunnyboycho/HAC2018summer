@@ -3622,6 +3622,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyUnit.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyTypes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4626340921231318, guid: f3bfbbe749aa93a4ea0efa177d23c194, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3722,7 +3732,36 @@ Prefab:
     - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
         type: 2}
       propertyPath: intervalWait
-      value: 0
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0,
+        type: 2}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0,
+        type: 2}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0,
+        type: 2}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyUnit.Array.data[1]
+      value: 
+      objectReference: {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0,
+        type: 2}
+    - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: enemyArray.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3bfbbe749aa93a4ea0efa177d23c194, type: 2}
