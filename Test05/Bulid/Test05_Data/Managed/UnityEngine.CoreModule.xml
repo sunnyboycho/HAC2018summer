@@ -32545,6 +32545,12 @@ Useful for restarting a trail from a new position.</para>
         <para>Get the tag of this SpriteAtlas.</para>
       </summary>
     </member>
+    <member name="M:UnityEngine.U2D.SpriteAtlas.CanBindTo(UnityEngine.Sprite)">
+      <summary>
+        <para>Return true if Sprite is packed into this SpriteAtlas.</para>
+      </summary>
+      <param name="sprite"></param>
+    </member>
     <member name="M:UnityEngine.U2D.SpriteAtlas.GetSprite(System.String)">
       <summary>
         <para>Clone the first Sprite in this atlas that matches the name packed in this atlas and return it.</para>
@@ -32571,6 +32577,12 @@ Useful for restarting a trail from a new position.</para>
       <summary>
         <para>Manages SpriteAtlas during runtime.</para>
       </summary>
+    </member>
+    <member name="?:UnityEngine.U2D.SpriteAtlasManager.atlasRegistered(System.Action`1&lt;UnityEngine.U2D.SpriteAtlas&gt;)">
+      <summary>
+        <para>Trigger when a SpriteAtlas is registered via invoking the callback in U2D.SpriteAtlasManager.atlasRequested.</para>
+      </summary>
+      <param name="value"></param>
     </member>
     <member name="?:UnityEngine.U2D.SpriteAtlasManager.atlasRequested(UnityEngine.U2D.SpriteAtlasManager/RequestAtlasCallback)">
       <summary>

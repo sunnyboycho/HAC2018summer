@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -22,6 +23,9 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField]
     EnemyManager enemyManager;
+
+    public GameObject ToWorldMap;
+    public GameObject ReStart;
 
     bool playerWin = false;
 
@@ -75,11 +79,34 @@ public class GameManager : MonoBehaviour {
     {
         gameStateText.text = "Win";
         gameStateText.enabled = true;
+        EndState();
     }
 
     void LoseState()
     {
         gameStateText.text = "Lose";
         gameStateText.enabled = true;
+        EndState();
+    }
+
+
+    void EndState()
+    {
+        Time.timeScale = 0;
+        ReStart.SetActive(true);
+        ToWorldMap.SetActive(true);
+    }
+
+    public void Re_Start()
+    {
+        int CurrentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(CurrentScene);
+        Time.timeScale = 1;
+    }
+
+    public void To_World_Map()
+    {
+        SceneManager.LoadScene("Level Select");
+        Time.timeScale = 1;
     }
 }
