@@ -19,6 +19,8 @@ public class EnemyManager : MonoBehaviour {
     [SerializeField]
     float intervalWait = 5.0f;
 
+    bool allowSpawn = true;
+
     Dictionary<GameObject, int> dict = new Dictionary<GameObject, int>();
 
     // Use this for initialization
@@ -36,15 +38,26 @@ public class EnemyManager : MonoBehaviour {
 
     IEnumerator Create()
     {
-        yield return new WaitForSeconds(intervalWait);
-        for (int i = 0; i < enemyNumber; i++)
+        if (allowSpawn)
         {
-            for (int j = 0; j < enemyArray.Length; j++)
-            {
-                gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
-                yield return new WaitForSeconds(spawnInterval);
-            }
             yield return new WaitForSeconds(intervalWait);
+            for (int i = 0; i < enemyNumber; i++)
+            {
+                for (int j = 0; j < enemyArray.Length; j++)
+                {
+                    if (enemyArray[j] != null)
+                    {
+                        gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
+                    }
+                    yield return new WaitForSeconds(spawnInterval);
+                }
+                yield return new WaitForSeconds(intervalWait);
+            }
         }
+    }
+
+    public void SwitchAllowSpawn()
+    {
+        allowSpawn = !allowSpawn;
     }
 }

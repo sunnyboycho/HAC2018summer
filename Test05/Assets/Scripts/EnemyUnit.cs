@@ -15,6 +15,7 @@ public class EnemyUnit : UnitScript {
         SetHealthUI();
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
         isAlive = true;
+        gameManager = FindObjectOfType<GameManager>();
         SetState(new MoveState(this));
     }
 	

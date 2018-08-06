@@ -10,6 +10,9 @@ public class BattlefieldCameraFollow : MonoBehaviour {
     private Vector3 panOrigin;
 
     [SerializeField]
+    float lerpSpeed;
+
+    [SerializeField]
     float xMin;
 
     [SerializeField]
@@ -78,7 +81,8 @@ public class BattlefieldCameraFollow : MonoBehaviour {
 
     void CenterOnBase()
     {
-        gameObject.transform.position = new Vector3(Mathf.Clamp(playerBase.position.x, xMin, xMax), Mathf.Clamp(playerBase.position.y, yMin, yMax), -10);
+        Vector3 target = new Vector3(Mathf.Clamp(playerBase.position.x, xMin, xMax), Mathf.Clamp(playerBase.position.y, yMin, yMax), -10);
+        transform.position = Vector3.Lerp(transform.position, target, lerpSpeed * Time.deltaTime);
         if (playerUnits.transform.childCount > 0)
         {
             unitPresent = true;
@@ -108,7 +112,8 @@ public class BattlefieldCameraFollow : MonoBehaviour {
                     }
                 }
             }
-            gameObject.transform.position = new Vector3(Mathf.Clamp(targetUnit.position.x, xMin, xMax), Mathf.Clamp(targetUnit.position.y, yMin, yMax), -10);
+            Vector3 target = new Vector3(Mathf.Clamp(targetUnit.position.x, xMin, xMax), Mathf.Clamp(targetUnit.position.y, yMin, yMax), -10);
+            transform.position = Vector3.Lerp(transform.position, target, lerpSpeed * Time.deltaTime);
         }
     }
 }

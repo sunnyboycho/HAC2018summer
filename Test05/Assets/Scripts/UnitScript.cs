@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UnitScript : MonoBehaviour {
-    
+
     protected UnitState currentState;
 
     protected Animator animator;
@@ -22,6 +24,12 @@ public class UnitScript : MonoBehaviour {
 
     [SerializeField]
     Image fillImage;
+
+    [SerializeField]
+    TextMeshProUGUI damageText;
+
+    [SerializeField]
+    Animator damageIndicator;
 
     Color fullHealthColor = Color.green;
     Color zeroHealthColor = Color.red;
@@ -98,6 +106,26 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
+    protected float totalRange;
+
+    public float TotalRange
+    {
+        get
+        {
+            return totalRange;
+        }
+    }
+
+    protected int defense;
+
+    public int Defense
+    {
+        get
+        {
+            return defense;
+        }
+    }
+
     protected bool isAlive = false;
 
     public bool IsAlive
@@ -108,8 +136,19 @@ public class UnitScript : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
-	void Start () {
+    protected GameManager gameManager;
+
+    public GameManager GameManager
+    {
+        get
+        {
+            return gameManager;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
+        damageText.text = "";
         /*
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
@@ -140,10 +179,17 @@ public class UnitScript : MonoBehaviour {
 
     public void RecieveDamage(int damage)
     {
-        Debug.Log("take " + damage + " damage");
-        currentHP -= damage;
+        int dmg = damage - defense;
+        Debug.Log("take " + dmg + " damage");
+        if (dmg <= 0)
+        {
+            dmg = 1;
+        }
+        currentHP -= dmg;
         StartCoroutine("SetHealth");
         CheckHealth();
+        damageText.text = dmg.ToString();
+        StartCoroutine("ShowDamage");
     }
 
     void CheckHealth()
@@ -210,5 +256,14 @@ public class UnitScript : MonoBehaviour {
         {
             slider.GetComponent<CanvasGroup>().alpha = 0;
         }
+    }
+
+    IEnumerator ShowDamage()
+    {
+        Debug.Log("Show damage " + damageText.text);
+        damageIndicator.SetBool("isDamaged", true);
+        yield return new WaitForSeconds(1f);
+        damageIndicator.SetBool("isDamaged", false);
+        damageText.text = "";
     }
 }

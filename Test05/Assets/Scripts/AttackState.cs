@@ -8,8 +8,6 @@ public class AttackState : UnitState
     LayerMask layerMask;
 
     GameObject target;
-
-    //private float timer = 0f;
     
     private float attackSpeed;
 
@@ -29,8 +27,8 @@ public class AttackState : UnitState
 
     public override void Action()
     {
-        //timer += Time.deltaTime;
         CheckEnemy();
+        CheckWin();
         if (target != null)
         {
             PassTarget();
@@ -42,8 +40,6 @@ public class AttackState : UnitState
     {
         Debug.Log("attack");
         distance = unitScript.AttackRange;
-        attackSpeed = unitScript.GetComponent<UnitDisplay>().unit.attackSpeed;
-        //timer = 0f;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", true);
         unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
@@ -68,29 +64,17 @@ public class AttackState : UnitState
             unitScript.SetState(new MoveState(unitScript));
         }
     }
-    
-    /*
-    public void Attack()
-    {
-        if (unitScript.IsAlive)
-        {
-            //timer = 0f;
-            if (unitScript.IsProjectileUnit)
-            {
-                GameObject temp = GameObject.Instantiate(unitScript.Projectile, unitScript.GetComponent<Transform>().GetChild(0).position, Quaternion.identity);
-                temp.transform.SetParent(unitScript.GetComponent<Transform>());
-                temp.GetComponent<ProjectileScript>().StartProjectile(target.transform, unitScript.TotalAttack);
-            }
-            else
-            {
-                target.GetComponent<UnitScript>().RecieveDamage(unitScript.TotalAttack);
-            }
-        }
-    }
-    */
 
     void PassTarget()
     {
         unitScript.AquireTarget(target);
+    }
+
+    void CheckWin()
+    {
+        if (unitScript.GameManager.EnemyWin || unitScript.GameManager.PlayerWin)
+        {
+            unitScript.SetState(new IdleState(unitScript));
+        }
     }
 }

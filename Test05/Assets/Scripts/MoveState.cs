@@ -31,6 +31,7 @@ public class MoveState : UnitState
             unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(playerPositive * unitScript.TotalSpeed, 0);
         }
         CheckEnemy();
+        CheckWin();
     }
 
     public override void OnStateEnter()
@@ -52,6 +53,14 @@ public class MoveState : UnitState
                 unitScript.SetState(new AttackState(unitScript));
                 break;
             }
+        }
+    }
+
+    void CheckWin()
+    {
+        if (unitScript.GameManager.EnemyWin || unitScript.GameManager.PlayerWin)
+        {
+            unitScript.SetState(new IdleState(unitScript));
         }
     }
 }

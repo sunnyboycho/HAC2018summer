@@ -11,7 +11,16 @@ public class PlayerUnit : UnitScript {
     int bonusHP = 5;
 
     [SerializeField]
-    float bonusSpeed = 1;
+    float bonusRange = 0;
+
+    [SerializeField]
+    int bonusDefense = 0;
+
+    [SerializeField]
+    float bonusSpeed = 0.2f;
+
+    [SerializeField]
+    GameObject marbleColor;
 
     public int[] colors = new int[4];
 
@@ -23,7 +32,9 @@ public class PlayerUnit : UnitScript {
         attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         totalSpeed = gameObject.GetComponent<UnitDisplay>().unit.speed;
+        defense = gameObject.GetComponent<UnitDisplay>().unit.defense;
         isAlive = true;
+        gameManager = FindObjectOfType<GameManager>();
         SetState(new MoveState(this));
     }
 
@@ -51,29 +62,49 @@ public class PlayerUnit : UnitScript {
 
     public void SetStats()
     {
+        int fitColor = 0;
+        int fitSparkle = 1;
         for (int i = 0; i < 4; i++)
         {
-            switch (colors[i])
+            if (colors[i] == marbleColor.GetComponent<MarbleDisplay>().marble.id)
             {
-                case 0:
-                    totalAttack = totalAttack + bonusAttack;
-                    break;
-                case 1:
-                    totalHP = totalHP + bonusHP;
-                    break;
-                case 2:
-                    totalSpeed = totalSpeed + bonusSpeed;
-                    break;
-                case 3:
-                    totalAttack = totalAttack + 2 * bonusAttack;
-                    break;
-                case 4:
-                    totalHP = totalHP + 2 * bonusHP;
-                    break;
-                case 5:
-                    totalSpeed = totalSpeed + 2 * bonusSpeed;
-                    break;
+                fitColor++;
             }
+            if (colors[i] == (marbleColor.GetComponent<MarbleDisplay>().marble.id + 3))
+            {
+                fitSparkle++;
+            }
+        }
+        switch (fitColor)
+        {
+            case 4:
+                totalAttack = totalAttack + bonusAttack * 10 * fitSparkle;
+                totalHP = totalHP + bonusHP * 10 * fitSparkle;
+                totalRange = totalRange + bonusRange * 10 * fitSparkle;
+                defense = defense + bonusDefense * 10 * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                break;
+            case 3:
+                totalAttack = totalAttack + bonusAttack * 4 * fitSparkle;
+                totalHP = totalHP + bonusHP * 4 * fitSparkle;
+                totalRange = totalRange + bonusRange * 4 * fitSparkle;
+                defense = defense + bonusDefense * 4 * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                break;
+            case 2:
+                totalAttack = totalAttack + bonusAttack * 2 * fitSparkle;
+                totalHP = totalHP + bonusHP * 2 * fitSparkle;
+                totalRange = totalRange + bonusRange * 2 * fitSparkle;
+                defense = defense + bonusDefense * 2 * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                break;
+            case 1:
+                totalAttack = totalAttack + bonusAttack * fitSparkle;
+                totalHP = totalHP + bonusHP * fitSparkle;
+                totalRange = totalRange + bonusRange * fitSparkle;
+                defense = defense + bonusDefense * fitSparkle;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                break;
         }
     }
 }

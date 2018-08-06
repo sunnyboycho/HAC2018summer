@@ -40,9 +40,15 @@ public class MarbleInput : MonoBehaviour {
     int fieldLayerMask;
 
     int marbleLayerMask;
+<<<<<<< HEAD
 
     [SerializeField]
     Text ComboText;
+=======
+    
+    [SerializeField]
+    bool allowInput = true;
+>>>>>>> 1650d9049c07b8140f2f1178a4539915b3530bd7
 
     // Use this for initialization
     void Start () {
@@ -52,25 +58,34 @@ public class MarbleInput : MonoBehaviour {
     }
 	
 	// Update is called once per frame
+    // Get inputs when input is allowed
 	void Update () {
-        if (Input.GetMouseButton(0))
+        if (allowInput)
         {
-            SelectMarbles();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            ProcessMarbles();
+            if (Input.GetMouseButton(0))
+            {
+                SelectMarbles();
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                ProcessMarbles();
+            }
         }
 	}
 
+    // Toggle allow input
+    public void SwitchInputAllow()
+    {
+        allowInput = !allowInput;
+    }
+
+    // Select marble that has been clicked. Store in hits array. Deselect if selected more than 5 marbles
     void SelectMarbles()
     {
-        //Debug.Log("click ");
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 100f, fieldLayerMask);
 
         if (hit.collider != null)
         {
-            //Debug.Log("hit " + hit.transform.name);
             hit.transform.GetComponent<SpriteRenderer>().enabled = true;
             int i = 0;
             while (hits[i] != null && !hits[i].Equals(hit.transform))
@@ -94,6 +109,7 @@ public class MarbleInput : MonoBehaviour {
         }
     }
 
+    // Check marbles of selected hits array. reset when done
     void ProcessMarbles()
     {
         SetMatrix();
@@ -143,6 +159,7 @@ public class MarbleInput : MonoBehaviour {
         SetMatrix();
     }
 
+    // Delete selected marbles inside hits array
     void ConsumeMarbles()
     {
         for (int k = 0; k < 4; k++)
@@ -164,6 +181,7 @@ public class MarbleInput : MonoBehaviour {
         }
     }
 
+    // Set bool matrix[4,12] array to show selected marbles
     void SetMatrix()
     {
         int n = 0;
@@ -177,6 +195,7 @@ public class MarbleInput : MonoBehaviour {
         }
     }
 
+    // Transcribe [4,12] matrix into [3,3] matrix. If out of bounds, initialize hits array.
     void InputMatrix()
     {
         int[] startPosition = {13, 13 };
@@ -239,38 +258,9 @@ public class MarbleInput : MonoBehaviour {
                 }
             }
         }
-       /*
-        int jMin = Mathf.Clamp(startPosition[1] - 2, 0, 12);
-        int jMax = Mathf.Clamp(startPosition[1] + 2, 0, 12);
-
-        for (int i = startPosition[0]; i < 4; i++)
-        {
-            for (int j = jMin; j < jMax; j++)
-            {
-                if (matrix[i, j])
-                {
-                    int jTemp = j - startPosition[1];
-                    while (jTemp < 0)
-                    {
-                        inputMatrix[0, 2] = inputMatrix[0, 1];
-                        inputMatrix[1, 2] = inputMatrix[1, 1];
-                        inputMatrix[2, 2] = inputMatrix[2, 1];
-                        inputMatrix[0, 1] = inputMatrix[0, 0];
-                        inputMatrix[1, 1] = inputMatrix[1, 0];
-                        inputMatrix[2, 1] = inputMatrix[2, 0];
-                        inputMatrix[0, 0] = false;
-                        inputMatrix[1, 0] = false;
-                        inputMatrix[2, 0] = false;
-                        jTemp++;
-                        startPosition[1] = startPosition[1] - 1;
-                    }
-                    inputMatrix[i - startPosition[0], j - startPosition[1]] = true;
-                }
-            }
-        }
-        */
     }
 
+    // Compare [3,3] matrix to check shape. Set type according to shape
     /*
      * 11
      * 11
@@ -433,6 +423,7 @@ public class MarbleInput : MonoBehaviour {
         }
     }
 
+    // check if hits array is full (more than 4).
     bool isHitsFull()
     {
         for (int i = 0; i < 5; i++)
@@ -445,6 +436,7 @@ public class MarbleInput : MonoBehaviour {
         return true;
     }
 
+    // initialize hits array and marbles array and colors array
     void Initialize()
     {
         hits[0] = null;
@@ -462,6 +454,7 @@ public class MarbleInput : MonoBehaviour {
         }
     }
 
+    //check whether selected marbles have the same color
     void Sparkle()
     {
         int temp = colors[0];
