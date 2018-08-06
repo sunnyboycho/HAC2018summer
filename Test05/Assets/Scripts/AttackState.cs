@@ -39,7 +39,7 @@ public class AttackState : UnitState
     public override void OnStateEnter()
     {
         Debug.Log("attack");
-        distance = unitScript.AttackRange;
+        distance = unitScript.TotalRange;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", true);
         unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }

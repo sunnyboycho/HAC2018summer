@@ -9,7 +9,7 @@ public class EnemyUnit : UnitScript {
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
-        attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
+        totalRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         currentHP = totalHP;
         SetHealthUI();

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -53,16 +52,6 @@ public class UnitScript : MonoBehaviour {
         get
         {
             return projectile;
-        }
-    }
-
-    protected float attackRange;
-
-    public float AttackRange
-    {
-        get
-        {
-            return attackRange;
         }
     }
 

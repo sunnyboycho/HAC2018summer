@@ -9,7 +9,7 @@ public class BaseScript : UnitScript{
     {
         animator = gameObject.GetComponent<Animator>();
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
-        attackRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
+        totalRange = gameObject.GetComponent<UnitDisplay>().unit.attackRange;
         totalHP = gameObject.GetComponent<UnitDisplay>().unit.hp;
         currentHP = totalHP;
         SetHealthUI();

@@ -37,7 +37,7 @@ public class MoveState : UnitState
     public override void OnStateEnter()
     {
         Debug.Log("move");
-        distance = unitScript.AttackRange;
+        distance = unitScript.TotalRange;
         unitScript.GetComponent<Animator>().SetBool("isAttacking", false);
     }
 

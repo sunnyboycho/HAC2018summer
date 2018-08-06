@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bDragging: 1
   panSpeed: 5
-  lerpSpeed: 0
+  lerpSpeed: 5
   xMin: -9
   xMax: 9
   yMin: 15
