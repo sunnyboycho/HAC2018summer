@@ -1,0 +1,62 @@
+
+적사과.png
+size: 1949,804
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+그림자
+  rotate: false
+  xy: 861, 623
+  size: 770, 179
+  orig: 770, 179
+  offset: 0, 0
+  index: -1
+꼬투리
+  rotate: false
+  xy: 1633, 514
+  size: 314, 288
+  orig: 314, 288
+  offset: 0, 0
+  index: -1
+눈
+  rotate: false
+  xy: 861, 341
+  size: 659, 280
+  orig: 659, 280
+  offset: 0, 0
+  index: -1
+레이어 1
+  rotate: true
+  xy: 861, 134
+  size: 205, 538
+  orig: 205, 538
+  offset: 0, 0
+  index: -1
+레이어 2
+  rotate: true
+  xy: 1522, 350
+  size: 162, 416
+  orig: 162, 416
+  offset: 0, 0
+  index: -1
+몸통(!)
+  rotate: false
+  xy: 2, 2
+  size: 857, 800
+  orig: 857, 800
+  offset: 0, 0
+  index: -1
+오른팔
+  rotate: false
+  xy: 1401, 89
+  size: 286, 250
+  orig: 286, 250
+  offset: 0, 0
+  index: -1
+왼팔
+  rotate: true
+  xy: 1689, 51
+  size: 297, 235
+  orig: 297, 235
+  offset: 0, 0
+  index: -1
