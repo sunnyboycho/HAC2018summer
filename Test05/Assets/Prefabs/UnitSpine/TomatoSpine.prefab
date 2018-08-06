@@ -571,7 +571,7 @@ MonoBehaviour:
   projectile: {fileID: 1008957272599848, guid: 6266c11d06b7887468bf235d302e2784, type: 2}
   bonusAttack: 3
   bonusHP: 1
-  bonusRange: 10
+  bonusRange: 1
   bonusDefense: 0
   bonusSpeed: 0.2
   marbleColor: {fileID: 1610568990298378, guid: e390cf774067f2341889f185d4d0dd21,

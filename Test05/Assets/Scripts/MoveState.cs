@@ -30,6 +30,10 @@ public class MoveState : UnitState
         {
             unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(playerPositive * unitScript.TotalSpeed, 0);
         }
+        else
+        {
+            unitScript.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
         CheckEnemy();
         CheckWin();
     }
@@ -43,6 +47,7 @@ public class MoveState : UnitState
 
     void CheckEnemy()
     {
+        distance = unitScript.TotalRange;
         Vector2 point = unitScript.GetComponent<Transform>().position;
         Collider2D[] colliders = new Collider2D[4];
         colliders = Physics2D.OverlapBoxAll(point, new Vector2(distance, 5f), 0f, layerMask);

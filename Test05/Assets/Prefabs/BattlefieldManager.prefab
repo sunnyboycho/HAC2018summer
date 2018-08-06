@@ -111,6 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+  unitImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   parent:
   - {fileID: 4605550361754420}
   - {fileID: 4163565011468776}
@@ -124,6 +128,7 @@ MonoBehaviour:
   - {fileID: 1789263776277062, guid: f551ddbe8dc6f584e8f77da03d9ab89e, type: 2}
   enemyUnit:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   playerSpawn:
   - {fileID: 0}
   - {fileID: 0}
@@ -151,8 +156,10 @@ MonoBehaviour:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   enemyArray:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  - {fileID: 0}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
-  enemyNumber: 2
+  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  enemyNumber: 10
   spawnInterval: 4
   intervalWait: 8

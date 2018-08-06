@@ -72,6 +72,7 @@ public class PlayerUnit : UnitScript {
             }
             if (colors[i] == (marbleColor.GetComponent<MarbleDisplay>().marble.id + 3))
             {
+                fitColor++;
                 fitSparkle++;
             }
         }

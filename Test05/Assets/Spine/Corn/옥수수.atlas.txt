@@ -1,236 +1,167 @@
 
 옥수수.png
-size: 2045,2048
+size: 304,525
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 2밑동
   rotate: true
-  xy: 874, 1113
-  size: 147, 93
-  orig: 147, 93
-  offset: 0, 0
-  index: -1
-2수염
-  rotate: true
-  xy: 697, 609
-  size: 405, 737
-  orig: 405, 737
-  offset: 0, 0
-  index: -1
-2알맹이
-  rotate: true
-  xy: 697, 261
-  size: 346, 765
-  orig: 346, 765
-  offset: 0, 0
-  index: -1
-2오른껍질
-  rotate: false
-  xy: 478, 398
-  size: 217, 796
-  orig: 217, 796
+  xy: 2, 230
+  size: 33, 21
+  orig: 33, 21
   offset: 0, 0
   index: -1
 2오른발1
   rotate: true
-  xy: 478, 261
-  size: 135, 177
-  orig: 135, 177
-  offset: 0, 0
-  index: -1
-2오른발2
-  rotate: false
-  xy: 1436, 635
-  size: 301, 379
-  orig: 301, 379
+  xy: 256, 90
+  size: 31, 40
+  orig: 31, 40
   offset: 0, 0
   index: -1
 2오른발2(!)
   rotate: false
-  xy: 1464, 254
-  size: 301, 379
-  orig: 301, 379
-  offset: 0, 0
-  index: -1
-2오른발3
-  rotate: true
-  xy: 1179, 2
-  size: 199, 319
-  orig: 199, 319
+  xy: 94, 16
+  size: 67, 83
+  orig: 67, 83
   offset: 0, 0
   index: -1
 2오른발3(!)
   rotate: true
-  xy: 1500, 2
-  size: 199, 319
-  orig: 199, 319
+  xy: 85, 144
+  size: 44, 70
+  orig: 44, 70
   offset: 0, 0
   index: -1
 2왼발1
   rotate: false
-  xy: 1940, 1030
-  size: 103, 137
-  orig: 103, 137
+  xy: 162, 282
+  size: 24, 31
+  orig: 24, 31
   offset: 0, 0
   index: -1
-2왼쪽껍질
+2왼발2
   rotate: true
-  xy: 983, 1016
-  size: 290, 813
-  orig: 290, 813
+  xy: 85, 101
+  size: 41, 69
+  orig: 41, 69
   offset: 0, 0
   index: -1
-2왼쪽껍질2
+2왼발3
   rotate: false
-  xy: 1767, 203
-  size: 245, 439
-  orig: 245, 439
+  xy: 208, 53
+  size: 46, 68
+  orig: 46, 68
   offset: 0, 0
   index: -1
 그림자
   rotate: false
-  xy: 466, 94
-  size: 711, 165
-  orig: 711, 165
+  xy: 2, 265
+  size: 158, 48
+  orig: 158, 48
+  offset: 0, 0
+  index: -1
+눈1
+  rotate: true
+  xy: 256, 23
+  size: 29, 34
+  orig: 29, 34
   offset: 0, 0
   index: -1
 눈2
   rotate: false
-  xy: 1798, 1024
+  xy: 162, 123
   size: 140, 143
   orig: 140, 143
   offset: 0, 0
   index: -1
-밑동
+눈3
   rotate: false
-  xy: 919, 2
-  size: 145, 90
-  orig: 145, 90
+  xy: 256, 54
+  size: 39, 34
+  orig: 39, 34
   offset: 0, 0
   index: -1
 수염
   rotate: false
-  xy: 2, 1196
-  size: 503, 850
-  orig: 503, 850
+  xy: 191, 268
+  size: 110, 184
+  orig: 110, 184
   offset: 0, 0
   index: -1
 알맹이
   rotate: true
-  xy: 983, 1678
-  size: 368, 861
-  orig: 368, 861
+  xy: 2, 398
+  size: 81, 187
+  orig: 81, 187
   offset: 0, 0
   index: -1
 알맹이(1)
   rotate: true
-  xy: 983, 1308
-  size: 368, 861
-  orig: 368, 861
-  offset: 0, 0
-  index: -1
-오른껍질
-  rotate: false
-  xy: 507, 1262
-  size: 474, 784
-  orig: 474, 784
+  xy: 2, 315
+  size: 81, 187
+  orig: 81, 187
   offset: 0, 0
   index: -1
 오른껍질(수정)
-  rotate: false
-  xy: 2, 378
-  size: 474, 816
-  orig: 474, 816
+  rotate: true
+  xy: 25, 190
+  size: 73, 124
+  orig: 73, 124
   offset: 0, 0
   index: -1
 오른발1
-  rotate: false
-  xy: 1821, 3
-  size: 182, 198
-  orig: 182, 198
+  rotate: true
+  xy: 163, 2
+  size: 41, 44
+  orig: 41, 44
   offset: 0, 0
   index: -1
 오른발2
   rotate: true
-  xy: 2, 67
-  size: 309, 462
-  orig: 309, 462
-  offset: 0, 0
-  index: -1
-왼발1
-  rotate: false
-  xy: 697, 1046
-  size: 175, 214
-  orig: 175, 214
-  offset: 0, 0
-  index: -1
-왼발2
-  rotate: false
-  xy: 1739, 644
-  size: 294, 370
-  orig: 294, 370
-  offset: 0, 0
-  index: -1
-왼쪽껍질
-  rotate: false
-  xy: 1846, 1169
-  size: 185, 877
-  orig: 185, 877
-  offset: 0, 0
-  index: -1
-왼쪽껍질2
-  rotate: true
-  xy: 466, 4
-  size: 88, 451
-  orig: 88, 451
-  offset: 0, 0
-  index: -1
-
-옥수수2.png
-size: 971,384
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-2왼발2
-  rotate: true
-  xy: 307, 2
-  size: 184, 314
-  orig: 184, 314
-  offset: 0, 0
-  index: -1
-2왼발3
-  rotate: true
-  xy: 656, 175
-  size: 207, 313
-  orig: 207, 313
-  offset: 0, 0
-  index: -1
-눈1
-  rotate: false
-  xy: 796, 20
-  size: 128, 153
-  orig: 128, 153
-  offset: 0, 0
-  index: -1
-눈3
-  rotate: false
-  xy: 623, 20
-  size: 171, 153
-  orig: 171, 153
+  xy: 194, 454
+  size: 69, 101
+  orig: 69, 101
   offset: 0, 0
   index: -1
 오른발3
   rotate: false
-  xy: 2, 38
-  size: 303, 344
-  orig: 303, 344
+  xy: 25, 4
+  size: 67, 76
+  orig: 67, 76
+  offset: 0, 0
+  index: -1
+왼발1
+  rotate: true
+  xy: 25, 82
+  size: 39, 48
+  orig: 39, 48
+  offset: 0, 0
+  index: -1
+왼발2
+  rotate: true
+  xy: 2, 123
+  size: 65, 81
+  orig: 65, 81
   offset: 0, 0
   index: -1
 왼발3
+  rotate: false
+  xy: 163, 45
+  size: 43, 76
+  orig: 43, 76
+  offset: 0, 0
+  index: -1
+왼쪽껍질
   rotate: true
-  xy: 307, 188
-  size: 194, 347
-  orig: 194, 347
+  xy: 2, 481
+  size: 42, 190
+  orig: 42, 190
+  offset: 0, 0
+  index: -1
+왼쪽껍질2
+  rotate: false
+  xy: 2, 22
+  size: 21, 99
+  orig: 21, 99
   offset: 0, 0
   index: -1

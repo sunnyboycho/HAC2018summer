@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: CornSkeleton
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 2b88c1ae886a23745881349fc7a61035, type: 2}
+  - {fileID: 11400000, guid: 5f41305dcd019674990f559da1d87558, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: fa0aa927d00d11340945c01fa24ae80d, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: ed7186dae1f9d4f4cb2244f0aff0a424, type: 3}
   fromAnimation: []
   toAnimation: []
   duration: []
