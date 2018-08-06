@@ -4315,6 +4315,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImage.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 114581447395931738, guid: f3bfbbe749aa93a4ea0efa177d23c194,
         type: 2}
       propertyPath: enemyArray.Array.size
@@ -4439,6 +4444,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83,
         type: 2}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImage.Array.data[0]
+      value: 
+      objectReference: {fileID: 1581585465}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImage.Array.data[1]
+      value: 
+      objectReference: {fileID: 470996460}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImage.Array.data[2]
+      value: 
+      objectReference: {fileID: 978782}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3bfbbe749aa93a4ea0efa177d23c194, type: 2}
   m_IsPrefabAsset: 0
