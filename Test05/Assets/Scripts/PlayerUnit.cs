@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerUnit : UnitScript {
 
+    SkillManager skillMangager;
+
     [SerializeField]
     int bonusAttack = 3;
 
@@ -22,6 +24,8 @@ public class PlayerUnit : UnitScript {
     [SerializeField]
     GameObject marbleColor;
 
+    float statMultiplier = 1f;
+
     public int[] colors = new int[4];
 
     // Use this for initialization
@@ -35,6 +39,7 @@ public class PlayerUnit : UnitScript {
         defense = gameObject.GetComponent<UnitDisplay>().unit.defense;
         isAlive = true;
         gameManager = FindObjectOfType<GameManager>();
+        skillMangager = FindObjectOfType<SkillManager>();
         SetState(new MoveState(this));
     }
 
@@ -76,6 +81,14 @@ public class PlayerUnit : UnitScript {
                 fitSparkle++;
             }
         }
+        if (skillMangager.GetStatUp())
+        {
+            statMultiplier = 2f;
+        }
+        else
+        {
+            statMultiplier = 1f;
+        }
         switch (fitColor)
         {
             case 4:
@@ -107,5 +120,10 @@ public class PlayerUnit : UnitScript {
                 totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
                 break;
         }
+        totalAttack = totalAttack * (int)statMultiplier;
+        totalHP = totalHP * (int)statMultiplier;
+        totalRange = totalRange * (int)statMultiplier;
+        defense = defense * (int)statMultiplier;
+        totalSpeed = totalSpeed * (int)statMultiplier;
     }
 }

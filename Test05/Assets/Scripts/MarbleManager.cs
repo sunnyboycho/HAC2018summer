@@ -33,6 +33,8 @@ public class MarbleManager : MonoBehaviour {
 
     bool allowSpawn = true;
 
+    bool isDoubleSpeed = false;
+
     [SerializeField]
     Transform field;
 
@@ -216,5 +218,20 @@ public class MarbleManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(waitSeconds);
         isReady = true;
+    }
+
+    public void DoubleSpeedStart()
+    {
+        if (!isDoubleSpeed)
+        {
+            isDoubleSpeed = true;
+            waitSeconds = waitSeconds / 2.0f;
+        }
+    }
+
+    public void DoubleSpeedEnd()
+    {
+        isDoubleSpeed = false;
+        waitSeconds = waitSeconds * 2.0f;
     }
 }
