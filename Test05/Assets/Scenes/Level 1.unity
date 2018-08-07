@@ -1105,6 +1105,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cf269dc7f846fa49978271f09d9959c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &727324529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114304156113852494, guid: 3cf269dc7f846fa49978271f09d9959c,
+    type: 2}
+  m_PrefabInternal: {fileID: 727324528}
+  m_Script: {fileID: 11500000, guid: 7ea2b5cdabbc2af4c947681e5d33eadf, type: 3}
 --- !u!1 &758337250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1845816854185592, guid: f3bfbbe749aa93a4ea0efa177d23c194,
@@ -2238,6 +2244,36 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114988154124331424, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2145599717}
+    - target: {fileID: 114988154124331424, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwapUnits
+      objectReference: {fileID: 0}
+    - target: {fileID: 114094106513946836, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 727324529}
+    - target: {fileID: 114094106513946836, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MarbleSpeedUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114379648657404526, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 727324529}
+    - target: {fileID: 114379648657404526, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StatUp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bc40c8c01251e3418cb54b002ee34c8, type: 2}
   m_IsPrefabAsset: 0
@@ -2289,6 +2325,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ebb67627a5f8564ab89e35957f2d9dd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!212 &1799544701 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212333206562930958, guid: 1ebb67627a5f8564ab89e35957f2d9dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1799544700}
+--- !u!212 &1799544702 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212134324499247782, guid: 1ebb67627a5f8564ab89e35957f2d9dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1799544700}
+--- !u!212 &1799544703 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212062443697211780, guid: 1ebb67627a5f8564ab89e35957f2d9dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1799544700}
 --- !u!1 &1866272034
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,6 +2622,39 @@ Prefab:
       propertyPath: enemyArray.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitPortrait.Array.data[0]
+      value: 
+      objectReference: {fileID: 1799544703}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitPortrait.Array.data[1]
+      value: 
+      objectReference: {fileID: 1799544702}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitPortrait.Array.data[2]
+      value: 
+      objectReference: {fileID: 1799544701}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImageAlt.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e5e00d9fbe2df854aa5e0be9f2aca5d8,
+        type: 3}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImageAlt.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d2e6d6a20422683498bfc39a15c0c060,
+        type: 3}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitImageAlt.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 83931eec7d362924fae9728ab543eed1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3bfbbe749aa93a4ea0efa177d23c194, type: 2}
   m_IsPrefabAsset: 0

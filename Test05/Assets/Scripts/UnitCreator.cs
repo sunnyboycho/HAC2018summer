@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class UnitCreator : MonoBehaviour {
 
     [SerializeField]
-    Text text;
-
-    [SerializeField]
     SpriteRenderer[] unitPortrait = new SpriteRenderer[3];
 
     [SerializeField]
@@ -35,7 +32,7 @@ public class UnitCreator : MonoBehaviour {
 
     private void Start()
     {
-        //SetUnitText();
+
     }
 
     public void CreateUnit(int type, int[] colors)
@@ -71,11 +68,5 @@ public class UnitCreator : MonoBehaviour {
             unitPortrait[i].sprite = unitImageAlt[i];
             unitImageAlt[i] = tempSprite;
         }
-        //SetUnitText();
-    }
-
-    void SetUnitText()
-    {
-        text.text = unit[0].GetComponent<UnitDisplay>().unit.unitName + "\n" + unit[1].GetComponent<UnitDisplay>().unit.unitName + "\n" + unit[2].GetComponent<UnitDisplay>().unit.unitName + "\n";
     }
 }

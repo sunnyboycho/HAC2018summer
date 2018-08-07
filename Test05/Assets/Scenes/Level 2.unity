@@ -199,11 +199,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224545318810441068, guid: 2bc40c8c01251e3418cb54b002ee34c8,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224545318810441068, guid: 2bc40c8c01251e3418cb54b002ee34c8,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -292,30 +287,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1557059772883890, guid: 2bc40c8c01251e3418cb54b002ee34c8, type: 2}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 114094106513946836, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+    - target: {fileID: 114988154124331424, guid: 2bc40c8c01251e3418cb54b002ee34c8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1664869986}
-    - target: {fileID: 114094106513946836, guid: 2bc40c8c01251e3418cb54b002ee34c8,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MarbleSpeedUp
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2145599717}
     - target: {fileID: 114379648657404526, guid: 2bc40c8c01251e3418cb54b002ee34c8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1664869986}
-    - target: {fileID: 114379648657404526, guid: 2bc40c8c01251e3418cb54b002ee34c8,
+    - target: {fileID: 114094106513946836, guid: 2bc40c8c01251e3418cb54b002ee34c8,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StatUp
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1664869986}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bc40c8c01251e3418cb54b002ee34c8, type: 2}
   m_IsPrefabAsset: 0
@@ -468,6 +454,21 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ebb67627a5f8564ab89e35957f2d9dd, type: 2}
   m_IsPrefabAsset: 0
+--- !u!212 &300194809 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212333206562930958, guid: 1ebb67627a5f8564ab89e35957f2d9dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 300194808}
+--- !u!212 &300194810 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212134324499247782, guid: 1ebb67627a5f8564ab89e35957f2d9dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 300194808}
+--- !u!212 &300194811 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 212062443697211780, guid: 1ebb67627a5f8564ab89e35957f2d9dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 300194808}
 --- !u!1 &335889524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,6 +2547,21 @@ Prefab:
       propertyPath: intervalWait
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitPortrait.Array.data[0]
+      value: 
+      objectReference: {fileID: 300194811}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitPortrait.Array.data[1]
+      value: 
+      objectReference: {fileID: 300194810}
+    - target: {fileID: 114215040110230944, guid: f3bfbbe749aa93a4ea0efa177d23c194,
+        type: 2}
+      propertyPath: unitPortrait.Array.data[2]
+      value: 
+      objectReference: {fileID: 300194809}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3bfbbe749aa93a4ea0efa177d23c194, type: 2}
   m_IsPrefabAsset: 0

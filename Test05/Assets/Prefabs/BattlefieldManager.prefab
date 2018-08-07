@@ -111,10 +111,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  unitImage:
+  unitPortrait:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  unitImageAlt:
+  - {fileID: 21300000, guid: e5e00d9fbe2df854aa5e0be9f2aca5d8, type: 3}
+  - {fileID: 21300000, guid: d2e6d6a20422683498bfc39a15c0c060, type: 3}
+  - {fileID: 21300000, guid: 83931eec7d362924fae9728ab543eed1, type: 3}
   parent:
   - {fileID: 4605550361754420}
   - {fileID: 4163565011468776}
@@ -154,12 +158,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   enemyArray:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   - {fileID: 0}
+  - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
-  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
-  - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
+  - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   enemyNumber: 10
   spawnInterval: 4
   intervalWait: 8
