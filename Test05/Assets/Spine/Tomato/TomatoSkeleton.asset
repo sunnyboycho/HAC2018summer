@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: TomatoSkeleton
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: e0c2bb09572d7174b92946ef18492e6a, type: 2}
+  - {fileID: 11400000, guid: f4da2e5f702af2348aae216086565c1f, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: 56d0258a8a0db7f4dabe4990123ce84c, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 32763a4c9e55dfb4883fb994f345d713, type: 3}
   fromAnimation: []
   toAnimation: []
   duration: []

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: MadScientistSkeleton
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: 3dbf90293dd73c3459628cf654120dd0, type: 2}
+  - {fileID: 11400000, guid: c11cb47c504f6d849b7af84a0916dd4b, type: 2}
   scale: 0.01
-  skeletonJSON: {fileID: 4900000, guid: e5b8d51d425edce4f90cc799a328d8a9, type: 3}
+  skeletonJSON: {fileID: 4900000, guid: 8cb5ca88660a73b4cad3cdab00293479, type: 3}
   fromAnimation: []
   toAnimation: []
   duration: []

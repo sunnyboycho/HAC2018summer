@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: "\uBBF8\uCE5C\uC5F0\uAD6C\uC6D0_\uBBF8\uCE5C\uC5F0\uAD6C\uC6D0"
+  m_Name: "\uBC30\uCD94_Material"
   m_Shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0929939062b237e478a4a9999c616d4d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2c5fef65cc5e7214a9a0b2c9d040991f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

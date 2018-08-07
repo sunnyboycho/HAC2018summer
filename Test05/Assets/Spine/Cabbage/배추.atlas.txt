@@ -1,152 +1,146 @@
 
 배추.png
-size: 2043,2029
+size: 854,396
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 e1
-  rotate: false
-  xy: 823, 138
-  size: 194, 146
-  orig: 194, 146
+  rotate: true
+  xy: 686, 191
+  size: 53, 40
+  orig: 53, 40
   offset: 0, 0
   index: -1
 e2
   rotate: true
-  xy: 1901, 1261
-  size: 136, 107
-  orig: 136, 107
+  xy: 443, 2
+  size: 38, 30
+  orig: 38, 30
+  offset: 0, 0
+  index: -1
+e3
+  rotate: true
+  xy: 683, 11
+  size: 57, 60
+  orig: 57, 60
   offset: 0, 0
   index: -1
 e4
-  rotate: true
-  xy: 1772, 13
-  size: 152, 269
-  orig: 152, 269
+  rotate: false
+  xy: 639, 11
+  size: 42, 73
+  orig: 42, 73
   offset: 0, 0
   index: -1
 공격잎
   rotate: false
-  xy: 1020, 105
-  size: 401, 765
-  orig: 401, 765
+  xy: 738, 189
+  size: 108, 205
+  orig: 108, 205
   offset: 0, 0
   index: -1
 그림자
   rotate: false
-  xy: 2, 73
-  size: 819, 211
-  orig: 819, 211
+  xy: 127, 26
+  size: 218, 57
+  orig: 218, 57
   offset: 0, 0
   index: -1
 그림자2
-  rotate: true
-  xy: 1984, 1790
-  size: 237, 56
-  orig: 237, 56
+  rotate: false
+  xy: 127, 8
+  size: 64, 16
+  orig: 64, 16
   offset: 0, 0
   index: -1
 눈
   rotate: false
-  xy: 1423, 13
-  size: 347, 152
-  orig: 347, 152
+  xy: 347, 16
+  size: 94, 42
+  orig: 94, 42
   offset: 0, 0
   index: -1
 눈2
   rotate: false
-  xy: 1680, 1018
-  size: 347, 152
-  orig: 347, 152
+  xy: 456, 42
+  size: 94, 42
+  orig: 94, 42
   offset: 0, 0
   index: -1
 눈썹
-  rotate: true
-  xy: 1680, 1172
-  size: 394, 219
-  orig: 394, 219
+  rotate: false
+  xy: 347, 60
+  size: 107, 60
+  orig: 107, 60
   offset: 0, 0
   index: -1
 밑동
-  rotate: true
-  xy: 1901, 1399
-  size: 167, 82
-  orig: 167, 82
+  rotate: false
+  xy: 475, 17
+  size: 46, 23
+  orig: 46, 23
   offset: 0, 0
   index: -1
 입
-  rotate: false
-  xy: 2, 2
-  size: 233, 69
-  orig: 233, 69
+  rotate: true
+  xy: 832, 123
+  size: 64, 20
+  orig: 64, 20
   offset: 0, 0
   index: -1
 입2
   rotate: false
-  xy: 1129, 879
-  size: 226, 120
-  orig: 226, 120
+  xy: 745, 35
+  size: 62, 33
+  orig: 62, 33
   offset: 0, 0
   index: -1
 잎1
-  rotate: false
-  xy: 1129, 1001
-  size: 549, 1026
-  orig: 549, 1026
+  rotate: true
+  xy: 462, 246
+  size: 148, 274
+  orig: 148, 274
   offset: 0, 0
   index: -1
 잎2
-  rotate: false
-  xy: 1423, 167
-  size: 588, 832
-  orig: 588, 832
+  rotate: true
+  xy: 462, 86
+  size: 158, 222
+  orig: 158, 222
   offset: 0, 0
   index: -1
 잎3
-  rotate: true
-  xy: 2, 286
-  size: 584, 1016
-  orig: 584, 1016
+  rotate: false
+  xy: 304, 122
+  size: 156, 272
+  orig: 156, 272
   offset: 0, 0
   index: -1
 잎4
-  rotate: true
-  xy: 1680, 1568
-  size: 459, 302
-  orig: 459, 302
-  offset: 0, 0
-  index: -1
-전체
   rotate: false
-  xy: 2, 872
-  size: 1125, 1155
-  orig: 1125, 1155
-  offset: 0, 0
-  index: -1
-
-배추2.png
-size: 1014,440
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-e3
-  rotate: false
-  xy: 801, 220
-  size: 211, 218
-  orig: 211, 218
+  xy: 2, 2
+  size: 123, 81
+  orig: 123, 81
   offset: 0, 0
   index: -1
 잎5
-  rotate: false
-  xy: 542, 123
-  size: 257, 315
-  orig: 257, 315
+  rotate: true
+  xy: 552, 14
+  size: 70, 85
+  orig: 70, 85
   offset: 0, 0
   index: -1
 잎6
   rotate: true
-  xy: 2, 2
-  size: 436, 538
-  orig: 436, 538
+  xy: 686, 70
+  size: 117, 144
+  orig: 117, 144
+  offset: 0, 0
+  index: -1
+전체
+  rotate: false
+  xy: 2, 85
+  size: 300, 309
+  orig: 300, 309
   offset: 0, 0
   index: -1

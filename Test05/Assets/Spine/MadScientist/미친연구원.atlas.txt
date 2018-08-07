@@ -1,278 +1,272 @@
 
 미친연구원.png
-size: 2048,2045
+size: 2001,449
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Flask
   rotate: false
-  xy: 1767, 204
-  size: 247, 300
-  orig: 247, 300
+  xy: 1884, 109
+  size: 56, 67
+  orig: 56, 67
   offset: 0, 0
   index: -1
 L-leg
   rotate: false
-  xy: 1607, 157
-  size: 158, 345
-  orig: 158, 345
+  xy: 1077, 2
+  size: 37, 78
+  orig: 37, 78
   offset: 0, 0
   index: -1
 L_arm
-  rotate: false
-  xy: 1206, 87
-  size: 203, 351
-  orig: 203, 351
+  rotate: true
+  xy: 1237, 88
+  size: 46, 79
+  orig: 46, 79
+  offset: 0, 0
+  index: -1
+L_hand
+  rotate: true
+  xy: 1298, 7
+  size: 41, 45
+  orig: 41, 45
+  offset: 0, 0
+  index: -1
+R-leg
+  rotate: true
+  xy: 1883, 178
+  size: 39, 76
+  orig: 39, 76
   offset: 0, 0
   index: -1
 R_hand
-  rotate: false
-  xy: 596, 829
-  size: 585, 602
-  orig: 585, 602
+  rotate: true
+  xy: 641, 4
+  size: 130, 131
+  orig: 130, 131
   offset: 0, 0
   index: -1
 body
   rotate: true
-  xy: 1348, 1634
-  size: 409, 632
-  orig: 409, 632
+  xy: 774, 42
+  size: 92, 140
+  orig: 92, 140
   offset: 0, 0
   index: -1
 eyes
-  rotate: true
-  xy: 944, 10
-  size: 373, 147
-  orig: 373, 147
+  rotate: false
+  xy: 774, 6
+  size: 83, 34
+  orig: 83, 34
   offset: 0, 0
   index: -1
 hair1
-  rotate: true
-  xy: 1411, 79
-  size: 359, 194
-  orig: 359, 194
+  rotate: false
+  xy: 1151, 36
+  size: 80, 44
+  orig: 80, 44
   offset: 0, 0
   index: -1
 hair2
   rotate: false
-  xy: 1175, 440
-  size: 282, 333
-  orig: 282, 333
+  xy: 1883, 219
+  size: 63, 74
+  orig: 63, 74
+  offset: 0, 0
+  index: -1
+hair3
+  rotate: true
+  xy: 1942, 123
+  size: 53, 57
+  orig: 53, 57
+  offset: 0, 0
+  index: -1
+hair4
+  rotate: true
+  xy: 1116, 2
+  size: 78, 33
+  orig: 78, 33
   offset: 0, 0
   index: -1
 hair5
   rotate: false
-  xy: 1459, 504
-  size: 293, 269
-  orig: 293, 269
+  xy: 1009, 25
+  size: 66, 61
+  orig: 66, 61
   offset: 0, 0
   index: -1
 hair6
   rotate: false
-  xy: 1607, 33
-  size: 139, 122
-  orig: 139, 122
+  xy: 1961, 189
+  size: 32, 29
+  orig: 32, 29
   offset: 0, 0
   index: -1
 head
   rotate: false
-  xy: 1183, 775
-  size: 621, 554
-  orig: 621, 554
+  xy: 501, 10
+  size: 138, 124
+  orig: 138, 124
   offset: 0, 0
   index: -1
 mouth
-  rotate: true
-  xy: 1062, 423
-  size: 404, 111
-  orig: 404, 111
+  rotate: false
+  xy: 1151, 8
+  size: 90, 26
+  orig: 90, 26
   offset: 0, 0
   index: -1
 shadow
   rotate: false
-  xy: 2, 1732
+  xy: 2, 136
   size: 1344, 311
   orig: 1344, 311
   offset: 0, 0
   index: -1
 spoid 사본
   rotate: false
-  xy: 596, 385
+  xy: 1348, 5
   size: 464, 442
   orig: 464, 442
   offset: 0, 0
   index: -1
 window
-  rotate: true
-  xy: 1806, 723
-  size: 606, 228
-  orig: 606, 228
+  rotate: false
+  xy: 1100, 82
+  size: 135, 52
+  orig: 135, 52
   offset: 0, 0
   index: -1
 깨진스포이드
-  rotate: false
-  xy: 1767, 85
-  size: 270, 117
-  orig: 270, 117
+  rotate: true
+  xy: 1953, 60
+  size: 61, 27
+  orig: 61, 27
   offset: 0, 0
   index: -1
 깨진플라스크
   rotate: false
-  xy: 1754, 506
-  size: 261, 215
-  orig: 261, 215
+  xy: 1237, 38
+  size: 59, 48
+  orig: 59, 48
+  offset: 0, 0
+  index: -1
+눈2
+  rotate: true
+  xy: 1912, 37
+  size: 70, 39
+  orig: 70, 39
+  offset: 0, 0
+  index: -1
+눈3
+  rotate: true
+  xy: 1948, 220
+  size: 73, 48
+  orig: 73, 48
+  offset: 0, 0
+  index: -1
+눈빛1
+  rotate: false
+  xy: 1318, 104
+  size: 27, 30
+  orig: 27, 30
   offset: 0, 0
   index: -1
 눈빛2
   rotate: false
-  xy: 1940, 1516
-  size: 106, 116
-  orig: 106, 116
+  xy: 1243, 9
+  size: 24, 27
+  orig: 24, 27
   offset: 0, 0
   index: -1
 레이어 2
-  rotate: false
-  xy: 2, 1433
-  size: 1226, 297
-  orig: 1226, 297
+  rotate: true
+  xy: 1814, 176
+  size: 271, 67
+  orig: 271, 67
   offset: 0, 0
   index: -1
 몸통2
   rotate: false
-  xy: 2, 2
-  size: 517, 686
-  orig: 517, 686
+  xy: 1883, 295
+  size: 116, 152
+  orig: 116, 152
   offset: 0, 0
   index: -1
 몸통3
-  rotate: false
-  xy: 2, 690
-  size: 592, 741
-  orig: 592, 741
+  rotate: true
+  xy: 334, 3
+  size: 131, 165
+  orig: 131, 165
   offset: 0, 0
   index: -1
 오른손4
   rotate: true
-  xy: 521, 8
-  size: 375, 421
-  orig: 375, 421
-  offset: 0, 0
-  index: -1
-오른팔3
-  rotate: false
-  xy: 1230, 1331
-  size: 708, 301
-  orig: 708, 301
-  offset: 0, 0
-  index: -1
-입3
-  rotate: true
-  xy: 1093, 17
-  size: 404, 111
-  orig: 404, 111
-  offset: 0, 0
-  index: -1
-입4
-  rotate: true
-  xy: 1230, 1654
-  size: 76, 110
-  orig: 76, 110
-  offset: 0, 0
-  index: -1
-튐
-  rotate: false
-  xy: 521, 573
-  size: 68, 115
-  orig: 68, 115
-  offset: 0, 0
-  index: -1
-혀
-  rotate: true
-  xy: 1940, 1397
-  size: 117, 104
-  orig: 117, 104
-  offset: 0, 0
-  index: -1
-
-미친연구원2.png
-size: 1165,591
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
-L_hand
-  rotate: false
-  xy: 674, 186
-  size: 179, 200
-  orig: 179, 200
-  offset: 0, 0
-  index: -1
-R-leg
-  rotate: true
-  xy: 824, 420
-  size: 169, 339
-  orig: 169, 339
-  offset: 0, 0
-  index: -1
-hair3
-  rotate: true
-  xy: 855, 178
-  size: 240, 250
-  orig: 240, 250
-  offset: 0, 0
-  index: -1
-hair4
-  rotate: false
-  xy: 327, 240
-  size: 345, 146
-  orig: 345, 146
-  offset: 0, 0
-  index: -1
-눈2
-  rotate: false
-  xy: 2, 2
-  size: 312, 172
-  orig: 312, 172
-  offset: 0, 0
-  index: -1
-눈3
-  rotate: false
-  xy: 2, 176
-  size: 323, 210
-  orig: 323, 210
-  offset: 0, 0
-  index: -1
-눈빛1
-  rotate: true
-  xy: 316, 8
-  size: 114, 129
-  orig: 114, 129
+  xy: 916, 2
+  size: 84, 91
+  orig: 84, 91
   offset: 0, 0
   index: -1
 오른팔2
   rotate: false
-  xy: 2, 388
-  size: 820, 201
-  orig: 820, 201
+  xy: 916, 88
+  size: 182, 46
+  orig: 182, 46
+  offset: 0, 0
+  index: -1
+오른팔3
+  rotate: true
+  xy: 1814, 17
+  size: 157, 68
+  orig: 157, 68
   offset: 0, 0
   index: -1
 왼손2
   rotate: false
-  xy: 893, 19
-  size: 212, 157
-  orig: 212, 157
+  xy: 1298, 50
+  size: 48, 36
+  orig: 48, 36
   offset: 0, 0
   index: -1
 입2
   rotate: false
-  xy: 659, 28
-  size: 232, 148
-  orig: 232, 148
+  xy: 859, 6
+  size: 52, 34
+  orig: 52, 34
+  offset: 0, 0
+  index: -1
+입3
+  rotate: true
+  xy: 1884, 17
+  size: 90, 26
+  orig: 90, 26
+  offset: 0, 0
+  index: -1
+입4
+  rotate: false
+  xy: 1982, 95
+  size: 17, 26
+  orig: 17, 26
   offset: 0, 0
   index: -1
 죽은눈
   rotate: false
-  xy: 327, 124
+  xy: 2, 20
   size: 330, 114
   orig: 330, 114
+  offset: 0, 0
+  index: -1
+튐
+  rotate: true
+  xy: 2, 2
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+혀
+  rotate: false
+  xy: 1269, 12
+  size: 27, 24
+  orig: 27, 24
   offset: 0, 0
   index: -1

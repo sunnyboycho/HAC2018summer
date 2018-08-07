@@ -770,7 +770,7 @@ MonoBehaviour:
   bonusRange: 0
   bonusDefense: 0
   bonusSpeed: 0.2
-  marbleColor: {fileID: 1327833091536042, guid: e0d3d03a2c5d5b1448ef3be6bdf6c173,
+  marbleColor: {fileID: 1031655214887142, guid: 01e77482655b61246bed1b5018eef7a9,
     type: 2}
   colors: 00000000000000000000000000000000
 --- !u!114 &114722216438439806

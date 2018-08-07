@@ -1,195 +1,195 @@
 
 무.png
-size: 1956,1859
+size: 1191,711
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 균열
-  rotate: false
-  xy: 2, 31
+  rotate: true
+  xy: 2, 3
   size: 706, 897
   orig: 706, 897
   offset: 0, 0
   index: -1
 그림자
   rotate: true
-  xy: 710, 109
-  size: 819, 211
-  orig: 819, 211
+  xy: 1063, 367
+  size: 184, 48
+  orig: 184, 48
   offset: 0, 0
   index: -1
 눈
   rotate: true
-  xy: 1741, 711
-  size: 245, 156
-  orig: 245, 156
+  xy: 1148, 563
+  size: 56, 36
+  orig: 56, 36
   offset: 0, 0
   index: -1
 눈2
-  rotate: true
-  xy: 1540, 474
+  rotate: false
+  xy: 901, 553
   size: 245, 156
   orig: 245, 156
   offset: 0, 0
   index: -1
 몸통
   rotate: false
-  xy: 2, 930
-  size: 710, 927
-  orig: 710, 927
+  xy: 901, 342
+  size: 160, 209
+  orig: 160, 209
   offset: 0, 0
   index: -1
 무순
-  rotate: false
-  xy: 714, 988
-  size: 115, 142
-  orig: 115, 142
+  rotate: true
+  xy: 970, 7
+  size: 27, 33
+  orig: 27, 33
   offset: 0, 0
   index: -1
 뿌리
-  rotate: true
-  xy: 1508, 2
-  size: 261, 203
-  orig: 261, 203
+  rotate: false
+  xy: 1115, 137
+  size: 59, 47
+  orig: 59, 47
   offset: 0, 0
   index: -1
 입
   rotate: false
-  xy: 1521, 365
-  size: 279, 93
-  orig: 279, 93
+  xy: 1063, 342
+  size: 64, 23
+  orig: 64, 23
   offset: 0, 0
   index: -1
 입2
-  rotate: true
-  xy: 1603, 721
-  size: 292, 136
-  orig: 292, 136
+  rotate: false
+  xy: 901, 2
+  size: 67, 32
+  orig: 67, 32
   offset: 0, 0
   index: -1
 줄기1(1)
   rotate: false
-  xy: 1304, 1241
-  size: 453, 616
-  orig: 453, 616
+  xy: 901, 36
+  size: 103, 139
+  orig: 103, 139
   offset: 0, 0
   index: -1
 줄기1(2)
-  rotate: false
-  xy: 1257, 771
-  size: 344, 242
-  orig: 344, 242
+  rotate: true
+  xy: 1113, 367
+  size: 78, 56
+  orig: 78, 56
   offset: 0, 0
   index: -1
 줄기2(1)
   rotate: true
-  xy: 923, 671
-  size: 459, 332
-  orig: 459, 332
+  xy: 1113, 447
+  size: 104, 75
+  orig: 104, 75
   offset: 0, 0
   index: -1
 줄기2(2)
   rotate: false
-  xy: 923, 254
-  size: 353, 415
-  orig: 353, 415
+  xy: 1036, 246
+  size: 81, 94
+  orig: 81, 94
   offset: 0, 0
   index: -1
 줄기3
-  rotate: true
-  xy: 1759, 1235
-  size: 229, 185
-  orig: 229, 185
+  rotate: false
+  xy: 1006, 31
+  size: 53, 43
+  orig: 53, 43
   offset: 0, 0
   index: -1
 충격파
   rotate: false
-  xy: 714, 1132
-  size: 588, 725
-  orig: 588, 725
+  xy: 901, 177
+  size: 133, 163
+  orig: 133, 163
   offset: 0, 0
   index: -1
 턱
-  rotate: false
-  xy: 710, 2
-  size: 73, 31
-  orig: 73, 31
+  rotate: true
+  xy: 1179, 283
+  size: 18, 9
+  orig: 18, 9
   offset: 0, 0
   index: -1
 파편1
   rotate: true
-  xy: 923, 2
-  size: 250, 338
-  orig: 250, 338
+  xy: 1036, 187
+  size: 57, 77
+  orig: 57, 77
   offset: 0, 0
   index: -1
 파편10
   rotate: false
-  xy: 831, 1042
-  size: 76, 88
-  orig: 76, 88
+  xy: 1171, 398
+  size: 18, 21
+  orig: 18, 21
   offset: 0, 0
   index: -1
 파편11
-  rotate: false
-  xy: 710, 35
-  size: 101, 72
-  orig: 101, 72
+  rotate: true
+  xy: 1171, 421
+  size: 24, 18
+  orig: 24, 18
   offset: 0, 0
   index: -1
 파편2
   rotate: true
-  xy: 1759, 1466
-  size: 391, 174
-  orig: 391, 174
+  xy: 1148, 621
+  size: 88, 40
+  orig: 88, 40
   offset: 0, 0
   index: -1
 파편3
   rotate: false
-  xy: 1278, 498
-  size: 260, 271
-  orig: 260, 271
+  xy: 1129, 303
+  size: 60, 62
+  orig: 60, 62
   offset: 0, 0
   index: -1
 파편4
-  rotate: false
-  xy: 1263, 2
-  size: 243, 250
-  orig: 243, 250
+  rotate: true
+  xy: 1119, 245
+  size: 56, 58
+  orig: 56, 58
   offset: 0, 0
   index: -1
 파편5
   rotate: true
-  xy: 1698, 460
-  size: 249, 256
-  orig: 249, 256
+  xy: 1115, 186
+  size: 57, 58
+  orig: 57, 58
   offset: 0, 0
   index: -1
 파편6
-  rotate: true
-  xy: 1304, 1015
-  size: 224, 438
-  orig: 224, 438
+  rotate: false
+  xy: 1006, 76
+  size: 52, 99
+  orig: 52, 99
   offset: 0, 0
   index: -1
 파편7
-  rotate: false
-  xy: 1278, 265
-  size: 241, 231
-  orig: 241, 231
+  rotate: true
+  xy: 1060, 129
+  size: 56, 53
+  orig: 56, 53
   offset: 0, 0
   index: -1
 파편8
-  rotate: true
-  xy: 1744, 958
-  size: 275, 191
-  orig: 275, 191
+  rotate: false
+  xy: 1060, 82
+  size: 63, 45
+  orig: 63, 45
   offset: 0, 0
   index: -1
 파편9
-  rotate: false
-  xy: 1802, 386
-  size: 78, 72
-  orig: 78, 72
+  rotate: true
+  xy: 1171, 377
+  size: 19, 18
+  orig: 19, 18
   offset: 0, 0
   index: -1
