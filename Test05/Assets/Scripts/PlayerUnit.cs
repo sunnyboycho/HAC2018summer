@@ -92,38 +92,33 @@ public class PlayerUnit : UnitScript {
         switch (fitColor)
         {
             case 4:
-                totalAttack = totalAttack + bonusAttack * 10 * fitSparkle;
-                totalHP = totalHP + bonusHP * 10 * fitSparkle;
-                totalRange = totalRange + bonusRange * 10 * fitSparkle;
-                defense = defense + bonusDefense * 10 * fitSparkle;
-                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                totalAttack = totalAttack + bonusAttack * 10 * fitSparkle * (int)statMultiplier;
+                totalHP = totalHP + bonusHP * 10 * fitSparkle * (int)statMultiplier;
+                totalRange = totalRange + bonusRange * 10 * fitSparkle * statMultiplier;
+                defense = defense + bonusDefense * 10 * fitSparkle * (int)statMultiplier;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle * statMultiplier;
                 break;
             case 3:
-                totalAttack = totalAttack + bonusAttack * 4 * fitSparkle;
-                totalHP = totalHP + bonusHP * 4 * fitSparkle;
-                totalRange = totalRange + bonusRange * 4 * fitSparkle;
-                defense = defense + bonusDefense * 4 * fitSparkle;
-                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                totalAttack = totalAttack + bonusAttack * 4 * fitSparkle * (int)statMultiplier;
+                totalHP = totalHP + bonusHP * 4 * fitSparkle * (int)statMultiplier;
+                totalRange = totalRange + bonusRange * 4 * fitSparkle * statMultiplier;
+                defense = defense + bonusDefense * 4 * fitSparkle * (int)statMultiplier;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle * statMultiplier;
                 break;
             case 2:
-                totalAttack = totalAttack + bonusAttack * 2 * fitSparkle;
-                totalHP = totalHP + bonusHP * 2 * fitSparkle;
-                totalRange = totalRange + bonusRange * 2 * fitSparkle;
-                defense = defense + bonusDefense * 2 * fitSparkle;
-                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                totalAttack = totalAttack + bonusAttack * 2 * fitSparkle * (int)statMultiplier;
+                totalHP = totalHP + bonusHP * 2 * fitSparkle * (int)statMultiplier;
+                totalRange = totalRange + bonusRange * 2 * fitSparkle * statMultiplier;
+                defense = defense + bonusDefense * 2 * fitSparkle * (int)statMultiplier;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle * statMultiplier;
                 break;
             case 1:
-                totalAttack = totalAttack + bonusAttack * fitSparkle;
-                totalHP = totalHP + bonusHP * fitSparkle;
-                totalRange = totalRange + bonusRange * fitSparkle;
-                defense = defense + bonusDefense * fitSparkle;
-                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle;
+                totalAttack = totalAttack + bonusAttack * fitSparkle * (int)statMultiplier;
+                totalHP = totalHP + bonusHP * fitSparkle * (int)statMultiplier;
+                totalRange = totalRange + bonusRange * fitSparkle * statMultiplier;
+                defense = defense + bonusDefense * fitSparkle * (int)statMultiplier;
+                totalSpeed = totalSpeed + bonusSpeed * 10 * fitSparkle * statMultiplier;
                 break;
         }
-        totalAttack = totalAttack * (int)statMultiplier;
-        totalHP = totalHP * (int)statMultiplier;
-        totalRange = totalRange * (int)statMultiplier;
-        defense = defense * (int)statMultiplier;
-        totalSpeed = totalSpeed * (int)statMultiplier;
     }
 }
