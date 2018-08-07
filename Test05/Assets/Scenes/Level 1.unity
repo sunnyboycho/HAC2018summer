@@ -376,9 +376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resume: {fileID: 1576771861}
+  Restart: {fileID: 894522518}
   ToWorldMap: {fileID: 1765152907}
   QuitGame: {fileID: 183089056}
-  ReStart: {fileID: 894522518}
 --- !u!114 &183089059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,9 +1653,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resume: {fileID: 1576771861}
+  Restart: {fileID: 894522518}
   ToWorldMap: {fileID: 1765152907}
   QuitGame: {fileID: 183089056}
-  ReStart: {fileID: 894522518}
 --- !u!114 &894522521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,7 +1696,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1507341247}
-        m_MethodName: Re_Start
+        m_MethodName: Restart_Game
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3212,9 +3212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resume: {fileID: 1576771861}
+  Restart: {fileID: 894522518}
   ToWorldMap: {fileID: 1765152907}
   QuitGame: {fileID: 183089056}
-  ReStart: {fileID: 894522518}
 --- !u!1 &1576771861
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,9 +3246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resume: {fileID: 1576771861}
+  Restart: {fileID: 894522518}
   ToWorldMap: {fileID: 1765152907}
   QuitGame: {fileID: 183089056}
-  ReStart: {fileID: 894522518}
 --- !u!114 &1576771863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3519,9 +3519,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resume: {fileID: 1576771861}
+  Restart: {fileID: 894522518}
   ToWorldMap: {fileID: 1765152907}
   QuitGame: {fileID: 183089056}
-  ReStart: {fileID: 894522518}
 --- !u!114 &1765152909
 MonoBehaviour:
   m_ObjectHideFlags: 0

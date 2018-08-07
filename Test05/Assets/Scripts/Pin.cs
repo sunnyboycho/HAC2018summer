@@ -11,6 +11,11 @@ public enum Direction
 
 public class Pin : MonoBehaviour
 {
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.root);
+    }
+
     public Character Character;
 
     [Header("Options")] //
