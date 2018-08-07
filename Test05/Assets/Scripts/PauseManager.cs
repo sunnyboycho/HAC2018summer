@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour {
 
     public GameObject Resume;
+    public GameObject Restart;
     public GameObject ToWorldMap;
     public GameObject QuitGame;
 
@@ -14,6 +15,7 @@ public class PauseManager : MonoBehaviour {
     {
         Time.timeScale = 0;
         Resume.SetActive(true);
+        Restart.SetActive(true);
         ToWorldMap.SetActive(true);
         QuitGame.SetActive(true);
     }
@@ -21,9 +23,16 @@ public class PauseManager : MonoBehaviour {
     public void Resume_Game()
     {
         Resume.SetActive(false);
+        Restart.SetActive(false);
         ToWorldMap.SetActive(false);
         QuitGame.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void Restart_Game()
+    {
+        string CurrentScene = Character.CurrentPin.SceneToLoad;
+        SceneManager.LoadScene(CurrentScene);
     }
 
     public void To_World_Map()
