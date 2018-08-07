@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: MadScientist
   image: {fileID: 0}
-  hp: 60
-  attack: 6
+  hp: 120
+  attack: 10
   speed: 2
   attackRange: 5
   defense: 0
