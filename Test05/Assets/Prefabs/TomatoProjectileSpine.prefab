@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 8
+  isParabellum: 0
 --- !u!114 &114250010274837674
 MonoBehaviour:
   m_ObjectHideFlags: 1

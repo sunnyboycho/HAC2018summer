@@ -14,7 +14,7 @@ MonoBehaviour:
   unitName: Tomato
   image: {fileID: 0}
   hp: 100
-  attack: 2
+  attack: 8
   speed: 1
   attackRange: 25
   defense: 0
