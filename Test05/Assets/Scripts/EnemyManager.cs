@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
+    int waveNumber = 0;
+
     [SerializeField]
     GameObject[] enemyTypes;
 
@@ -18,6 +20,9 @@ public class EnemyManager : MonoBehaviour {
 
     [SerializeField]
     float intervalWait = 5.0f;
+
+    [SerializeField]
+    int perWave = 5;
 
     bool allowSpawn = true;
 
@@ -41,13 +46,15 @@ public class EnemyManager : MonoBehaviour {
         if (allowSpawn)
         {
             yield return new WaitForSeconds(intervalWait);
+            waveNumber++;
             for (int i = 0; i < enemyNumber; i++)
             {
                 for (int j = 0; j < enemyArray.Length; j++)
                 {
                     if (enemyArray[j] != null)
                     {
-                        gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
+                        GameObject temp = gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
+                        temp.GetComponent<EnemyUnit>().SetStats(waveNumber/perWave);
                     }
                     yield return new WaitForSeconds(spawnInterval);
                 }

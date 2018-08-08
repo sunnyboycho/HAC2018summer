@@ -4,8 +4,25 @@ using UnityEngine;
 
 public class EnemyUnit : UnitScript {
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    int bonusAttack = 3;
+
+    [SerializeField]
+    int bonusHP = 5;
+
+    [SerializeField]
+    float bonusRange = 0;
+
+    [SerializeField]
+    int bonusDefense = 0;
+
+    [SerializeField]
+    float bonusSpeed = 0.2f;
+
+    int statMultiplier = 0;
+
+    // Use this for initialization
+    void Start () {
         animator = gameObject.GetComponent<Animator>();
         animator.SetBool("isAttacking", false);
         totalAttack = gameObject.GetComponent<UnitDisplay>().unit.attack;
@@ -26,5 +43,15 @@ public class EnemyUnit : UnitScript {
         {
             GetComponent<Rigidbody2D>().isKinematic = true;
         }
+    }
+
+    public void SetStats(int multiplier)
+    {
+        statMultiplier = multiplier;
+        totalAttack = totalAttack + bonusAttack * statMultiplier;
+        totalHP = totalHP + bonusHP * statMultiplier;
+        totalRange = totalRange + bonusRange * statMultiplier;
+        defense = defense + bonusDefense * statMultiplier;
+        totalSpeed = totalSpeed + bonusSpeed * statMultiplier;
     }
 }

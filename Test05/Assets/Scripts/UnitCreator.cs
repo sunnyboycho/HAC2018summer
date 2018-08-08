@@ -44,12 +44,13 @@ public class UnitCreator : MonoBehaviour {
         newUnit.GetComponent<MeshRenderer>().sortingOrder = spawnPoint;
     }
 
-    public void CreateEnemyUnit(int i)
+    public GameObject CreateEnemyUnit(int i)
     {
         int enemySpawnPoint = Random.Range(0, enemySpawn.Length);
         GameObject newUnit = Instantiate(enemyUnit[i], enemySpawn[enemySpawnPoint].position, Quaternion.identity);
         newUnit.transform.SetParent(parent[1]);
         newUnit.GetComponent<MeshRenderer>().sortingOrder = enemySpawnPoint;
+        return newUnit;
     }
 
     public void SwapUnits()
