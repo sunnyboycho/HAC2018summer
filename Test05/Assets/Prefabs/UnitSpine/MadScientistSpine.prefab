@@ -632,11 +632,11 @@ MonoBehaviour:
   damageIndicator: {fileID: 95319476571348884}
   isProjectileUnit: 0
   projectile: {fileID: 1381252944747614, guid: 0ece18af0de06af4ca7450cd02f728d0, type: 2}
-  flatBonusAttack: 3
-  flatBonusHP: 5
+  flatBonusAttack: 0
+  flatBonusHP: 0
   flatBonusRange: 0
   flatBonusDefense: 0
-  flatBonusSpeed: 0.2
+  flatBonusSpeed: 0
   waveBonusAttack: 3
   waveBonusHP: 5
   waveBonusRange: 0

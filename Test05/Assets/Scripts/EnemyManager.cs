@@ -49,6 +49,7 @@ public class EnemyManager : MonoBehaviour {
 
     IEnumerator Create()
     {
+        int typeCount = 0;
         if (allowSpawn)
         {
             yield return new WaitForSeconds(intervalWait);
@@ -57,7 +58,8 @@ public class EnemyManager : MonoBehaviour {
                 waveCount++;
                 if (enableWaveIncrease && (waveCount % perWave) == 0)
                 {
-                    enemyList.Add(enemyTypes[0]);
+                    enemyList.Add(enemyTypes[typeCount]);
+                    typeCount = ++typeCount % enemyTypes.Length;
                 }
                 for (int j = 0; j < enemyList.ToArray().Length; j++)
                 {

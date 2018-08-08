@@ -607,6 +607,16 @@ MonoBehaviour:
   damageIndicator: {fileID: 95846924258921356}
   isProjectileUnit: 0
   projectile: {fileID: 0}
+  flatBonusAttack: 0
+  flatBonusHP: 0
+  flatBonusRange: 0
+  flatBonusDefense: 0
+  flatBonusSpeed: 0
+  waveBonusAttack: 3
+  waveBonusHP: 5
+  waveBonusRange: 0
+  waveBonusDefense: 0
+  waveBonusSpeed: 0.2
 --- !u!114 &114582740524788790
 MonoBehaviour:
   m_ObjectHideFlags: 1
