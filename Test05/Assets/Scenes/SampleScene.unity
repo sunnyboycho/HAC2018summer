@@ -465,6 +465,16 @@ Prefab:
       propertyPath: ComboText
       value: 
       objectReference: {fileID: 15131114}
+    - target: {fileID: 61094544116740792, guid: 64da829448a5bae48b083b77c834df19,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.7263613
+      objectReference: {fileID: 0}
+    - target: {fileID: 61094544116740792, guid: 64da829448a5bae48b083b77c834df19,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.45272255
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64da829448a5bae48b083b77c834df19, type: 2}
   m_IsPrefabAsset: 0

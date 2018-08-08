@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114140136821837094}
   - component: {fileID: 50220101249385072}
   - component: {fileID: 61174817919516120}
+  - component: {fileID: 114953252545339102}
   m_Layer: 8
   m_Name: SparkleBlue
   m_TagString: Marble
@@ -57,7 +58,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 100000
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -100,6 +101,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marble: {fileID: 11400000, guid: c4427207beff6b549882c143369039e8, type: 2}
+--- !u!114 &114953252545339102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552354871290176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22dc47190132a94287cb6c4b954b9cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212949985891815744
 SpriteRenderer:
   m_ObjectHideFlags: 1
