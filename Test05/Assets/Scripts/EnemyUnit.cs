@@ -5,19 +5,34 @@ using UnityEngine;
 public class EnemyUnit : UnitScript {
 
     [SerializeField]
-    int bonusAttack = 3;
+    int flatBonusAttack = 3;
 
     [SerializeField]
-    int bonusHP = 5;
+    int flatBonusHP = 5;
 
     [SerializeField]
-    float bonusRange = 0;
+    float flatBonusRange = 0;
 
     [SerializeField]
-    int bonusDefense = 0;
+    int flatBonusDefense = 0;
 
     [SerializeField]
-    float bonusSpeed = 0.2f;
+    float flatBonusSpeed = 0.2f;
+
+    [SerializeField]
+    int waveBonusAttack = 3;
+
+    [SerializeField]
+    int waveBonusHP = 5;
+
+    [SerializeField]
+    float waveBonusRange = 0;
+
+    [SerializeField]
+    int waveBonusDefense = 0;
+
+    [SerializeField]
+    float waveBonusSpeed = 0.2f;
 
     int statMultiplier = 0;
 
@@ -48,10 +63,10 @@ public class EnemyUnit : UnitScript {
     public void SetStats(int multiplier)
     {
         statMultiplier = multiplier;
-        totalAttack = totalAttack + bonusAttack * statMultiplier;
-        totalHP = totalHP + bonusHP * statMultiplier;
-        totalRange = totalRange + bonusRange * statMultiplier;
-        defense = defense + bonusDefense * statMultiplier;
-        totalSpeed = totalSpeed + bonusSpeed * statMultiplier;
+        totalAttack = totalAttack + flatBonusAttack + waveBonusAttack * statMultiplier;
+        totalHP = totalHP + flatBonusHP + waveBonusHP * statMultiplier;
+        totalRange = totalRange + flatBonusRange + waveBonusRange * statMultiplier;
+        defense = defense + flatBonusDefense + waveBonusDefense * statMultiplier;
+        totalSpeed = totalSpeed + flatBonusSpeed + waveBonusSpeed * statMultiplier;
     }
 }

@@ -110,7 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804a8dd80a30eae47b9ccf383ad9c623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
   unitPortrait:
   - {fileID: 0}
   - {fileID: 0}
@@ -159,12 +158,13 @@ MonoBehaviour:
   enemyTypes:
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
-  enemyArray:
+  enemyList:
+  - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
   - {fileID: 0}
   - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   - {fileID: 1659970765707642, guid: c7a1257782b5739409f306094dff5e83, type: 2}
-  - {fileID: 1917777894151564, guid: 0c2a710f56f4f2145b9163867fe368d0, type: 2}
   enemyNumber: 10
   spawnInterval: 4
   intervalWait: 8
+  perWave: 5

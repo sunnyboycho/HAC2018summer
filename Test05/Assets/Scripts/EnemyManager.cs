@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
 
-    int waveNumber = 0;
+    int waveCount = 0;
 
     [SerializeField]
     GameObject[] enemyTypes;
 
     [SerializeField]
-    GameObject[] enemyArray;
+    List<GameObject> enemyList;
 
     [SerializeField]
     int enemyNumber;
@@ -23,6 +23,12 @@ public class EnemyManager : MonoBehaviour {
 
     [SerializeField]
     int perWave = 5;
+
+    [SerializeField]
+    bool enableWaveIncrease = false;
+
+    [SerializeField]
+    bool enableStatIncrease = false;
 
     bool allowSpawn = true;
 
@@ -46,15 +52,26 @@ public class EnemyManager : MonoBehaviour {
         if (allowSpawn)
         {
             yield return new WaitForSeconds(intervalWait);
-            waveNumber++;
             for (int i = 0; i < enemyNumber; i++)
             {
-                for (int j = 0; j < enemyArray.Length; j++)
+                waveCount++;
+                if (enableWaveIncrease && (waveCount % perWave) == 0)
                 {
-                    if (enemyArray[j] != null)
+                    enemyList.Add(enemyTypes[0]);
+                }
+                for (int j = 0; j < enemyList.ToArray().Length; j++)
+                {
+                    if (enemyList.ToArray()[j] != null)
                     {
-                        GameObject temp = gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyArray[j]]);
-                        temp.GetComponent<EnemyUnit>().SetStats(waveNumber/perWave);
+                        GameObject temp = gameObject.GetComponent<UnitCreator>().CreateEnemyUnit(dict[enemyList.ToArray()[j]]);
+                        if (enableStatIncrease)
+                        {
+                            temp.GetComponent<EnemyUnit>().SetStats(waveCount / perWave);
+                        }
+                        else
+                        {
+                            temp.GetComponent<EnemyUnit>().SetStats(0);
+                        }
                     }
                     yield return new WaitForSeconds(spawnInterval);
                 }
