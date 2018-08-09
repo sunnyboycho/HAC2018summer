@@ -8,7 +8,12 @@ public class Character : MonoBehaviour
     private Pin _targetPin;
     private MapManager _mapManager;
 
-    public GameObject Level_Pin;
+    private GameObject Level_Pin;
+
+    void Awake()
+    {
+        Level_Pin = Pin.Level_Pin;
+    }
 
 
     public void Initialize(MapManager mapManager, Pin startPin)
@@ -16,7 +21,6 @@ public class Character : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("IsMoving", false);
         _mapManager = mapManager;
         SetCurrentPin(startPin);
-        Level_Pin.SetActive(true);
     }
     
     

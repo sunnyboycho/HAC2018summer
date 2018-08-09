@@ -11,9 +11,20 @@ public enum Direction
 
 public class Pin : MonoBehaviour
 {
+    public static int IsPinExist = 0;
+    public static GameObject Level_Pin;
+
     void Awake()
     {
-        DontDestroyOnLoad(transform.root);
+        if (IsPinExist == 0)
+        {
+            DontDestroyOnLoad(transform.root);
+        }
+        else if (IsPinExist == 1)
+        {
+            //Level_Pin.SetActive(true);
+        }
+        Level_Pin = GameObject.Find("Level_Pin");
     }
 
     public Character Character;
@@ -104,10 +115,6 @@ public class Pin : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("clicked!");
-
-
-
         if (!Character.GetComponent<Animator>().GetBool("IsMoving"))
         {
             if (transform.position.x > Character.transform.position.x)
@@ -130,6 +137,5 @@ public class Pin : MonoBehaviour
                 Character.TrySetDirection(Direction.Before);
             }
         }
-        }
-
+    }
  }

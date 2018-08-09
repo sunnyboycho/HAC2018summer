@@ -11,17 +11,17 @@ public class MapManager : MonoBehaviour
     public static Pin CurrentPosition;
     public static int IsStartPositionChanged = 0;
 
-	/// <summary>
-	/// Use this for initialization
-	/// </summary>
-	private void Start ()
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
+    private void Start ()
 	{
 		// Pass a ref and default the player Starting Pin
         if (IsStartPositionChanged == 0)
             Character.Initialize(this, StartPin);
         else
             Character.Initialize(this, CurrentPosition);
-	}
+    }
 
     /// <summary>
     /// Update the GUI text
