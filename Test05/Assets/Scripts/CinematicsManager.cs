@@ -26,6 +26,18 @@ public class CinematicsManager : MonoBehaviour {
 		
 	}
 
+    void PlayCinematics()
+    {
+        PauseGame();
+        StartCoroutine("WaitTime");
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(5f);
+        ResumeGame();
+    }
+
     void PauseGame()
     {
         marbleInput.AllowInputOff();
