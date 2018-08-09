@@ -86,4 +86,14 @@ public class EnemyManager : MonoBehaviour {
     {
         allowSpawn = !allowSpawn;
     }
+
+    public void AllowSpawnOff()
+    {
+        allowSpawn = false;
+    }
+
+    public void AllowSpawnOn()
+    {
+        allowSpawn = false;
+    }
 }

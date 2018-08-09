@@ -65,6 +65,16 @@ public class MarbleManager : MonoBehaviour {
         allowSpawn = !allowSpawn;
     }
 
+    public void AllowSpawnOff()
+    {
+        allowSpawn = false;
+    }
+
+    public void AllowSpawnOn()
+    {
+        allowSpawn = false;
+    }
+
     void InitialSpawn()
     {
         for (int i = 0; i < initialSpawn.Length; i++)

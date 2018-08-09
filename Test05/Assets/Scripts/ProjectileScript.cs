@@ -74,11 +74,15 @@ public class ProjectileScript : MonoBehaviour {
 
     void Parabellum()
     {
+        float x = target.transform.position.x - gameObject.transform.position.x;
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * projectileSpeed * 0.6f;
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(x * 0.7f, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        /*
         if (target.GetComponent<Animator>().GetBool("isAttacking"))
         {
             float x = target.transform.position.x - gameObject.transform.position.x;
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * projectileSpeed;
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(x / 2.5f, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * projectileSpeed * 0.6f;
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(x * 0.7f, gameObject.GetComponent<Rigidbody2D>().velocity.y);
         }
         else
         {
@@ -87,9 +91,10 @@ public class ProjectileScript : MonoBehaviour {
             {
                 x = -x;
             }
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * projectileSpeed;
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(x / 2.5f, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * projectileSpeed * 0.5f;
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(x * 0.7f, gameObject.GetComponent<Rigidbody2D>().velocity.y);
         }
+        */
     }
 
     void DamageTarget()
