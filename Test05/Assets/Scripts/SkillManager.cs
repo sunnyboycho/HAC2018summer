@@ -7,23 +7,60 @@ public class SkillManager : MonoBehaviour {
 
     [SerializeField]
     Text text;
-    
+
     MarbleManager marbleManager;
+
+    [SerializeField]
+    Text[] timerTexts = new Text[2];
+
+    [SerializeField]
+    float[] cooldowns = new float[2];
+
+    float[] timers = new float[2];
+
+    bool[] isReady = new bool[2];
 
     bool statUp = false;
 
     private void Start()
     {
+        for (int i = 0; i < 2; i++)
+        {
+            timers[i] = 0;
+            isReady[i] = false;
+        }
         marbleManager = FindObjectOfType<MarbleManager>();
         text.text = "";
     }
 
+    private void Update()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            if (!isReady[i])
+            {
+                timers[i] = timers[i] + Time.deltaTime;
+                timerTexts[i].text = ((int)timers[i]).ToString();
+                if (timers[i] >= cooldowns[i])
+                {
+                    timers[i] = 0;
+                    isReady[i] = true;
+                }
+            }
+            else
+            {
+                timerTexts[i].text = "Ready";
+            }
+        }
+    }
+
     public void StatUp()
     {
-        if (!statUp)
+        if (isReady[1])
         {
             statUp = true;
-            text.text = "S1 Active";
+            isReady[1] = false;
+            text.text = "S2 Active";
             StartCoroutine("StatUpWait");
         }
     }
@@ -42,9 +79,13 @@ public class SkillManager : MonoBehaviour {
 
     public void MarbleSpeedUp()
     {
-        text.text = "S2 Active";
-        marbleManager.DoubleSpeedStart();
-        StartCoroutine("DoubleSpeedWait");
+        if (isReady[0])
+        {
+            isReady[0] = false;
+            text.text = "S1 Active";
+            marbleManager.DoubleSpeedStart();
+            StartCoroutine("DoubleSpeedWait");
+        }
     }
 
     IEnumerator DoubleSpeedWait()

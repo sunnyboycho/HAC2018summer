@@ -59,17 +59,17 @@ public class GameManager : MonoBehaviour {
             if (!enemy.GetComponent<BaseScript>().IsAlive)
             {
                 playerWin = true;
-                marbleInput.SwitchInputAllow();
-                marbleManager.SwitchAllowSpawn();
-                enemyManager.SwitchAllowSpawn();
+                marbleInput.AllowInputOff();
+                marbleManager.AllowSpawnOff();
+                enemyManager.AllowSpawnOff();
                 WinState();
             }
             if (!player.GetComponent<BaseScript>().IsAlive)
             {
                 enemyWin = true;
-                marbleInput.SwitchInputAllow();
-                marbleManager.SwitchAllowSpawn();
-                enemyManager.SwitchAllowSpawn();
+                marbleInput.AllowInputOff();
+                marbleManager.AllowSpawnOff();
+                enemyManager.AllowSpawnOff();
                 LoseState();
             }
         }

@@ -76,6 +76,16 @@ public class MarbleInput : MonoBehaviour {
         allowInput = !allowInput;
     }
 
+    public void AllowInputOff()
+    {
+        allowInput = false;
+    }
+
+    public void AllowInputOn()
+    {
+        allowInput = false;
+    }
+
     // Select marble that has been clicked. Store in hits array. Deselect if selected more than 5 marbles
     void SelectMarbles()
     {
