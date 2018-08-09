@@ -11,6 +11,13 @@ public class PauseManager : MonoBehaviour {
     public GameObject ToWorldMap;
     public GameObject QuitGame;
 
+    private GameObject Level_Pin;
+
+    void Awake()
+    {
+        Level_Pin = Pin.Level_Pin;
+    }
+
     public void Pause_Game()
     {
         Time.timeScale = 0;
@@ -33,6 +40,7 @@ public class PauseManager : MonoBehaviour {
     {
         string CurrentScene = Character.CurrentPin.SceneToLoad;
         SceneManager.LoadScene(CurrentScene);
+        Time.timeScale = 1;
     }
 
     public void To_World_Map()
